@@ -7,6 +7,8 @@
 [sub_resource type="Environment" id="Environment_q5fru"]
 ambient_light_color = Color(0.5649617, 0.5649616, 0.5649616, 1)
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_v7qa8"]
+
 [node name="MovementTestSceen" type="Node3D" unique_id=1346146592]
 
 [node name="Environment" type="Node" parent="." unique_id=1105520939]
@@ -17,12 +19,8 @@ environment = SubResource("Environment_q5fru")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment" unique_id=86774612]
 transform = Transform3D(1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0, 1, 0, 20, 0)
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=668831026]
-transform = Transform3D(0.9063078, -0.29883626, 0.2988363, 0, 0.7071068, 0.70710677, -0.4226183, -0.6408564, 0.64085644, 10.492432, 34.73999, 29.363647)
-projection = 1
-size = 10.0
-
-[node name="WorldGeometry" type="Node3D" parent="." unique_id=881598512]
+[node name="WorldGeometry" type="NavigationRegion3D" parent="." unique_id=1448157649]
+navigation_mesh = SubResource("NavigationMesh_v7qa8")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="WorldGeometry" unique_id=679026762]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.024169922, -0.5, 0.024658203)

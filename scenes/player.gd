@@ -1,9 +1,12 @@
 extends CharacterBody3D
 
-
+@onready var camera_3d: Camera3D = $Camera3D
+@onready var camera_marker: Marker3D = $CameraMarker
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
+func _ready() -> void:
+	camera_3d.global_position = camera_marker.global_position
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -26,3 +29,8 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+	camera_3d.global_position = lerp(
+		camera_3d.global_position,
+		camera_marker.global_position,
+		delta * 2.5
+	)

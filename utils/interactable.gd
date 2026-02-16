@@ -2,8 +2,11 @@ extends Area3D
 
 @export var shape: Shape3D
 @export var should_navigate: bool = true
+@export var dialogue: DialogueResource
 
 @onready var collision_shape: CollisionShape3D = $CollisionShape3D
+
+signal interaction_started
 
 var player: CharacterBody3D
 var player_en_route: bool = false
@@ -45,3 +48,7 @@ func _on_player_navigation_finished() -> void:
 
 func perform_interaction() -> void:
 	print("Interacting with ", name)
+	interaction_started.emit()
+
+	if dialogue:
+		DialogueManager.show_dialogue_balloon(dialogue, "start")

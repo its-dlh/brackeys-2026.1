@@ -4,6 +4,7 @@
 [ext_resource type="Material" uid="uid://dgpf4byvi3vl8" path="res://dev_textures/green_cross_material.tres" id="2_u6ihb"]
 [ext_resource type="PackedScene" uid="uid://cnxxve6eyvij6" path="res://utils/interactable.tscn" id="3_5h01a"]
 [ext_resource type="PackedScene" uid="uid://dqvawp4qq4qtp" path="res://scenes/player.tscn" id="3_ssauf"]
+[ext_resource type="Resource" uid="uid://bsechbvvoc5mk" path="res://words/upgrades_and_items/starting_table.dialogue" id="4_figr7"]
 [ext_resource type="Script" uid="uid://vw7kywh6j84x" path="res://scenes/floor_collision.gd" id="4_u6ihb"]
 [ext_resource type="PackedScene" uid="uid://bh7r8co701lfi" path="res://environment_assets/science-tube.glb" id="5_ssauf"]
 [ext_resource type="PackedScene" uid="uid://ki0ynqoammqr" path="res://environment_assets/workbench.glb" id="6_wsx3i"]
@@ -63,6 +64,8 @@ input_ray_pickable = false
 shape = SubResource("BoxShape3D_wsx3i")
 
 [node name="Interactable" parent="WorldGeometry/Table Static Body" unique_id=528907151 instance=ExtResource("3_5h01a")]
+dialogue = ExtResource("4_figr7")
+
 [node name="science-tube" parent="WorldGeometry" unique_id=482548221 instance=ExtResource("5_ssauf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.543145, 1.2450081, 0.80773926)
 

@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cu0bpvx6yycn4"
+uid="uid://bh7r8co701lfi"
 path="res://.godot/imported/science-tube.glb-783b5da28d080147376a240f087b807c.scn"
 
 [deps]
@@ -39,4 +39,4 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={}
 gltf/naming_version=2
-gltf/embedded_image_handling=3
+gltf/embedded_image_handling=1

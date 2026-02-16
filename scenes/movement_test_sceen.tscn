@@ -75,11 +75,6 @@ shape = SubResource("BoxShape3D_wsx3i")
 [node name="Player" parent="." unique_id=1791314085 instance=ExtResource("3_ssauf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.722, -0.2573588, 0)
 
-[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Player" unique_id=79460429]
-path_desired_distance = 0.5
-target_desired_distance = 0.1
-debug_enabled = true
-
 [node name="ColllisionFloor" type="Area3D" parent="." unique_id=714797951]
 script = ExtResource("4_u6ihb")
 

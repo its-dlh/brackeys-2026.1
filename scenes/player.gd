@@ -10,11 +10,6 @@ const JUMP_VELOCITY = 4.5
 func _ready() -> void:
 	camera_3d.global_position = camera_marker.global_position
 
-	# These values need to be adjusted for the actor's speed
-	# and the navigation layout.
-	navigation_agent.path_desired_distance = 0.5
-	navigation_agent.target_desired_distance = 0.1
-
 func _physics_process(delta: float) -> void:
 	if navigation_agent.is_navigation_finished():
 		return
@@ -48,5 +43,6 @@ func _physics_process(delta: float) -> void:
 # 		print("Mouse click at: ", event.position)
 
 
-func navigate_to(target_position: Vector3) -> void:
+func navigate_to(target_position: Vector3, desired_distance: float = 0.1) -> void:
 	navigation_agent.set_target_position(target_position)
+	navigation_agent.target_desired_distance = desired_distance

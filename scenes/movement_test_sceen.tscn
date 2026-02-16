@@ -4,7 +4,7 @@
 [ext_resource type="Material" uid="uid://dgpf4byvi3vl8" path="res://dev_textures/green_cross_material.tres" id="2_u6ihb"]
 [ext_resource type="PackedScene" uid="uid://dqvawp4qq4qtp" path="res://scenes/player.tscn" id="3_ssauf"]
 [ext_resource type="Script" uid="uid://vw7kywh6j84x" path="res://scenes/floor_collision.gd" id="4_u6ihb"]
-[ext_resource type="PackedScene" uid="uid://cu0bpvx6yycn4" path="res://environment_assets/science-tube.glb" id="4_u6ihb"]
+[ext_resource type="PackedScene" uid="uid://cu0bpvx6yycn4" path="res://environment_assets/science-tube.glb" id="5_ssauf"]
 
 [sub_resource type="Environment" id="Environment_q5fru"]
 ambient_light_color = Color(0.5649617, 0.5649616, 0.5649616, 1)
@@ -71,5 +71,6 @@ navigation_mesh = SubResource("NavigationMesh_u6ihb")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D" unique_id=1810630638 groups=["Floor"]]
 mesh = SubResource("PlaneMesh_ssauf")
-[node name="science-tube" parent="." unique_id=1399052157 instance=ExtResource("4_u6ihb")]
+
+[node name="science-tube" parent="." unique_id=1399052157 instance=ExtResource("5_ssauf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.846237, 1.2562898, 2.0831883)

@@ -1,8 +1,10 @@
 ~ start
+if GameState.get_flag(GameState.Flags.ROOM1_DOOR_OPEN)
+	The door is open.
 if GameState.get_flag(GameState.Flags.HAS_ARMS)
 	You open the door with your arms.
 	do parent.rotate_y(1.5)
+	do GameState.set_flag(GameState.Flags.ROOM1_DOOR_OPEN, true)
 else
-	You don't have any arms.
-	do parent.rotate_y(1.5)
+	The door is closed, and you don't have any arms.
 => END

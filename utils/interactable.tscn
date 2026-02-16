@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cnxxve6eyvij6"]
+
+[ext_resource type="Script" uid="uid://bg5aj4kfetqrj" path="res://utils/interactable.gd" id="1_drdt1"]
+
+[node name="Interactable" type="Area3D" unique_id=528907151]
+script = ExtResource("1_drdt1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1016907309]

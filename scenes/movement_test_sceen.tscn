@@ -2,6 +2,7 @@
 
 [ext_resource type="Material" uid="uid://cs0fncgty6wqu" path="res://dev_textures/gray_box_material.tres" id="1_v7qa8"]
 [ext_resource type="Material" uid="uid://dgpf4byvi3vl8" path="res://dev_textures/green_cross_material.tres" id="2_u6ihb"]
+[ext_resource type="PackedScene" uid="uid://cnxxve6eyvij6" path="res://utils/interactable.tscn" id="3_5h01a"]
 [ext_resource type="PackedScene" uid="uid://dqvawp4qq4qtp" path="res://scenes/player.tscn" id="3_ssauf"]
 [ext_resource type="Script" uid="uid://vw7kywh6j84x" path="res://scenes/floor_collision.gd" id="4_u6ihb"]
 [ext_resource type="PackedScene" uid="uid://cu0bpvx6yycn4" path="res://environment_assets/science-tube.glb" id="5_ssauf"]
@@ -71,6 +72,8 @@ input_ray_pickable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="WorldGeometry/Table Static Body" unique_id=1018325307]
 shape = SubResource("BoxShape3D_wsx3i")
+
+[node name="Interactable" parent="WorldGeometry/Table Static Body" unique_id=528907151 instance=ExtResource("3_5h01a")]
 
 [node name="Player" parent="." unique_id=1791314085 instance=ExtResource("3_ssauf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.722, -0.2573588, 0)

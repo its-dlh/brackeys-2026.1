@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://xmdddjxaa17c"]
+[gd_scene format=4 uid="uid://xmdddjxaa17c"]
 
 [ext_resource type="Material" uid="uid://cs0fncgty6wqu" path="res://dev_textures/gray_box_material.tres" id="1_v7qa8"]
 [ext_resource type="Material" uid="uid://dgpf4byvi3vl8" path="res://dev_textures/green_cross_material.tres" id="2_u6ihb"]
@@ -15,11 +15,19 @@ ambient_light_color = Color(0.5649617, 0.5649616, 0.5649616, 1)
 data = PackedVector3Array(-50, -0.25, 50, -50, -0.25, -50, -50, 0.25, -50, 50, -0.25, -50, -50, -0.25, -50, -50, -0.25, 50, -50, 0.25, -50, -50, -0.25, -50, 50, -0.25, -50, -50, 0.25, -50, -50, 0.25, 50, -50, -0.25, 50, -50, -0.25, 50, -50, 0.25, 50, 50, 0.25, 50, 50, 0.25, 50, -50, 0.25, 50, -50, 0.25, -50, -50, -0.25, 50, 50, -0.25, 50, 50, -0.25, -50, 50, 0.25, 50, 50, -0.25, 50, -50, -0.25, 50, 50, -0.25, -50, 50, -0.25, 50, 50, 0.25, 50, 50, -0.25, -50, 50, 0.25, -50, -50, 0.25, -50, -50, 0.25, -50, 50, 0.25, -50, 50, 0.25, 50, 50, 0.25, 50, 50, 0.25, -50, 50, -0.25, -50)
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_u6ihb"]
-vertices = PackedVector3Array(-44.5, 0.5, -44.5, -44.5, 0.5, 44.5, 44.5, 0.5, 44.5, 44.5, 0.5, -44.5)
+vertices = PackedVector3Array(-49.508, 0.25, -49.5, -49.508, 0.25, 49.5, 49.492, 0.25, 49.5, 49.492, 0.25, -49.5)
 polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_ssauf"]
-size = Vector2(90, 90)
+[sub_resource type="ArrayMesh" id="ArrayMesh_ssauf"]
+_surfaces = [{
+"aabb": AABB(-50, -0.25, -50, 100, 0.5, 100),
+"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
+"format": 34359738391,
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("AABIwgAAgL4AAEhCAABIwgAAgL4AAEjCAABIwgAAgD4AAEjCAABIQgAAgL4AAEjCAABIwgAAgL4AAEjCAABIwgAAgL4AAEhCAABIwgAAgD4AAEjCAABIwgAAgL4AAEjCAABIQgAAgL4AAEjCAABIwgAAgD4AAEjCAABIwgAAgD4AAEhCAABIwgAAgL4AAEhCAABIwgAAgL4AAEhCAABIwgAAgD4AAEhCAABIQgAAgD4AAEhCAABIQgAAgD4AAEhCAABIwgAAgD4AAEhCAABIwgAAgD4AAEjCAABIwgAAgL4AAEhCAABIQgAAgL4AAEhCAABIQgAAgL4AAEjCAABIQgAAgD4AAEhCAABIQgAAgL4AAEhCAABIwgAAgL4AAEhCAABIQgAAgL4AAEjCAABIQgAAgL4AAEhCAABIQgAAgD4AAEhCAABIQgAAgL4AAEjCAABIQgAAgD4AAEjCAABIwgAAgD4AAEjCAABIwgAAgD4AAEjCAABIQgAAgD4AAEjCAABIQgAAgD4AAEhCAABIQgAAgD4AAEhCAABIQgAAgD4AAEjCAABIQgAAgL4AAEjCAAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
+}]
 
 [node name="MovementTestSceen" type="Node3D" unique_id=1346146592]
 
@@ -53,24 +61,28 @@ use_collision = true
 size = Vector3(20.7146, 9.776855, 4.802246)
 
 [node name="Player" parent="." unique_id=1791314085 instance=ExtResource("3_ssauf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.7218018, 0.9152093, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.722, 0, 0)
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="Player" unique_id=79460429]
+path_desired_distance = 0.5
+target_desired_distance = 0.1
 
-[node name="ColllisionFloor" type="StaticBody3D" parent="." unique_id=1024264098]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.015960693, -6.1035156e-05, 0.0032958984)
+[node name="ColllisionFloor" type="Area3D" parent="." unique_id=714797951]
 script = ExtResource("4_u6ihb")
 
 [node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="ColllisionFloor" unique_id=282203209]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.024169922, -0.5, 0.024658203)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 shape = SubResource("ConcavePolygonShape3D_ssauf")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1516025011]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.015960693, -6.1035156e-05, 0.0032958984)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+top_level = true
 navigation_mesh = SubResource("NavigationMesh_u6ihb")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D" unique_id=1810630638 groups=["Floor"]]
-mesh = SubResource("PlaneMesh_ssauf")
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D" unique_id=239472405]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.008, -0.5, 0)
+visible = false
+mesh = SubResource("ArrayMesh_ssauf")
 
 [node name="science-tube" parent="." unique_id=1399052157 instance=ExtResource("5_ssauf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.846237, 1.2562898, 2.0831883)

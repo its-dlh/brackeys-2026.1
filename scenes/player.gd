@@ -13,7 +13,7 @@ func _ready() -> void:
 	# These values need to be adjusted for the actor's speed
 	# and the navigation layout.
 	navigation_agent.path_desired_distance = 0.5
-	navigation_agent.target_desired_distance = 0.5
+	navigation_agent.target_desired_distance = 0.1
 
 func _physics_process(delta: float) -> void:
 	if navigation_agent.is_navigation_finished():

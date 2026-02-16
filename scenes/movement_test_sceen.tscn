@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dqvawp4qq4qtp" path="res://scenes/player.tscn" id="3_ssauf"]
 [ext_resource type="Script" uid="uid://vw7kywh6j84x" path="res://scenes/floor_collision.gd" id="4_u6ihb"]
 [ext_resource type="PackedScene" uid="uid://cu0bpvx6yycn4" path="res://environment_assets/science-tube.glb" id="5_ssauf"]
+[ext_resource type="PackedScene" uid="uid://ki0ynqoammqr" path="res://environment_assets/workbench.glb" id="6_wsx3i"]
 
 [sub_resource type="Environment" id="Environment_q5fru"]
 ambient_light_color = Color(0.5649617, 0.5649616, 0.5649616, 1)
@@ -43,7 +44,7 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0.09
 navigation_mesh = SubResource("NavigationMesh_v7qa8")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="WorldGeometry" unique_id=679026762]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.024169922, -0.5, 0.024658203)
+transform = Transform3D(0.99999917, -0.0012915432, 0, 0.0012915432, 0.99999917, 0, 0, 0, 1, -0.024169922, -0.5, 0.024658203)
 material_override = ExtResource("1_v7qa8")
 use_collision = true
 size = Vector3(100, 0.5, 100)
@@ -86,3 +87,6 @@ mesh = SubResource("ArrayMesh_ssauf")
 
 [node name="science-tube" parent="." unique_id=1399052157 instance=ExtResource("5_ssauf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.846237, 1.2562898, 2.0831883)
+
+[node name="table" parent="." unique_id=1337499401 instance=ExtResource("6_wsx3i")]
+transform = Transform3D(0.0017453879, 0, 0.9999985, 0, 1, 0, -0.9999985, 0, 0.0017453879, -2.2222638, 0.10627636, 1.4585452)

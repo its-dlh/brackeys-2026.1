@@ -23,6 +23,17 @@ func _physics_process(delta: float) -> void:
 	var next_path_position: Vector3 = navigation_agent.get_next_path_position()
 
 	velocity = current_agent_position.direction_to(next_path_position) * SPEED
+
+	# TODO override navigation if controls are used
+	# var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	# var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	# if direction:
+	# 	velocity.x = direction.x * SPEED
+	# 	velocity.z = direction.z * SPEED
+	# else:
+	# 	velocity.x = move_toward(velocity.x, 0, SPEED)
+	# 	velocity.z = move_toward(velocity.z, 0, SPEED)
+
 	move_and_slide()
 
 	camera_3d.global_position = lerp(

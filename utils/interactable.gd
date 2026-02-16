@@ -17,7 +17,9 @@ var player: CharacterBody3D
 var player_en_route: bool = false
 
 func _ready() -> void:
-	if not shape:
+	if get_parent().has_signal("input_event"):
+		get_parent().connect("input_event", _input_event)
+	elif not shape:
 		shape = get_sibling_shape()
 		print('Shape: ', shape)
 		collision_shape.shape = shape

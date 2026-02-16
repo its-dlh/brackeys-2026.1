@@ -38,11 +38,11 @@ func get_sibling_shape() -> Shape3D:
 	return null
 
 func _input_event(_camera: Camera3D, event: InputEvent, _event_position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
-	if not should_navigate:
-		perform_interaction()
-		return
-
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		if not should_navigate:
+			perform_interaction()
+			return
+
 		player_en_route = true
 		player.navigate_to(navigation_target, acceptable_distance)
 		print('Player en route')
@@ -61,4 +61,4 @@ func perform_interaction() -> void:
 	interaction_started.emit()
 
 	if dialogue:
-		DialogueManager.show_dialogue_balloon(dialogue, "start")
+		DialogueManager.show_dialogue_balloon(dialogue, "start", [self,{ parent = get_parent() }])

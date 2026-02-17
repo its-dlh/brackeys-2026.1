@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bhuibbuuisuam"
+path="res://.godot/imported/science_tube.dialogue-2717caf7f0d5f057ed31fcbb4348e5d8.tres"
+
+[deps]
+
+source_file="res://words/upgrades_and_items/science_tube.dialogue"
+dest_files=["res://.godot/imported/science_tube.dialogue-2717caf7f0d5f057ed31fcbb4348e5d8.tres"]
+
+[params]
+
+defaults=true

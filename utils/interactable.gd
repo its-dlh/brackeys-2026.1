@@ -6,7 +6,7 @@ extends Area3D
 @export_group("Navigation")
 @export var should_navigate: bool = true
 @export var target_offset: Vector3 = Vector3.ZERO
-@export var acceptable_distance: float = 1.0
+@export var acceptable_distance: float = 2.0
 
 @onready var collision_shape: CollisionShape3D = $CollisionShape3D
 @onready var navigation_target = global_position + target_offset
@@ -34,7 +34,7 @@ func navigation_setup() -> void:
 func get_sibling_shape() -> Shape3D:
 	var parent = get_parent()
 	if parent:
-		return parent.get_node("CollisionShape3D").shape
+		return find_node_recursive(parent, "CollisionShape3D").shape
 	return null
 
 func _input_event(_camera: Camera3D, event: InputEvent, _event_position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
@@ -62,3 +62,14 @@ func perform_interaction() -> void:
 
 	if dialogue:
 		DialogueManager.show_dialogue_balloon(dialogue, "start", [self,{ parent = get_parent() }])
+
+func find_node_recursive(current_node: Node, target_name: String) -> Node:
+	if current_node.name == target_name:
+		return current_node
+
+	for child in current_node.get_children():
+		var found_node = find_node_recursive(child, target_name)
+		if found_node:
+			return found_node
+	
+	return null

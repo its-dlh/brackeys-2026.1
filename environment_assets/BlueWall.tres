@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b0cb4oh2jjr2"]
+
+[ext_resource type="Texture2D" uid="uid://m71ushg5iwr7" path="res://environment_assets/blue-wall_blue_metal_plate_diff_1k.jpg" id="1_11pky"]
+[ext_resource type="Texture2D" uid="uid://c8ohqpox0mmrn" path="res://environment_assets/blue-wall_blue_metal_plate_rough_1k.png" id="2_xf2qj"]
+[ext_resource type="Texture2D" uid="uid://b22ktdpr3sbt1" path="res://environment_assets/blue-wall_blue_metal_plate_nor_gl_1k.png" id="3_axxqe"]
+
+[resource]
+resource_name = "BlueWall"
+cull_mode = 2
+albedo_texture = ExtResource("1_11pky")
+metallic_texture = ExtResource("2_xf2qj")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_xf2qj")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_axxqe")

@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c2nwy6084qtxb"
+uid="uid://bmmugkjd0alku"
 path="res://.godot/imported/blue-wall.glb-8abad3f782fd903b49473c3d9000b8ee.scn"
 
 [deps]
@@ -34,7 +34,7 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-materials/extract=0
+materials/extract=1
 materials/extract_format=0
 materials/extract_path=""
 _subresources={}

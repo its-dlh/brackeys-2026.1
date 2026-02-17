@@ -77,26 +77,26 @@ transform = Transform3D(0.45285493, 0, 0.8915842, 0, 1, 0, -0.8915842, 0, 0.4528
 
 [node name="Interactable" parent="WorldGeometry/workbench" unique_id=2142760303 instance=ExtResource("3_5h01a")]
 dialogue = ExtResource("6_figr7")
-acceptable_distance = 3.0
+acceptable_distance = 2.0
 
 [node name="TestDoor" parent="WorldGeometry" unique_id=1314669707 instance=ExtResource("8_xv0fy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6262207, -0.25229454, 8.02771)
 
 [node name="LeftArmBody" type="StaticBody3D" parent="WorldGeometry" unique_id=606811078]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.666992, 0, 0.91552734)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.666992, -0.124863505, 0.91552734)
 
 [node name="LeftArm" type="CSGBox3D" parent="WorldGeometry/LeftArmBody" unique_id=1588270843]
-transform = Transform3D(0.81871134, 0, 0.57420534, 0, 1, 0, -0.57420534, 0, 0.81871134, 0, 0.0662837, 0)
+transform = Transform3D(0.81871134, 0, 0.57420534, 0, 1, 0, -0.57420534, 0, 0.81871134, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_xv0fy")
 size = Vector3(0.29382324, 0.22265625, 1.1157227)
 
 [node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="WorldGeometry/LeftArmBody" unique_id=445975300]
-transform = Transform3D(0.81871134, 0, 0.57420534, 0, 1, 0, -0.57420534, 0, 0.81871134, 0, -0.15637255, 0)
+transform = Transform3D(0.81871134, 0, 0.57420534, 0, 1, 0, -0.57420534, 0, 0.81871134, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_gol8j")
 
 [node name="Interactable" parent="WorldGeometry/LeftArmBody" unique_id=1673644714 instance=ExtResource("3_5h01a")]
 dialogue = ExtResource("9_04u44")
-acceptable_distance = 1.0
+acceptable_distance = 0.5
 
 [node name="Player" parent="." unique_id=1791314085 instance=ExtResource("3_ssauf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.722, -0.2573588, 0)

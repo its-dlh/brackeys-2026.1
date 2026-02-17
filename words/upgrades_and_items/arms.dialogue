@@ -1,6 +1,10 @@
 ~ start
-There are mechanical arms on the table.
-Verified compatibility with chassis.
-Verified compatibility with current firmware.
-Arms acquired. Fine motor abilities amplified.
+if not GameState.get_flag(GameState.Flags.HAS_ARMS)
+	There are mechanical arms on the table.
+	Verified compatibility with chassis.
+	Verified compatibility with current firmware.
+	Arms acquired. Fine motor abilities amplified.
+	do GameState.set_flag(GameState.Flags.HAS_ARMS, true)
+else
+	This is where you found the arms
 => END

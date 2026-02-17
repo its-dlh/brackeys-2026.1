@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://bkh6x6nktallc"]
+
+[ext_resource type="Script" uid="uid://vw7kywh6j84x" path="res://scenes/floor_collision.gd" id="1_j046t"]
+[ext_resource type="Material" uid="uid://rgcl3mpxidm6" path="res://environment_assets/plain_floor_material.tres" id="2_5rsq8"]
+[ext_resource type="Material" uid="uid://861ncltoup8o" path="res://environment_assets/plain_wall_material.tres" id="3_jsi1a"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_hy5rx"]
+vertices = PackedVector3Array(-1.4, 0.01999998, -2, -1.4, 0.01999998, 2, 2, 0.01999998, 2, 2, 0.01999998, -2)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+cell_size = 0.1
+cell_height = 0.01
+agent_max_climb = 0.01
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_nogom"]
+data = PackedVector3Array(-2.5, -0.25, 2.5, -2.5, -0.25, -2.5, -2.5, 0.25, -2.5, 2.5, -0.25, -2.5, -2.5, -0.25, -2.5, -2.5, -0.25, 2.5, -2.5, 0.25, -2.5, -2.5, -0.25, -2.5, 2.5, -0.25, -2.5, -2.5, 0.25, -2.5, -2.5, 0.25, 2.5, -2.5, -0.25, 2.5, -2.5, -0.25, 2.5, -2.5, 0.25, 2.5, 2.5, 0.25, 2.5, 2.5, 0.25, 2.5, -2.5, 0.25, 2.5, -2.5, 0.25, -2.5, -2.5, -0.25, 2.5, 2.5, -0.25, 2.5, 2.5, -0.25, -2.5, 2.5, 0.25, 2.5, 2.5, -0.25, 2.5, -2.5, -0.25, 2.5, 2.5, -0.25, -2.5, 2.5, -0.25, 2.5, 2.5, 0.25, 2.5, 2.5, -0.25, -2.5, 2.5, 0.25, -2.5, -2.5, 0.25, -2.5, -2.5, 0.25, -2.5, 2.5, 0.25, -2.5, 2.5, 0.25, 2.5, 2.5, 0.25, 2.5, 2.5, 0.25, -2.5, 2.5, -0.25, -2.5)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ftkub"]
+data = PackedVector3Array(-0.25, -1.25, 2.5, -0.25, -1.25, -2.5, -0.25, 1.25, -2.5, 0.25, -1.25, -2.5, -0.25, -1.25, -2.5, -0.25, -1.25, 2.5, -0.25, 1.25, -2.5, -0.25, -1.25, -2.5, 0.25, -1.25, -2.5, -0.25, 1.25, -2.5, -0.25, 1.25, 2.5, -0.25, -1.25, 2.5, -0.25, -1.25, 2.5, -0.25, 1.25, 2.5, 0.25, 1.25, 2.5, 0.25, 1.25, 2.5, -0.25, 1.25, 2.5, -0.25, 1.25, -2.5, -0.25, -1.25, 2.5, 0.25, -1.25, 2.5, 0.25, -1.25, -2.5, 0.25, 1.25, 2.5, 0.25, -1.25, 2.5, -0.25, -1.25, 2.5, 0.25, -1.25, -2.5, 0.25, -1.25, 2.5, 0.25, 1.25, 2.5, 0.25, -1.25, -2.5, 0.25, 1.25, -2.5, -0.25, 1.25, -2.5, -0.25, 1.25, -2.5, 0.25, 1.25, -2.5, 0.25, 1.25, 2.5, 0.25, 1.25, 2.5, 0.25, 1.25, -2.5, 0.25, -1.25, -2.5)
+
+[node name="PlainFloorPlainWall5x5" type="Node3D" unique_id=2028324652]
+
+[node name="WorldGeometry" type="NavigationRegion3D" parent="." unique_id=1103197185]
+navigation_mesh = SubResource("NavigationMesh_hy5rx")
+
+[node name="Floor" type="StaticBody3D" parent="WorldGeometry" unique_id=1107550413]
+script = ExtResource("1_j046t")
+
+[node name="FloorCSG" type="CSGBox3D" parent="WorldGeometry/Floor" unique_id=1739628237]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+size = Vector3(5, 0.5, 5)
+material = ExtResource("2_5rsq8")
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="WorldGeometry/Floor" unique_id=628876614]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+shape = SubResource("ConcavePolygonShape3D_nogom")
+
+[node name="Wall" type="StaticBody3D" parent="WorldGeometry" unique_id=779937111]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25, 1.25, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="WorldGeometry/Wall" unique_id=1080365995]
+size = Vector3(0.5, 2.5, 5)
+material = ExtResource("3_jsi1a")
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="WorldGeometry/Wall" unique_id=1787895111]
+shape = SubResource("ConcavePolygonShape3D_ftkub")

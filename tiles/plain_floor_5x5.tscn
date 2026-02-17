@@ -1,0 +1,42 @@
+[gd_scene format=4 uid="uid://dp17d1nacv3nf"]
+
+[ext_resource type="Script" uid="uid://vw7kywh6j84x" path="res://scenes/floor_collision.gd" id="1_78fqu"]
+[ext_resource type="Material" uid="uid://rgcl3mpxidm6" path="res://environment_assets/plain_floor_material.tres" id="2_yr2cd"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_hy5rx"]
+vertices = PackedVector3Array(-2, 0.01999998, -2, -2, 0.01999998, 2, 2, 0.01999998, 2, 2, 0.01999998, -2)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+cell_size = 0.1
+cell_height = 0.01
+agent_max_climb = 0.01
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_p8c5o"]
+_surfaces = [{
+"aabb": AABB(-2.5, -0.25, -2.5, 5, 0.5, 5),
+"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
+"format": 34359738391,
+"material": ExtResource("2_yr2cd"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("AAAgwAAAgL4AACBAAAAgwAAAgL4AACDAAAAgwAAAgD4AACDAAAAgQAAAgL4AACDAAAAgwAAAgL4AACDAAAAgwAAAgL4AACBAAAAgwAAAgD4AACDAAAAgwAAAgL4AACDAAAAgQAAAgL4AACDAAAAgwAAAgD4AACDAAAAgwAAAgD4AACBAAAAgwAAAgL4AACBAAAAgwAAAgL4AACBAAAAgwAAAgD4AACBAAAAgQAAAgD4AACBAAAAgQAAAgD4AACBAAAAgwAAAgD4AACBAAAAgwAAAgD4AACDAAAAgwAAAgL4AACBAAAAgQAAAgL4AACBAAAAgQAAAgL4AACDAAAAgQAAAgD4AACBAAAAgQAAAgL4AACBAAAAgwAAAgL4AACBAAAAgQAAAgL4AACDAAAAgQAAAgL4AACBAAAAgQAAAgD4AACBAAAAgQAAAgL4AACDAAAAgQAAAgD4AACDAAAAgwAAAgD4AACDAAAAgwAAAgD4AACDAAAAgQAAAgD4AACDAAAAgQAAAgD4AACBAAAAgQAAAgD4AACBAAAAgQAAAgD4AACDAAAAgQAAAgL4AACDAAAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
+}]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yneg2"]
+size = Vector3(5, 0.5, 5)
+
+[node name="PlainFloor5x5" type="Node3D" unique_id=2028324652]
+
+[node name="WorldGeometry" type="NavigationRegion3D" parent="." unique_id=1103197185]
+navigation_mesh = SubResource("NavigationMesh_hy5rx")
+
+[node name="Floor" type="StaticBody3D" parent="WorldGeometry" unique_id=1107550413]
+script = ExtResource("1_78fqu")
+
+[node name="FloorMesh" type="MeshInstance3D" parent="WorldGeometry/Floor" unique_id=1826684245]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+mesh = SubResource("ArrayMesh_p8c5o")
+
+[node name="FloorCollisionShape" type="CollisionShape3D" parent="WorldGeometry/Floor" unique_id=302211358]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+shape = SubResource("BoxShape3D_yneg2")

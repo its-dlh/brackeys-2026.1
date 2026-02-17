@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://icjjp2brm8ar"]
+
+[ext_resource type="Material" uid="uid://cs0fncgty6wqu" path="res://dev_textures/gray_box_material.tres" id="1_bgo10"]
+[ext_resource type="PackedScene" uid="uid://cnxxve6eyvij6" path="res://utils/interactable.tscn" id="2_e0u0p"]
+[ext_resource type="Resource" uid="uid://b5pwv3j5nr2ls" path="res://words/test_door.dialogue" id="3_e0u0p"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_qyt45"]
+resource_name = "DoorMesh"
+material = ExtResource("1_bgo10")
+size = Vector3(1, 2, 0.25)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cbrb2"]
+size = Vector3(1, 2, 0.25)
+
+[node name="TestDoor" type="StaticBody3D" unique_id=1314669707]
+input_ray_pickable = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2052859855]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0)
+mesh = SubResource("BoxMesh_qyt45")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=298061902]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0)
+shape = SubResource("BoxShape3D_cbrb2")
+
+[node name="Interactable" parent="." unique_id=528907151 instance=ExtResource("2_e0u0p")]
+dialogue = ExtResource("3_e0u0p")
+should_navigate = false

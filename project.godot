@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 DialogueManager="*uid://c3rodes2l3gxb"
+GameState="*uid://b2e473vwkhajy"
 
 [editor_plugins]
 
@@ -72,7 +73,7 @@ ui_down={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://words/upgrades_and_items/arms.dialogue", "res://words/upgrades_and_items/starting_table.dialogue")
+locale/translations_pot_files=PackedStringArray("res://words/upgrades_and_items/arms.dialogue", "res://words/upgrades_and_items/starting_table.dialogue", "res://words/test_door.dialogue", "res://words/upgrades_and_items/science_tube.dialogue")
 
 [layer_names]
 

@@ -1,10 +1,15 @@
 extends Area3D
 
 @export var shape: Shape3D
-@export var should_navigate: bool = true
 @export var dialogue: DialogueResource
 
+@export_group("Navigation")
+@export var should_navigate: bool = true
+@export var target_offset: Vector3 = Vector3.ZERO
+@export var acceptable_distance: float = 2.0
+
 @onready var collision_shape: CollisionShape3D = $CollisionShape3D
+@onready var navigation_target = global_position + target_offset
 
 signal interaction_started
 
@@ -13,42 +18,47 @@ var player_en_route: bool = false
 
 func _ready() -> void:
 	if not shape:
-		shape = get_sibling_shape()
-		print('Shape: ', shape)
-		collision_shape.shape = shape
-
+		connect_to_sibling_collision_objects()
 
 	if should_navigate:
-		# TODO find a better way to get player node while still safely waiting for it to be ready
-		player = get_node("/root/MovementTestSceen/Player")
-		await player.ready
-		player.navigation_agent.navigation_finished.connect(_on_player_navigation_finished)
+		navigation_setup()
 
+func navigation_setup() -> void:
+	await get_tree().physics_frame
+	player = get_tree().get_first_node_in_group("player")
+	player.navigation_agent.target_reached.connect(_on_navigation_target_reached)
+	player.navigation_agent.navigation_finished.connect(_on_player_navigation_finished)
 
-func get_sibling_shape() -> Shape3D:
-	var parent = get_parent()
-	if parent:
-		return parent.get_node("CollisionShape3D").shape
-	return null
+func connect_to_sibling_collision_objects() -> void:
+	var collision_objects = get_parent().find_children("*", "CollisionObject3D", true);
+	for collision_object in collision_objects:
+		if collision_object != self:
+			collision_object.input_event.connect(_input_event)
+			print('Collision object: ', collision_object.name)
 
 func _input_event(_camera: Camera3D, event: InputEvent, _event_position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
-	if not should_navigate:
-		perform_interaction()
-		return
-
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		if not should_navigate:
+			perform_interaction()
+			return
+
 		player_en_route = true
-		player.navigate_to(global_position)
+		player.navigate_to(navigation_target, acceptable_distance)
 		print('Player en route')
+
+func _on_navigation_target_reached() -> void:
+	if player_en_route and player.navigation_agent.target_position == navigation_target:
+		player_en_route = false
+		perform_interaction()
 
 func _on_player_navigation_finished() -> void:
 	if player_en_route:
 		player_en_route = false
-		perform_interaction()
 
 func perform_interaction() -> void:
 	print("Interacting with ", name)
 	interaction_started.emit()
 
 	if dialogue:
-		DialogueManager.show_dialogue_balloon(dialogue, "start")
+		DialogueManager.show_dialogue_balloon(dialogue, "start", [self,{ parent = get_parent() }])
+

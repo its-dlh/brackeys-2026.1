@@ -10,7 +10,7 @@ height = 1.8
 radius = 0.25
 height = 1.8
 
-[node name="Player" type="CharacterBody3D" unique_id=1791314085]
+[node name="Player" type="CharacterBody3D" unique_id=1791314085 groups=["player"]]
 collision_layer = 2
 script = ExtResource("1_3vyb7")
 
@@ -32,6 +32,6 @@ projection = 1
 size = 10.0
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=818447834]
-path_desired_distance = 0.5
+path_desired_distance = 0.2
 target_desired_distance = 0.1
 debug_enabled = true

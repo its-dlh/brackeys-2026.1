@@ -18,9 +18,7 @@ var player_en_route: bool = false
 
 func _ready() -> void:
 	if not shape:
-		shape = get_sibling_shape()
-		print('Shape: ', shape)
-		collision_shape.shape = shape
+		connect_to_sibling_collision_objects()
 
 	if should_navigate:
 		navigation_setup()
@@ -31,11 +29,12 @@ func navigation_setup() -> void:
 	player.navigation_agent.target_reached.connect(_on_navigation_target_reached)
 	player.navigation_agent.navigation_finished.connect(_on_player_navigation_finished)
 
-func get_sibling_shape() -> Shape3D:
-	var parent = get_parent()
-	if parent:
-		return find_node_recursive(parent, "CollisionShape3D").shape
-	return null
+func connect_to_sibling_collision_objects() -> void:
+	var collision_objects = get_parent().find_children("*", "CollisionObject3D", true);
+	for collision_object in collision_objects:
+		if collision_object != self:
+			collision_object.input_event.connect(_input_event)
+			print('Collision object: ', collision_object.name)
 
 func _input_event(_camera: Camera3D, event: InputEvent, _event_position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
@@ -63,13 +62,3 @@ func perform_interaction() -> void:
 	if dialogue:
 		DialogueManager.show_dialogue_balloon(dialogue, "start", [self,{ parent = get_parent() }])
 
-func find_node_recursive(current_node: Node, target_name: String) -> Node:
-	if current_node.name == target_name:
-		return current_node
-
-	for child in current_node.get_children():
-		var found_node = find_node_recursive(child, target_name)
-		if found_node:
-			return found_node
-	
-	return null

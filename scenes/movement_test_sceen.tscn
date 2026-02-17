@@ -59,6 +59,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.543145, 1.2450081, 0.80773
 
 [node name="Interactable" parent="WorldGeometry/science-tube" unique_id=528907151 instance=ExtResource("3_5h01a")]
 dialogue = ExtResource("5_qrki1")
+target_offset = Vector3(0.1, 0, 0.1)
 
 [node name="workbench" parent="WorldGeometry" unique_id=374708462 instance=ExtResource("6_wsx3i")]
 transform = Transform3D(0.45285493, 0, 0.8915842, 0, 1, 0, -0.8915842, 0, 0.45285493, 4.474756, 0.110525936, 6.8483887)

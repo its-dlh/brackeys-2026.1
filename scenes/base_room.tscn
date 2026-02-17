@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://bchldmt66chur"]
+
+[ext_resource type="PackedScene" uid="uid://dqvawp4qq4qtp" path="res://scenes/player.tscn" id="2_1tp4b"]
+[ext_resource type="Script" uid="uid://vw7kywh6j84x" path="res://scenes/floor_collision.gd" id="3_1tp4b"]
+
+[sub_resource type="Environment" id="Environment_1tp4b"]
+background_mode = 1
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_hy5rx"]
+vertices = PackedVector3Array(-4.5, 0.25, -4.5, -4.5, 0.25, 4.5, 4.5, 0.25, 4.5, 4.5, 0.25, -4.5)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_hy5rx"]
+data = PackedVector3Array(-50, -0.25, 50, -50, -0.25, -50, -50, 0.25, -50, 50, -0.25, -50, -50, -0.25, -50, -50, -0.25, 50, -50, 0.25, -50, -50, -0.25, -50, 50, -0.25, -50, -50, 0.25, -50, -50, 0.25, 50, -50, -0.25, 50, -50, -0.25, 50, -50, 0.25, 50, 50, 0.25, 50, 50, 0.25, 50, -50, 0.25, 50, -50, 0.25, -50, -50, -0.25, 50, 50, -0.25, 50, 50, -0.25, -50, 50, 0.25, 50, 50, -0.25, 50, -50, -0.25, 50, 50, -0.25, -50, 50, -0.25, 50, 50, 0.25, 50, 50, -0.25, -50, 50, 0.25, -50, -50, 0.25, -50, -50, 0.25, -50, 50, 0.25, -50, 50, 0.25, 50, 50, 0.25, 50, 50, 0.25, -50, 50, -0.25, -50)
+
+[node name="BaseRoom" type="Node3D" unique_id=2028324652]
+
+[node name="Environment" type="Node3D" parent="." unique_id=1494301003]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Environment" unique_id=213868063]
+environment = SubResource("Environment_1tp4b")
+
+[node name="WorldGeometry" type="NavigationRegion3D" parent="." unique_id=1103197185]
+navigation_mesh = SubResource("NavigationMesh_hy5rx")
+
+[node name="Floor" type="CSGBox3D" parent="WorldGeometry" unique_id=1739628237]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+size = Vector3(10, 0.5, 10)
+
+[node name="Player" parent="." unique_id=1791314085 instance=ExtResource("2_1tp4b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3265718, 0, 2.6368637)
+
+[node name="ColllisionFloor" type="Area3D" parent="." unique_id=1579497550]
+script = ExtResource("3_1tp4b")
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="ColllisionFloor" unique_id=1687659235]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.027189255, 0)
+shape = SubResource("ConcavePolygonShape3D_hy5rx")

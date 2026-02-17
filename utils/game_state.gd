@@ -1,19 +1,19 @@
 extends Node
 
-signal state_changed(flag: Flags, value: bool, state: Dictionary)
+signal state_changed(key, value, state: Dictionary)
 
-enum Flags {
+enum {
 	HAS_LEFT_ARM,
-	ROOM1_DOOR_OPEN
+	HAS_RIGHT_ARM
 }
 
 var state: Dictionary = {}
 
-func set_value(flag: Flags, value: bool) -> void:
-	state[flag] = value
-	state_changed.emit(flag, value, state)
+func set_value(key, value) -> void:
+	state[key] = value
+	state_changed.emit(key, value, state)
 	print('State: ', state)
 
-func get_value(flag: Flags) -> bool:
-	return state.get(flag, false)
+func get_value(key):
+	return state.get(key, null)
 

@@ -1,7 +1,7 @@
 ~ start
 if RoomState.get_value("door_open") == true
 	The door is open.
-elif GameState.get_value(GameState.Flags.HAS_LEFT_ARM)
+elif GameState.get_value(GameState.HAS_LEFT_ARM) == true
 	You open the door with your left arm.
 	do parent.rotate_y(-1.5)
 	do RoomState.set_value("door_open", true)

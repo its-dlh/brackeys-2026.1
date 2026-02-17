@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://bh7r8co701lfi" path="res://environment_assets/science-tube.glb" id="5_ssauf"]
 [ext_resource type="Resource" uid="uid://bsechbvvoc5mk" path="res://words/upgrades_and_items/starting_table.dialogue" id="6_figr7"]
 [ext_resource type="PackedScene" uid="uid://cdpq044v64164" path="res://environment_assets/workbench.glb" id="6_wsx3i"]
+[ext_resource type="PackedScene" uid="uid://icjjp2brm8ar" path="res://scenes/test_door.tscn" id="8_xv0fy"]
+[ext_resource type="Resource" uid="uid://cpgvtlte14nhn" path="res://words/upgrades_and_items/left_arm.dialogue" id="9_04u44"]
 
 [sub_resource type="Environment" id="Environment_q5fru"]
 
@@ -18,6 +20,14 @@ polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(2, 0, 3), PackedInt32Arr
 cell_size = 0.1
 cell_height = 0.01
 agent_max_climb = 0.01
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xv0fy"]
+albedo_color = Color(0.317822, 0.4330272, 0.8950709, 1)
+metallic = 1.0
+metallic_specular = 1.0
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_gol8j"]
+data = PackedVector3Array(-0.14691162, -0.111328125, 0.5578613, -0.14691162, -0.111328125, -0.5578613, -0.14691162, 0.111328125, -0.5578613, 0.14691162, -0.111328125, -0.5578613, -0.14691162, -0.111328125, -0.5578613, -0.14691162, -0.111328125, 0.5578613, -0.14691162, 0.111328125, -0.5578613, -0.14691162, -0.111328125, -0.5578613, 0.14691162, -0.111328125, -0.5578613, -0.14691162, 0.111328125, -0.5578613, -0.14691162, 0.111328125, 0.5578613, -0.14691162, -0.111328125, 0.5578613, -0.14691162, -0.111328125, 0.5578613, -0.14691162, 0.111328125, 0.5578613, 0.14691162, 0.111328125, 0.5578613, 0.14691162, 0.111328125, 0.5578613, -0.14691162, 0.111328125, 0.5578613, -0.14691162, 0.111328125, -0.5578613, -0.14691162, -0.111328125, 0.5578613, 0.14691162, -0.111328125, 0.5578613, 0.14691162, -0.111328125, -0.5578613, 0.14691162, 0.111328125, 0.5578613, 0.14691162, -0.111328125, 0.5578613, -0.14691162, -0.111328125, 0.5578613, 0.14691162, -0.111328125, -0.5578613, 0.14691162, -0.111328125, 0.5578613, 0.14691162, 0.111328125, 0.5578613, 0.14691162, -0.111328125, -0.5578613, 0.14691162, 0.111328125, -0.5578613, -0.14691162, 0.111328125, -0.5578613, -0.14691162, 0.111328125, -0.5578613, 0.14691162, 0.111328125, -0.5578613, 0.14691162, 0.111328125, 0.5578613, 0.14691162, 0.111328125, 0.5578613, 0.14691162, 0.111328125, -0.5578613, 0.14691162, -0.111328125, -0.5578613)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ssauf"]
 data = PackedVector3Array(-50, -0.25, 50, -50, -0.25, -50, -50, 0.25, -50, 50, -0.25, -50, -50, -0.25, -50, -50, -0.25, 50, -50, 0.25, -50, -50, -0.25, -50, 50, -0.25, -50, -50, 0.25, -50, -50, 0.25, 50, -50, -0.25, 50, -50, -0.25, 50, -50, 0.25, 50, 50, 0.25, 50, 50, 0.25, 50, -50, 0.25, 50, -50, 0.25, -50, -50, -0.25, 50, 50, -0.25, 50, 50, -0.25, -50, 50, 0.25, 50, 50, -0.25, 50, -50, -0.25, 50, 50, -0.25, -50, 50, -0.25, 50, 50, 0.25, 50, 50, -0.25, -50, 50, 0.25, -50, -50, 0.25, -50, -50, 0.25, -50, 50, 0.25, -50, 50, 0.25, 50, 50, 0.25, 50, 50, 0.25, -50, 50, -0.25, -50)
@@ -67,6 +77,25 @@ transform = Transform3D(0.45285493, 0, 0.8915842, 0, 1, 0, -0.8915842, 0, 0.4528
 [node name="Interactable" parent="WorldGeometry/workbench" unique_id=2142760303 instance=ExtResource("3_5h01a")]
 dialogue = ExtResource("6_figr7")
 acceptable_distance = 3.0
+
+[node name="TestDoor" parent="WorldGeometry" unique_id=1314669707 instance=ExtResource("8_xv0fy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6262207, -0.25229454, 8.02771)
+
+[node name="LeftArmBody" type="StaticBody3D" parent="WorldGeometry" unique_id=606811078]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.666992, 0, 0.91552734)
+
+[node name="LeftArm" type="CSGBox3D" parent="WorldGeometry/LeftArmBody" unique_id=1588270843]
+transform = Transform3D(0.81871134, 0, 0.57420534, 0, 1, 0, -0.57420534, 0, 0.81871134, 0, 0.0662837, 0)
+material_override = SubResource("StandardMaterial3D_xv0fy")
+size = Vector3(0.29382324, 0.22265625, 1.1157227)
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="WorldGeometry/LeftArmBody" unique_id=445975300]
+transform = Transform3D(0.81871134, 0, 0.57420534, 0, 1, 0, -0.57420534, 0, 0.81871134, 0, -0.15637255, 0)
+shape = SubResource("ConcavePolygonShape3D_gol8j")
+
+[node name="Interactable" parent="WorldGeometry/LeftArmBody" unique_id=1673644714 instance=ExtResource("3_5h01a")]
+dialogue = ExtResource("9_04u44")
+acceptable_distance = 1.0
 
 [node name="Player" parent="." unique_id=1791314085 instance=ExtResource("3_ssauf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.722, -0.2573588, 0)

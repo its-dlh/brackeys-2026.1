@@ -3,7 +3,7 @@ extends Node
 signal state_changed(flag: Flags, value: bool, state: Dictionary)
 
 enum Flags {
-	HAS_ARMS,
+	HAS_LEFT_ARM,
 	ROOM1_DOOR_OPEN
 }
 

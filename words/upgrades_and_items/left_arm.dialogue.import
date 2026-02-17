@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cpgvtlte14nhn"
+path="res://.godot/imported/left_arm.dialogue-4fab3f8f41d925b70967ae38dabd91fe.tres"
+
+[deps]
+
+source_file="res://words/upgrades_and_items/left_arm.dialogue"
+dest_files=["res://.godot/imported/left_arm.dialogue-4fab3f8f41d925b70967ae38dabd91fe.tres"]
+
+[params]
+
+defaults=true

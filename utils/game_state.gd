@@ -9,10 +9,11 @@ enum Flags {
 
 var state: Dictionary = {}
 
-func set_flag(flag: Flags, value: bool) -> void:
+func set_value(flag: Flags, value: bool) -> void:
 	state[flag] = value
 	state_changed.emit(flag, value, state)
 	print('State: ', state)
 
-func get_flag(flag: Flags) -> bool:
+func get_value(flag: Flags) -> bool:
 	return state.get(flag, false)
+

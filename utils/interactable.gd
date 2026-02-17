@@ -61,4 +61,3 @@ func perform_interaction() -> void:
 
 	if dialogue:
 		DialogueManager.show_dialogue_balloon(dialogue, "start", [self,{ parent = get_parent() }])
-

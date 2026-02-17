@@ -1,0 +1,10 @@
+~ start
+if not GameState.get_flag(GameState.Flags.HAS_LEFT_ARM):
+	There is one robot arm on the floor.
+	You try putting your right arm socket near it. Nothing happens.
+	You try putting your left arm socket near it. It snaps magnetically into place, with a surprising amount of force.
+	do GameState.set_flag(GameState.Flags.HAS_LEFT_ARM, true)
+	set parent.visible = false
+else
+	There is no longer anything on the floor here.
+=> END

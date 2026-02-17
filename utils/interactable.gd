@@ -7,7 +7,6 @@ extends Area3D
 @export var target_offset: Vector3 = Vector3.ZERO
 @export var acceptable_distance: float = 2.0
 
-@onready var collision_shape: CollisionShape3D = $CollisionShape3D
 @onready var navigation_target = global_position + target_offset
 
 signal interaction_started

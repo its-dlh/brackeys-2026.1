@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bh7r8co701lfi" path="res://environment_assets/science-tube.glb" id="5_ssauf"]
 [ext_resource type="Resource" uid="uid://bsechbvvoc5mk" path="res://words/upgrades_and_items/starting_table.dialogue" id="6_figr7"]
 [ext_resource type="PackedScene" uid="uid://cdpq044v64164" path="res://environment_assets/workbench.glb" id="6_wsx3i"]
+[ext_resource type="PackedScene" uid="uid://icjjp2brm8ar" path="res://scenes/test_door.tscn" id="8_xv0fy"]
 
 [sub_resource type="Environment" id="Environment_q5fru"]
 
@@ -67,6 +68,9 @@ transform = Transform3D(0.45285493, 0, 0.8915842, 0, 1, 0, -0.8915842, 0, 0.4528
 [node name="Interactable" parent="WorldGeometry/workbench" unique_id=2142760303 instance=ExtResource("3_5h01a")]
 dialogue = ExtResource("6_figr7")
 acceptable_distance = 3.0
+
+[node name="TestDoor" parent="WorldGeometry" unique_id=1314669707 instance=ExtResource("8_xv0fy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75067663, 0)
 
 [node name="Player" parent="." unique_id=1791314085 instance=ExtResource("3_ssauf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.722, -0.2573588, 0)

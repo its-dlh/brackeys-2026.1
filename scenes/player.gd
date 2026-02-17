@@ -4,6 +4,7 @@ extends CharacterBody3D
 @onready var camera_marker: Marker3D = $CameraMarker
 @onready var navigation_agent: NavigationAgent3D = $NavigationAgent3D
 
+const CAMERA_LAG_FACTOR = 2.5
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
@@ -34,7 +35,7 @@ func _physics_process(delta: float) -> void:
 	camera_3d.global_position = lerp(
 		camera_3d.global_position,
 		camera_marker.global_position,
-		delta * 2.5
+		delta * CAMERA_LAG_FACTOR
 	)
 
 # func _input(event):

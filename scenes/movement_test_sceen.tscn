@@ -76,3 +76,5 @@ script = ExtResource("4_u6ihb")
 [node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="ColllisionFloor" unique_id=282203209]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 shape = SubResource("ConcavePolygonShape3D_ssauf")
+
+[editable path="WorldGeometry/workbench"]

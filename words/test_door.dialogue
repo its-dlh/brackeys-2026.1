@@ -1,5 +1,5 @@
 ~ start
-if RoomState.get_value("door_open")
+if RoomState.get_value("door_open") == true
 	The door is open.
 elif GameState.get_value(GameState.Flags.HAS_LEFT_ARM)
 	You open the door with your left arm.

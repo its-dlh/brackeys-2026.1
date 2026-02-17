@@ -30,12 +30,12 @@ navigation_mesh = SubResource("NavigationMesh_hy5rx")
 script = ExtResource("3_1tp4b")
 
 [node name="FloorCSG" type="CSGBox3D" parent="WorldGeometry/Floor" unique_id=1739628237]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 size = Vector3(10, 0.5, 10)
 
 [node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="WorldGeometry/Floor" unique_id=1240856966]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 shape = SubResource("ConcavePolygonShape3D_ont3e")
 
 [node name="Player" parent="." unique_id=1791314085 instance=ExtResource("2_1tp4b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3265718, -0.25, 2.6368637)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3265718, 0, 2.6368637)

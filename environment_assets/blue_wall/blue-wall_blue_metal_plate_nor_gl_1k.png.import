@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://m71ushg5iwr7"
-path.s3tc="res://.godot/imported/blue-wall_blue_metal_plate_diff_1k.jpg-6f2891f895f3c04ccd7604a5ed485f1a.s3tc.ctex"
+uid="uid://hq5a4dw0pb8u"
+path.s3tc="res://.godot/imported/blue-wall_blue_metal_plate_nor_gl_1k.png-c54ff093ff835d452b95d8ed70d68f86.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "45afc8a2240408bc73985af8e8a27ed6"
+"md5": "0a62175ff13a2c4da7097daa08675a27"
 }
 
 [deps]
 
-source_file="res://environment_assets/blue-wall_blue_metal_plate_diff_1k.jpg"
-dest_files=["res://.godot/imported/blue-wall_blue_metal_plate_diff_1k.jpg-6f2891f895f3c04ccd7604a5ed485f1a.s3tc.ctex"]
+source_file="res://environment_assets/blue_wall/blue-wall_blue_metal_plate_nor_gl_1k.png"
+dest_files=["res://.godot/imported/blue-wall_blue_metal_plate_nor_gl_1k.png-c54ff093ff835d452b95d8ed70d68f86.s3tc.ctex"]
 
 [params]
 
@@ -25,12 +25,12 @@ compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=0
-roughness/src_normal=""
+roughness/mode=1
+roughness/src_normal="res://environment_assets/blue-wall_blue_metal_plate_nor_gl_1k.png"
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

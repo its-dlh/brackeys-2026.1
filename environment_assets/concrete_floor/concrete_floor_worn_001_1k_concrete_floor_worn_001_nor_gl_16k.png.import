@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b22ktdpr3sbt1"
-path.s3tc="res://.godot/imported/blue-wall_blue_metal_plate_nor_gl_1k.png-55ef3b2efcf5307d79574cbf4ca44f45.s3tc.ctex"
+uid="uid://cx0k247kplpij"
+path.s3tc="res://.godot/imported/concrete_floor_worn_001_1k_concrete_floor_worn_001_nor_gl_16k.png-b6bf6f171849b345224fe860fea2c88a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "0a62175ff13a2c4da7097daa08675a27"
+"md5": "641c5b2b7a4893daf9dbcfa18fcae646"
 }
 
 [deps]
 
-source_file="res://environment_assets/blue-wall_blue_metal_plate_nor_gl_1k.png"
-dest_files=["res://.godot/imported/blue-wall_blue_metal_plate_nor_gl_1k.png-55ef3b2efcf5307d79574cbf4ca44f45.s3tc.ctex"]
+source_file="res://environment_assets/concrete_floor/concrete_floor_worn_001_1k_concrete_floor_worn_001_nor_gl_16k.png"
+dest_files=["res://.godot/imported/concrete_floor_worn_001_1k_concrete_floor_worn_001_nor_gl_16k.png-b6bf6f171849b345224fe860fea2c88a.s3tc.ctex"]
 
 [params]
 
@@ -30,7 +30,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://environment_assets/blue-wall_blue_metal_plate_nor_gl_1k.png"
+roughness/src_normal="res://environment_assets/concrete_floor_worn_001_1k_concrete_floor_worn_001_nor_gl_16k.png"
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

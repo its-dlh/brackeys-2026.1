@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b5joed2dbec3u"]
+
+[ext_resource type="Texture2D" uid="uid://24n03seg2pxv" path="res://environment_assets/elevator/elevator_RustyDoor.png" id="1_2svj2"]
+[ext_resource type="Texture2D" uid="uid://pcnmvpoyw3o" path="res://environment_assets/elevator/elevator_RustyDoor-normal.png" id="2_kv1fw"]
+
+[resource]
+resource_name = "RustedDoor"
+cull_mode = 2
+albedo_texture = ExtResource("1_2svj2")
+metallic = 0.9
+roughness = 0.5
+normal_enabled = true
+normal_texture = ExtResource("2_kv1fw")

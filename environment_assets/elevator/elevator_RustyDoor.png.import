@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8ohqpox0mmrn"
-path.s3tc="res://.godot/imported/blue-wall_blue_metal_plate_rough_1k.png-8dc1de3a347c97699b53ae469252761b.s3tc.ctex"
+uid="uid://24n03seg2pxv"
+path.s3tc="res://.godot/imported/elevator_RustyDoor.png-ef1ca49680f1142387b58a9d5351ed9a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "15139c18940eca47d3fe0de9c8a5221b"
+"md5": "fcea5d350b706cffb7d933fbb36a082c"
 }
 
 [deps]
 
-source_file="res://environment_assets/blue-wall_blue_metal_plate_rough_1k.png"
-dest_files=["res://.godot/imported/blue-wall_blue_metal_plate_rough_1k.png-8dc1de3a347c97699b53ae469252761b.s3tc.ctex"]
+source_file="res://environment_assets/elevator/elevator_RustyDoor.png"
+dest_files=["res://.godot/imported/elevator_RustyDoor.png-ef1ca49680f1142387b58a9d5351ed9a.s3tc.ctex"]
 
 [params]
 

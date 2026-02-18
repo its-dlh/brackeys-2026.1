@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://big6q5qq6qtgm"
-path.s3tc="res://.godot/imported/concrete_floor_worn_001_1k_concrete_floor_worn_001_diff_16k.jpg-9db1ea70297582155b397aec552991a5.s3tc.ctex"
+uid="uid://pcnmvpoyw3o"
+path.s3tc="res://.godot/imported/elevator_RustyDoor-normal.png-6a1f8b282da83328221747f80f1e8860.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "6efd5a73e866bc3cbb4e105a5df85311"
+"md5": "9e733e0fa47d6f0480e36a9aed2e3cc9"
 }
 
 [deps]
 
-source_file="res://environment_assets/concrete_floor_worn_001_1k_concrete_floor_worn_001_diff_16k.jpg"
-dest_files=["res://.godot/imported/concrete_floor_worn_001_1k_concrete_floor_worn_001_diff_16k.jpg-9db1ea70297582155b397aec552991a5.s3tc.ctex"]
+source_file="res://environment_assets/elevator/elevator_RustyDoor-normal.png"
+dest_files=["res://.godot/imported/elevator_RustyDoor-normal.png-6a1f8b282da83328221747f80f1e8860.s3tc.ctex"]
 
 [params]
 
@@ -25,12 +25,12 @@ compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=0
-roughness/src_normal=""
+roughness/mode=1
+roughness/src_normal="res://environment_assets/elevator_RustyDoor-normal.png"
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cwbfgms642tho"]
+
+[ext_resource type="Texture2D" uid="uid://big6q5qq6qtgm" path="res://environment_assets/concrete_floor_worn_001_1k_concrete_floor_worn_001_diff_16k.jpg" id="1_m4af4"]
+[ext_resource type="Texture2D" uid="uid://cpmjkfepjot24" path="res://environment_assets/concrete_floor_worn_001_1k_concrete_floor_worn_001_rough_16k.png" id="2_wx12c"]
+[ext_resource type="Texture2D" uid="uid://cx0k247kplpij" path="res://environment_assets/concrete_floor_worn_001_1k_concrete_floor_worn_001_nor_gl_16k.png" id="3_bs0cj"]
+
+[resource]
+resource_name = "concrete_floor_worn_001"
+cull_mode = 2
+albedo_texture = ExtResource("1_m4af4")
+metallic_texture = ExtResource("2_wx12c")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_wx12c")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_bs0cj")

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bj1erac6lg17o"]
 
 [ext_resource type="Script" uid="uid://vw7kywh6j84x" path="res://scenes/floor_collision.gd" id="1_j0w4i"]
+[ext_resource type="Material" uid="uid://cwbfgms642tho" path="res://environment_assets/concrete_floor_material.tres" id="2_6rbk5"]
 [ext_resource type="PackedScene" uid="uid://bmmugkjd0alku" path="res://environment_assets/blue-wall.glb" id="2_86dv5"]
 [ext_resource type="PackedScene" uid="uid://dqvawp4qq4qtp" path="res://scenes/player.tscn" id="2_c8jr1"]
 [ext_resource type="PackedScene" uid="uid://dscpy108f4usr" path="res://environment_assets/science_tube.tscn" id="3_86dv5"]
@@ -46,6 +47,7 @@ script = ExtResource("1_j0w4i")
 
 [node name="FloorCSG" type="CSGBox3D" parent="WorldGeometry/Floor" unique_id=1739628237]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+material_override = ExtResource("2_6rbk5")
 size = Vector3(10, 0.5, 10)
 
 [node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="WorldGeometry/Floor" unique_id=1240856966]

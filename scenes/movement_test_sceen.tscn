@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cdpq044v64164" path="res://environment_assets/workbench.glb" id="6_wsx3i"]
 [ext_resource type="PackedScene" uid="uid://icjjp2brm8ar" path="res://scenes/test_door.tscn" id="8_xv0fy"]
 [ext_resource type="Resource" uid="uid://cpgvtlte14nhn" path="res://words/upgrades_and_items/left_arm.dialogue" id="9_04u44"]
-[ext_resource type="PackedScene" uid="uid://c2nwy6084qtxb" path="res://environment_assets/blue-wall.glb" id="10_gol8j"]
+[ext_resource type="PackedScene" uid="uid://bmmugkjd0alku" path="res://environment_assets/blue-wall.glb" id="10_gol8j"]
 
 [sub_resource type="Environment" id="Environment_q5fru"]
 background_energy_multiplier = 0.3
@@ -44,6 +44,16 @@ environment = SubResource("Environment_q5fru")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment" unique_id=86774612]
 transform = Transform3D(0.9987579, 0.04348995, 0.024315659, 0.04909727, -0.94216025, -0.33154714, 0.008490279, 0.3323292, -0.94312525, 0.099243164, 20.00116, -15.185364)
 sky_mode = 1
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Environment" unique_id=501981342]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2497864, -0.13098145, -0.23071289)
+light_energy = 0.36
+shadow_enabled = true
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Environment" unique_id=694681963]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.733139, -0.120910645, -0.21264648)
+light_energy = 0.19
+shadow_enabled = true
 
 [node name="WorldGeometry" type="NavigationRegion3D" parent="." unique_id=1448157649]
 navigation_mesh = SubResource("NavigationMesh_v7qa8")

@@ -78,7 +78,7 @@ transform = Transform3D(0.45285493, 0, 0.8915842, 0, 1, 0, -0.8915842, 0, 0.4528
 
 [node name="Interactable" parent="WorldGeometry/workbench" unique_id=2142760303 instance=ExtResource("3_5h01a")]
 dialogue = ExtResource("6_figr7")
-acceptable_distance = 2.0
+acceptable_distance = 2.5
 
 [node name="TestDoor" parent="WorldGeometry" unique_id=1314669707 instance=ExtResource("8_xv0fy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6262207, -0.25229454, 8.02771)
@@ -97,7 +97,7 @@ shape = SubResource("ConcavePolygonShape3D_gol8j")
 
 [node name="Interactable" parent="WorldGeometry/LeftArmBody" unique_id=1673644714 instance=ExtResource("3_5h01a")]
 dialogue = ExtResource("9_04u44")
-acceptable_distance = 0.5
+acceptable_distance = 1.0
 
 [node name="blue-wall" parent="WorldGeometry" unique_id=1771223879 instance=ExtResource("10_gol8j")]
 transform = Transform3D(-0.045258358, 0, -0.99897534, 0, 1, 0, 0.99897534, 0, -0.045258358, -3.0486119, 0.99648166, -0.60827637)

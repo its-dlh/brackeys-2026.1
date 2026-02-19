@@ -5,7 +5,7 @@ extends Area3D
 @export_group("Navigation")
 @export var should_navigate: bool = true
 @export var target_offset: Vector3 = Vector3.ZERO
-@export var acceptable_distance: float = 1.5
+@export var acceptable_distance: float = 2.0
 
 @onready var navigation_target = Vector3(global_position.x, 0.0, global_position.z) + target_offset
 

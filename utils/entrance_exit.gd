@@ -1,8 +1,11 @@
 extends Node3D
 
 ## The scene that the game will load when the player touches the magic invisible exit box
-@export var connected_room: PackedScene
-@export var entrance_offset: Vector3 = Vector3(2.5, 0, 0)
+@export_file("*.tscn") var connected_room_path: String
+## The exit of one room needs to have the same connection ID as the entrance of the next room
+@export var connection_id: String
+## The entrance needs to be offset from the exit to avoid the player re-exiting
+@export var entrance_offset: Vector3 = Vector3(1.5, 0, 0)
 
 @onready var trigger_area = $ExitArea3D
 
@@ -13,4 +16,4 @@ func _on_body_entered(body: Node3D) -> void:
 	print("Body entered exit area: ", body.name)
 	if body.is_in_group("player"):
 		print("Player entered exit area")
-		RoomTransitionManager.go(connected_room)
+		RoomTransitionManager.go(connected_room_path, connection_id)

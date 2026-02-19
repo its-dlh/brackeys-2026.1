@@ -34,4 +34,3 @@ size = 10.0
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=818447834]
 path_desired_distance = 0.2
 target_desired_distance = 0.1
-debug_enabled = true

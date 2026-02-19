@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://icjjp2brm8ar"]
 
 [ext_resource type="Material" uid="uid://dgpf4byvi3vl8" path="res://dev_textures/green_cross_material.tres" id="1_e0u0p"]
+[ext_resource type="Script" uid="uid://b23tcg7ty6myt" path="res://scenes/test_door.gd" id="1_qyt45"]
 [ext_resource type="PackedScene" uid="uid://cnxxve6eyvij6" path="res://utils/interactable.tscn" id="2_e0u0p"]
 [ext_resource type="Resource" uid="uid://cqemrogs54lfu" path="res://words/test_door.dialogue" id="3_e0u0p"]
 
@@ -13,6 +14,7 @@ size = Vector3(2, 4, 0.25)
 size = Vector3(2, 4, 0.25)
 
 [node name="TestDoor" type="StaticBody3D" unique_id=1314669707]
+script = ExtResource("1_qyt45")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2052859855]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, 0)

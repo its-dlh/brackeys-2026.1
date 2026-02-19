@@ -9,5 +9,6 @@ func _ready() -> void:
 	get_tree().tree_changed.connect(_on_tree_changed)
 
 func _on_tree_changed() -> void:
-	for node in get_tree().get_nodes_in_group("editor_only"):
-		node.visible = false
+	if get_tree():
+		for node in get_tree().get_nodes_in_group("editor_only"):
+			node.visible = false

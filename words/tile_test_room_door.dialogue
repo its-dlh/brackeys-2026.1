@@ -1,0 +1,7 @@
+~ start
+if parent.is_door_open() == true
+	The door is open.
+else
+	You open the door.
+	do parent.open_door()
+=> END

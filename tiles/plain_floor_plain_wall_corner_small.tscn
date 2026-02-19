@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dtpgsvbsthrrl"]
 
-[ext_resource type="Script" uid="uid://vw7kywh6j84x" path="res://scenes/floor_collision.gd" id="1_jpq46"]
+[ext_resource type="Script" uid="uid://vw7kywh6j84x" path="res://utils/floor_collision.gd" id="1_jpq46"]
 [ext_resource type="Material" uid="uid://rgcl3mpxidm6" path="res://environment_assets/plain_floor_material.tres" id="2_2e1s4"]
 [ext_resource type="Material" uid="uid://861ncltoup8o" path="res://environment_assets/plain_wall_material.tres" id="3_cs3jn"]
 

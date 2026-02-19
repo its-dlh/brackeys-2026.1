@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://bql73sqxxamhs"]
+
+[ext_resource type="Script" uid="uid://bbt71y6ju62dw" path="res://environment_assets/plain_door.gd" id="1_0qnrc"]
+[ext_resource type="Material" uid="uid://b5joed2dbec3u" path="res://environment_assets/elevator/RustedDoor.tres" id="1_nlber"]
+[ext_resource type="PackedScene" uid="uid://cnxxve6eyvij6" path="res://utils/interactable.tscn" id="2_n7fsw"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_rl1ej"]
+lightmap_size_hint = Vector2i(12, 33)
+material = ExtResource("1_nlber")
+add_uv2 = true
+size = Vector3(1.5, 2, 0.25)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0qnrc"]
+size = Vector3(1.5, 2, 0.25)
+
+[node name="PlainDoor" type="Node3D" unique_id=812010551]
+script = ExtResource("1_0qnrc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1351143421]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("BoxMesh_rl1ej")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=457764560]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=261951093]
+shape = SubResource("BoxShape3D_0qnrc")
+
+[node name="Interactable" parent="." unique_id=528907151 instance=ExtResource("2_n7fsw")]
+acceptable_distance = 1.5
+
+[node name="Label3D" type="Label3D" parent="." unique_id=733367115 groups=["editor_only"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.2)
+modulate = Color(0.39306572, 0.52241874, 1, 1)
+text = "--->"
+font_size = 50
+
+[node name="Label3D2" type="Label3D" parent="." unique_id=1295932116 groups=["editor_only"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.20000002)
+modulate = Color(0.39306572, 0.52241874, 1, 1)
+text = "--->"
+font_size = 50

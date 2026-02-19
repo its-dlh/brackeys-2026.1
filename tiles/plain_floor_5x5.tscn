@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://dp17d1nacv3nf"]
 
-[ext_resource type="Script" uid="uid://vw7kywh6j84x" path="res://scenes/floor_collision.gd" id="1_78fqu"]
+[ext_resource type="Script" uid="uid://vw7kywh6j84x" path="res://utils/floor_collision.gd" id="1_78fqu"]
 [ext_resource type="Material" uid="uid://rgcl3mpxidm6" path="res://environment_assets/plain_floor_material.tres" id="2_yr2cd"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_hy5rx"]

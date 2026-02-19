@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://dtpgsvbsthrrl" path="res://tiles/plain_floor_plain_wall_corner_small.tscn" id="8_n26ff"]
 [ext_resource type="PackedScene" uid="uid://7bxqkmdlkkqr" path="res://tiles/plain_floor_plain_wall_doorway.tscn" id="9_c5rtn"]
 [ext_resource type="PackedScene" uid="uid://cu1y42f4ap1ke" path="res://tiles/plain_floor_plain_wall_small.tscn" id="10_kp5ku"]
+[ext_resource type="PackedScene" uid="uid://bql73sqxxamhs" path="res://environment_assets/plain_door.tscn" id="13_kp5ku"]
+[ext_resource type="Resource" uid="uid://ged82wy52wki" path="res://words/tile_test_room_door.dialogue" id="14_1qy8s"]
 
 [sub_resource type="Environment" id="Environment_1tp4b"]
 background_mode = 2
@@ -104,3 +106,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -7)
 
 [node name="PlainFloorPlainWallSmall" parent="." unique_id=299214723 instance=ExtResource("10_kp5ku")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 10.000002, 0, -7)
+
+[node name="PlainDoor" parent="." unique_id=812010551 instance=ExtResource("13_kp5ku")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12.25, 0, -8.25)
+dialogue = ExtResource("14_1qy8s")

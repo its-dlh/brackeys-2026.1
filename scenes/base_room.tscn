@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bchldmt66chur"]
 
 [ext_resource type="PackedScene" uid="uid://dqvawp4qq4qtp" path="res://scenes/player.tscn" id="2_1tp4b"]
-[ext_resource type="Script" uid="uid://vw7kywh6j84x" path="res://scenes/floor_collision.gd" id="3_1tp4b"]
+[ext_resource type="Script" uid="uid://vw7kywh6j84x" path="res://utils/floor_collision.gd" id="3_1tp4b"]
 
 [sub_resource type="Environment" id="Environment_1tp4b"]
 background_mode = 1

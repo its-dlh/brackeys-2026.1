@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://co1bngp21kqce"]
 
-[ext_resource type="Script" uid="uid://vw7kywh6j84x" path="res://scenes/floor_collision.gd" id="1_j0w4i"]
-[ext_resource type="Material" uid="uid://cwbfgms642tho" path="res://environment_assets/concrete_floor_material.tres" id="2_6rbk5"]
-[ext_resource type="PackedScene" uid="uid://bmmugkjd0alku" path="res://environment_assets/blue-wall.glb" id="2_86dv5"]
+[ext_resource type="Script" uid="uid://vw7kywh6j84x" path="res://utils/floor_collision.gd" id="1_j0w4i"]
+[ext_resource type="Material" uid="uid://cwbfgms642tho" path="res://environment_assets/concrete_floor/concrete_floor_material.tres" id="2_6rbk5"]
+[ext_resource type="PackedScene" uid="uid://bmmugkjd0alku" path="res://environment_assets/blue_wall/blue-wall.glb" id="2_86dv5"]
 [ext_resource type="PackedScene" uid="uid://dqvawp4qq4qtp" path="res://scenes/player.tscn" id="2_c8jr1"]
 [ext_resource type="PackedScene" uid="uid://dscpy108f4usr" path="res://environment_assets/science_tube.tscn" id="3_86dv5"]
-[ext_resource type="PackedScene" uid="uid://b3jannmryx5q0" path="res://environment_assets/elevator.glb" id="5_q2dgp"]
-[ext_resource type="PackedScene" uid="uid://dwg5ppr2doyxa" path="res://environment_assets/workbench.glb" id="6_amsds"]
-[ext_resource type="PackedScene" uid="uid://bgkia056w082a" path="res://environment_assets/locker.glb" id="7_gbehq"]
+[ext_resource type="PackedScene" uid="uid://b3jannmryx5q0" path="res://environment_assets/elevator/elevator.glb" id="5_q2dgp"]
+[ext_resource type="PackedScene" uid="uid://dwg5ppr2doyxa" path="res://environment_assets/workbench/workbench.glb" id="6_amsds"]
+[ext_resource type="PackedScene" uid="uid://bgkia056w082a" path="res://environment_assets/locker/locker.glb" id="7_gbehq"]
 
 [sub_resource type="Environment" id="Environment_1tp4b"]
 background_mode = 1

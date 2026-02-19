@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://vw7kywh6j84x" path="res://utils/floor_collision.gd" id="1_d1pfb"]
 [ext_resource type="Material" uid="uid://rgcl3mpxidm6" path="res://environment_assets/plain_floor_material.tres" id="2_ap8g3"]
-[ext_resource type="PackedScene" uid="uid://bmmugkjd0alku" path="res://environment_assets/blue-wall.glb" id="3_d1pfb"]
+[ext_resource type="PackedScene" uid="uid://bmmugkjd0alku" path="res://environment_assets/blue_wall/blue-wall.glb" id="3_d1pfb"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_hy5rx"]
 vertices = PackedVector3Array(-1.5, 0.01999998, -1.5, -1.5, 0.01999998, -0.5, -0.5, 0.01999998, -0.5, -0.5, 0.01999998, -1.5)

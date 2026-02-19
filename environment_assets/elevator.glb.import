@@ -46,7 +46,7 @@ _subresources={
 },
 "RustedDoor": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://environment_assets/RustedDoor.tres",
+"use_external/fallback_path": "res://environment_assets/elevator/RustedDoor.tres",
 "use_external/path": "uid://b5joed2dbec3u"
 }
 }

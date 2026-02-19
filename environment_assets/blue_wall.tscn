@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://osql8f0gl5ll"]
+
+[ext_resource type="PackedScene" uid="uid://bmmugkjd0alku" path="res://environment_assets/blue_wall/blue-wall.glb" id="1_r4ile"]
+
+[node name="blue-wall" unique_id=107233700 instance=ExtResource("1_r4ile")]

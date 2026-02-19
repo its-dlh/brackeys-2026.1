@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://bn7gwfj7cphha"]
+
+[ext_resource type="PackedScene" uid="uid://b3jannmryx5q0" path="res://environment_assets/elevator/elevator.glb" id="1_vatug"]
+
+[node name="elevator" unique_id=1345433856 instance=ExtResource("1_vatug")]

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dscpy108f4usr"]
 
-[ext_resource type="PackedScene" uid="uid://bh7r8co701lfi" path="res://environment_assets/science-tube.glb" id="1_82s5m"]
+[ext_resource type="PackedScene" uid="uid://bh7r8co701lfi" path="res://environment_assets/science_tube/science-tube.glb" id="1_82s5m"]
 [ext_resource type="PackedScene" uid="uid://cnxxve6eyvij6" path="res://utils/interactable.tscn" id="2_nfemn"]
 [ext_resource type="Resource" uid="uid://bhuibbuuisuam" path="res://words/upgrades_and_items/science_tube.dialogue" id="3_l6tre"]
 

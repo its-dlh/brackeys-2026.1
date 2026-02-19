@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bmmugkjd0alku"
-path="res://.godot/imported/blue-wall.glb-8abad3f782fd903b49473c3d9000b8ee.scn"
+uid="uid://b3jannmryx5q0"
+path="res://.godot/imported/elevator.glb-7d474b35f30ee271ea2275ab68bdbb7a.scn"
 
 [deps]
 
-source_file="res://environment_assets/blue-wall.glb"
-dest_files=["res://.godot/imported/blue-wall.glb-8abad3f782fd903b49473c3d9000b8ee.scn"]
+source_file="res://environment_assets/elevator/elevator.glb"
+dest_files=["res://.godot/imported/elevator.glb-7d474b35f30ee271ea2275ab68bdbb7a.scn"]
 
 [params]
 
@@ -17,7 +17,7 @@ nodes/root_type=""
 nodes/root_name=""
 nodes/root_script=null
 nodes/apply_root_scale=true
-nodes/root_scale=1.0
+nodes/root_scale=0.5
 nodes/import_as_skeleton_bones=false
 nodes/use_name_suffixes=true
 nodes/use_node_type_suffixes=true
@@ -34,9 +34,22 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-materials/extract=1
+materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"materials": {
+"Material": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://environment_assets/blue_wall/BlueWall.tres",
+"use_external/path": "uid://b0cb4oh2jjr2"
+},
+"RustedDoor": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://environment_assets/elevator/RustedDoor.tres",
+"use_external/path": "uid://b5joed2dbec3u"
+}
+}
+}
 gltf/naming_version=2
 gltf/embedded_image_handling=1

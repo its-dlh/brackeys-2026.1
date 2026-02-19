@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://ch0kryxtsu168"]
+
+[ext_resource type="PackedScene" uid="uid://bgkia056w082a" path="res://environment_assets/locker/locker.glb" id="1_xqdw6"]
+
+[node name="locker" unique_id=1768840152 instance=ExtResource("1_xqdw6")]

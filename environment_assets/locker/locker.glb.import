@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bh7r8co701lfi"
-path="res://.godot/imported/science-tube.glb-783b5da28d080147376a240f087b807c.scn"
+uid="uid://bgkia056w082a"
+path="res://.godot/imported/locker.glb-a8c0cfd680079093ce73fb1989c783ea.scn"
 
 [deps]
 
-source_file="res://environment_assets/science-tube.glb"
-dest_files=["res://.godot/imported/science-tube.glb-783b5da28d080147376a240f087b807c.scn"]
+source_file="res://environment_assets/locker/locker.glb"
+dest_files=["res://.godot/imported/locker.glb-a8c0cfd680079093ce73fb1989c783ea.scn"]
 
 [params]
 

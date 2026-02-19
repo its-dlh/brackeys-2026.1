@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bgkia056w082a"
-path="res://.godot/imported/locker.glb-477eb689be835abdff190b9cb066938b.scn"
+uid="uid://dwg5ppr2doyxa"
+path="res://.godot/imported/workbench.glb-630cc29ab656015fe74fd709b9779b81.scn"
 
 [deps]
 
-source_file="res://environment_assets/locker.glb"
-dest_files=["res://.godot/imported/locker.glb-477eb689be835abdff190b9cb066938b.scn"]
+source_file="res://environment_assets/workbench/workbench.glb"
+dest_files=["res://.godot/imported/workbench.glb-630cc29ab656015fe74fd709b9779b81.scn"]
 
 [params]
 
@@ -17,7 +17,7 @@ nodes/root_type=""
 nodes/root_name=""
 nodes/root_script=null
 nodes/apply_root_scale=true
-nodes/root_scale=1.0
+nodes/root_scale=0.5
 nodes/import_as_skeleton_bones=false
 nodes/use_name_suffixes=true
 nodes/use_node_type_suffixes=true

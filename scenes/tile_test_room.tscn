@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://byj6loolns1f5"]
 
+[ext_resource type="PackedScene" uid="uid://ctcjlsc6uyab8" path="res://utils/entrance_exit.tscn" id="1_c5rtn"]
 [ext_resource type="PackedScene" uid="uid://dqvawp4qq4qtp" path="res://scenes/player.tscn" id="2_0if41"]
 [ext_resource type="PackedScene" uid="uid://dp17d1nacv3nf" path="res://tiles/plain_floor_5x5.tscn" id="2_du6nb"]
 [ext_resource type="PackedScene" uid="uid://bkh6x6nktallc" path="res://tiles/plain_floor_plain_wall_5x5.tscn" id="3_agn8n"]
@@ -39,6 +40,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 3, -6)
 
 [node name="Player" parent="." unique_id=1791314085 instance=ExtResource("2_0if41")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3265718, 0, 2.6368637)
+
+[node name="EntranceExit" parent="." unique_id=1306114400 instance=ExtResource("1_c5rtn")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 14, 0, -8)
 
 [node name="PlainFloor5x5" parent="." unique_id=707367707 instance=ExtResource("2_du6nb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)

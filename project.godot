@@ -21,6 +21,7 @@ DialogueManager="*uid://c3rodes2l3gxb"
 GameState="*uid://b2e473vwkhajy"
 RoomState="*uid://dc0nxwwjf0w1m"
 EditorOnlyGroupVisibility="*uid://dechndssy5om0"
+RoomTransitionManager="*uid://co208iex5wqno"
 
 [editor_plugins]
 
@@ -30,6 +31,7 @@ enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 player=""
 editor_only=""
+entrance=""
 
 [input]
 

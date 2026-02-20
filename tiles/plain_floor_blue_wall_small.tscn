@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://b04a4neb7pc8k"]
+[gd_scene format=4 uid="uid://b04a4neb7pc8k"]
 
 [ext_resource type="Script" uid="uid://vw7kywh6j84x" path="res://utils/floor_collision.gd" id="1_e6nt1"]
 [ext_resource type="Material" uid="uid://rgcl3mpxidm6" path="res://environment_assets/plain_floor_material.tres" id="2_7ry5n"]
@@ -11,6 +11,21 @@ cell_size = 0.1
 cell_height = 0.01
 agent_max_climb = 0.01
 
+[sub_resource type="ArrayMesh" id="ArrayMesh_e6nt1"]
+lightmap_size_hint = Vector2i(114, 86)
+_surfaces = [{
+"aabb": AABB(-1.25, -0.25, -1.25, 2.5, 0.5, 2.5),
+"attribute_data": PackedByteArray("AACAPwAAgD8N5XU/+oJ+PwAAgD8AAAAAH8H9PvqCfj8AAAAAAAAAAB/B/T5f0Fc/AACAPwAAgD8fwf0++oK+OwAAgD8AAAAADeV1P/qCvjsAAAAAAAAAAA3ldT99QR8/AACAPwAAgD/cR/A++oJ+PwAAgD8AAAAA3EfwPl/QVz8AAAAAAAAAACS4jztf0Fc/AAAAAAAAgD8N5XU/X9BXPwAAgD8AAIA/kOB+P6EvKD8AAIA/AAAAAJDgfj884k4/AAAAAAAAAAAS3Ac/POJOPwAAAAAAAAAA3EfwPn1BHz8AAAAAAACAPyS4jzt9QR8/AACAPwAAgD8kuI87+oK+OwAAAAAAAIA/H8H9Pn1BHz8AAAAAAACAPxLcBz+hLyg/AACAPwAAgD8oryE9POJOPwAAgD8AAAAAcB8BPzziTj8AAAAAAAAAAHAfAT+hLyg/AAAAAAAAgD8kuI87+oJ+PwAAgD8AAAAA3EfwPvqCvjsAAAAAAACAPyivIT2hLyg/"),
+"format": 34359742519,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAwAEAAUABgAHAAgAAgAJAAAACgALAAwADQAOAA8ABQAQAAMADAARAAoAEgATABQACAAVAAYADwAWAA0AFAAXABIA"),
+"material": ExtResource("2_7ry5n"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AACgvwAAgL4AAKA/AACgvwAAgL4AAKC/AACgvwAAgD4AAKC/AACgPwAAgL4AAKC/AACgvwAAgL4AAKC/AACgvwAAgL4AAKA/AACgvwAAgD4AAKC/AACgvwAAgL4AAKC/AACgPwAAgL4AAKC/AACgvwAAgD4AAKA/AACgvwAAgL4AAKA/AACgvwAAgD4AAKA/AACgPwAAgD4AAKA/AACgPwAAgD4AAKA/AACgvwAAgD4AAKA/AACgvwAAgD4AAKC/AACgPwAAgL4AAKA/AACgPwAAgL4AAKA/AACgPwAAgL4AAKC/AACgPwAAgL4AAKA/AACgPwAAgD4AAKA/AACgPwAAgD4AAKC/AACgPwAAgD4AAKC/AACgPwAAgD4AAKC/AAAAgP9//n8AAACA/3/+fwAAAID/f/5/AIAAAP//AAAAgAAA//8AAACAAAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAAAgP9//n//f/9/AAD/P/9//38AAP8//3//fwAA/z8AgP////8AAACA/////wAAAID/////AAAAgAAA//8AAP9//38AAP8///8AgP9//n///wCA/3/+f///AID/f/5//////wAA/z8AgP////8AAP//AID/f/5/")
+}]
+
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_vhjra"]
 data = PackedVector3Array(-1.25, -0.25, 1.25, -1.25, -0.25, -1.25, -1.25, 0.25, -1.25, 1.25, -0.25, -1.25, -1.25, -0.25, -1.25, -1.25, -0.25, 1.25, -1.25, 0.25, -1.25, -1.25, -0.25, -1.25, 1.25, -0.25, -1.25, -1.25, 0.25, -1.25, -1.25, 0.25, 1.25, -1.25, -0.25, 1.25, -1.25, -0.25, 1.25, -1.25, 0.25, 1.25, 1.25, 0.25, 1.25, 1.25, 0.25, 1.25, -1.25, 0.25, 1.25, -1.25, 0.25, -1.25, -1.25, -0.25, 1.25, 1.25, -0.25, 1.25, 1.25, -0.25, -1.25, 1.25, 0.25, 1.25, 1.25, -0.25, 1.25, -1.25, -0.25, 1.25, 1.25, -0.25, -1.25, 1.25, -0.25, 1.25, 1.25, 0.25, 1.25, 1.25, -0.25, -1.25, 1.25, 0.25, -1.25, -1.25, 0.25, -1.25, -1.25, 0.25, -1.25, 1.25, 0.25, -1.25, 1.25, 0.25, 1.25, 1.25, 0.25, 1.25, 1.25, 0.25, -1.25, 1.25, -0.25, -1.25)
 
@@ -22,10 +37,9 @@ navigation_mesh = SubResource("NavigationMesh_hy5rx")
 [node name="Floor" type="StaticBody3D" parent="WorldGeometry" unique_id=1107550413]
 script = ExtResource("1_e6nt1")
 
-[node name="FloorCSG" type="CSGBox3D" parent="WorldGeometry/Floor" unique_id=1739628237]
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="WorldGeometry/Floor" unique_id=877457908]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25, -0.25, -1.25)
-size = Vector3(2.5, 0.5, 2.5)
-material = ExtResource("2_7ry5n")
+mesh = SubResource("ArrayMesh_e6nt1")
 
 [node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="WorldGeometry/Floor" unique_id=308757188]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25, -0.25, -1.25)

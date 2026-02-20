@@ -1,6 +1,6 @@
 extends Node
 
-signal state_changed(key: String, value, room_state: Dictionary)
+signal state_changed(key: String, value, prev_value, room_state: Dictionary)
 
 var state: Dictionary = {}
 
@@ -12,8 +12,9 @@ func get_room_state() -> Dictionary:
 
 func set_value(key: String, value) -> void:
   var room_state = get_room_state()
+  var prev_value = room_state.get(key, null)
   room_state[key] = value
-  state_changed.emit(key, value, room_state)
+  state_changed.emit(key, value, prev_value, room_state)
   print('Room state: ', room_state)
 
 func get_value(key: String):

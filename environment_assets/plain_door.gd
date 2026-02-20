@@ -9,7 +9,7 @@ extends Node3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	GameState.state_changed.connect(_on_state_changed)
+	RoomState.state_changed.connect(_on_state_changed)
 
 	# Reflect the initial state of the door
 	_on_open_state_changed(is_door_open())
@@ -23,17 +23,19 @@ func _on_state_changed(key, value, prev_value, _state) -> void:
 
 func _on_open_state_changed(is_open: bool) -> void:
 	if is_open:
-		door_mesh.position.x = 0.9
+		print('Reflecting door state: open')
+		door_mesh.position.x = 1.4
 		door_collision_shape.set_deferred("disabled", true)
 	else:
+		print('Reflecting door state: closed')
 		door_mesh.position.x = 0.0
 		door_collision_shape.set_deferred("disabled", false)
 
 func open_door() -> void:
-	GameState.set_value(open_state_key, true)
+	RoomState.set_value(open_state_key, true)
 
 func close_door() -> void:
-	GameState.set_value(open_state_key, false)
+	RoomState.set_value(open_state_key, false)
 
 func is_door_open() -> bool:
-	return GameState.get_value(open_state_key) == true
+	return RoomState.get_value(open_state_key) == true

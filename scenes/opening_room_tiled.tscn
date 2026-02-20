@@ -23,15 +23,15 @@
 [ext_resource type="PackedScene" uid="uid://cnxi6sqik5071" path="res://tiles/plain_floor_plain_wall_inner_corner_5x5.tscn" id="15_0fxbs"]
 [ext_resource type="PackedScene" uid="uid://b40uqnh1iy5sg" path="res://tiles/plain_floor_10x10.tscn" id="16_ig36b"]
 [ext_resource type="PackedScene" uid="uid://8mxryp082s56" path="res://tiles/plain_floor_tiny.tscn" id="23_j1g1p"]
+[ext_resource type="PackedScene" uid="uid://47b6rej64ben" path="res://tiles/stairs.tscn" id="24_kyuk5"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_j1g1p"]
-vertices = PackedVector3Array(-11.076571, 2.52, -9.886864, -11.076571, 2.52, -7.8868637, -10.576571, 2.52, -9.636864, -8.326571, 2.52, -9.636864, -9.076571, 1.01, -8.136864, -8.576571, 1.01, -8.136864, -8.576571, 1.01, -9.136864, -9.326571, 1.01, -9.136864, -8.576571, 0.01999998, -3.1368637, -9.076571, 0.01999998, -2.8868637, -8.576571, 0.01999998, -1.1368637, -1.8265715, 0.01999998, -0.3868637, -2.3265715, 0.01999998, -4.1368637, -5.8265715, 0.01999998, -4.3868637, -10.326571, 0.01999998, -7.6368637, -10.326571, 0.01999998, -4.8868637, -9.326571, 0.01999998, -4.8868637, -8.326571, 0.01999998, -7.6368637, -8.576571, 0.01999998, -4.1368637, -5.8265715, 0.01999998, -6.1368637, -3.8265715, 0.01999998, -6.3868637, -3.8265715, 0.01999998, -9.136864, -8.076571, 0.01999998, -9.136864, -2.0765715, 0.01999998, -4.6368637, -9.326571, 0.01999998, -0.3868637, -2.3265715, 0.01999998, -6.3868637, 3.4234285, 0.01999998, -9.136864, 3.4234285, 0.01999998, -0.3868637, -5.3265715, 1.05, -5.8868637, -5.3265715, 1.05, -4.6368637, -2.5765715, 1.05, -4.6368637, -2.5765715, 1.05, -5.8868637, -9.076571, 3.01, -4.1368637, -10.576571, 3.01, -4.1368637, -10.576571, 3.01, -3.1368637, -10.076571, 3.01, -2.8868637, -9.576571, 3.01, -2.8868637, -9.076571, 3.01, -3.1368637, -10.576571, 3.01, -1.1368637, -9.076571, 3.01, -1.1368637, -10.326571, 0.01999998, -3.8868637, -10.076571, 0.01999998, -3.1368637, -9.326571, 0.01999998, -3.3868637, -9.576571, 0.01999998, -4.1368637, -10.326571, 0.01999998, -1.8868637, -10.076571, 0.01999998, -1.1368637, -9.326571, 0.01999998, -1.3868637, -9.576571, 0.01999998, -2.1368637)
-polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(3, 2, 0), PackedInt32Array(5, 4, 6), PackedInt32Array(6, 4, 7), PackedInt32Array(9, 8, 10), PackedInt32Array(10, 8, 13), PackedInt32Array(10, 13, 12), PackedInt32Array(10, 12, 11), PackedInt32Array(15, 14, 16), PackedInt32Array(16, 14, 17), PackedInt32Array(8, 18, 13), PackedInt32Array(18, 16, 13), PackedInt32Array(13, 16, 19), PackedInt32Array(19, 16, 17), PackedInt32Array(17, 22, 19), PackedInt32Array(19, 22, 20), PackedInt32Array(20, 22, 21), PackedInt32Array(12, 23, 11), PackedInt32Array(11, 24, 10), PackedInt32Array(20, 21, 25), PackedInt32Array(25, 21, 26), PackedInt32Array(25, 26, 23), PackedInt32Array(23, 26, 27), PackedInt32Array(23, 27, 11), PackedInt32Array(31, 30, 28), PackedInt32Array(28, 30, 29), PackedInt32Array(35, 34, 36), PackedInt32Array(36, 34, 37), PackedInt32Array(37, 34, 33), PackedInt32Array(37, 33, 32), PackedInt32Array(36, 39, 35), PackedInt32Array(35, 39, 38), PackedInt32Array(43, 42, 40), PackedInt32Array(40, 42, 41), PackedInt32Array(47, 46, 44), PackedInt32Array(44, 46, 45)]
+vertices = PackedVector3Array(-11.076571, 2.52, -9.886864, -11.076571, 2.52, -7.8868637, -10.576571, 2.52, -9.636864, -8.326571, 2.52, -9.636864, -10.326571, 1.24, -9.136864, -10.326571, 1.01, -8.136864, -8.576571, 1.01, -8.136864, -8.576571, 1.01, -9.136864, -9.451571, 1.01, -9.136864, -8.576571, 0.01999998, -3.1368637, -9.076571, 0.01999998, -2.8868637, -8.576571, 0.01999998, -1.1368637, -1.8265715, 0.01999998, -0.3868637, -2.3265715, 0.01999998, -4.1368637, -5.8265715, 0.01999998, -4.3868637, -10.326571, 0.01999998, -7.6368637, -10.326571, 0.01999998, -4.8868637, -9.326571, 0.01999998, -4.8868637, -8.326571, 0.01999998, -7.6368637, -8.576571, 0.01999998, -4.1368637, -5.8265715, 0.01999998, -6.1368637, -3.8265715, 0.01999998, -6.3868637, -3.8265715, 0.01999998, -9.136864, -8.076571, 0.01999998, -9.136864, -2.0765715, 0.01999998, -4.6368637, -9.326571, 0.01999998, -0.3868637, -2.3265715, 0.01999998, -6.3868637, 3.4234285, 0.01999998, -9.136864, 3.4234285, 0.01999998, -0.3868637, -5.3265715, 1.05, -5.8868637, -5.3265715, 1.05, -4.6368637, -2.5765715, 1.05, -4.6368637, -2.5765715, 1.05, -5.8868637, -9.076571, 3.01, -4.1368637, -10.576571, 3.01, -4.1368637, -10.576571, 3.01, -3.1368637, -10.076571, 3.01, -2.8868637, -9.576571, 3.01, -2.8868637, -9.076571, 3.01, -3.1368637, -10.576571, 3.01, -1.1368637, -9.076571, 3.01, -1.1368637, -10.326571, 0.01999998, -3.8868637, -10.076571, 0.01999998, -3.1368637, -9.326571, 0.01999998, -3.3868637, -9.576571, 0.01999998, -4.1368637, -10.326571, 0.01999998, -1.8868637, -10.076571, 0.01999998, -1.1368637, -9.326571, 0.01999998, -1.3868637, -9.576571, 0.01999998, -2.1368637)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(3, 2, 0), PackedInt32Array(7, 6, 8), PackedInt32Array(8, 6, 4), PackedInt32Array(4, 6, 5), PackedInt32Array(10, 9, 11), PackedInt32Array(11, 9, 14), PackedInt32Array(11, 14, 13), PackedInt32Array(11, 13, 12), PackedInt32Array(16, 15, 17), PackedInt32Array(17, 15, 18), PackedInt32Array(9, 19, 14), PackedInt32Array(19, 17, 14), PackedInt32Array(14, 17, 20), PackedInt32Array(20, 17, 18), PackedInt32Array(18, 23, 20), PackedInt32Array(20, 23, 21), PackedInt32Array(21, 23, 22), PackedInt32Array(13, 24, 12), PackedInt32Array(12, 25, 11), PackedInt32Array(21, 22, 26), PackedInt32Array(26, 22, 27), PackedInt32Array(26, 27, 24), PackedInt32Array(24, 27, 28), PackedInt32Array(24, 28, 12), PackedInt32Array(32, 31, 29), PackedInt32Array(29, 31, 30), PackedInt32Array(36, 35, 37), PackedInt32Array(37, 35, 38), PackedInt32Array(38, 35, 34), PackedInt32Array(38, 34, 33), PackedInt32Array(37, 40, 36), PackedInt32Array(36, 40, 39), PackedInt32Array(44, 43, 41), PackedInt32Array(41, 43, 42), PackedInt32Array(48, 47, 45), PackedInt32Array(45, 47, 46)]
 geometry_parsed_geometry_type = 1
 geometry_collision_mask = 4294967041
 cell_height = 0.01
 agent_radius = 0.25
-agent_max_climb = 0.01
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xv0fy"]
 albedo_color = Color(0.317822, 0.4330272, 0.8950709, 1)
@@ -77,13 +77,13 @@ agent_radius = 0.25
 agent_max_climb = 0.01
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_8b6so"]
-vertices = PackedVector3Array(6, 0.01999998, -7, 5.25, 0.01999998, -6.5, 7.25, 0.01999998, -2.5, 9.75, 0.01999998, -2.75, 10, 0.01999998, -7.75, 6, 0.01999998, -11.5, 14.75, 0.01999998, -7.75, 14.75, 0.01999998, -11.5, -7.25, 0.01999998, -4, -7.25, 0.01999998, -3.25, -6.5, 0.01999998, -3, -6.5, 0.01999998, -4.5, -3, 0.01999998, -6.5, -7.25, 0.01999998, -2, -7.25, 0.01999998, 7.25, 7.25, 0.01999998, 7.25, -4.5, 0.01999998, -6.5, -6.5, 0.01999998, -6.5, -3.25, 0.01999998, -9.75, -4.25, 0.01999998, -9.75, -4, 0.01999998, -7, -2.5, 2.52, -7, 0.25, 2.52, -7, 0, 2.52, -7.5, -2.5, 2.52, -7.5)
-polygons = [PackedInt32Array(0, 4, 1), PackedInt32Array(1, 4, 2), PackedInt32Array(2, 4, 3), PackedInt32Array(4, 0, 5), PackedInt32Array(6, 4, 7), PackedInt32Array(7, 4, 5), PackedInt32Array(9, 8, 10), PackedInt32Array(10, 8, 11), PackedInt32Array(1, 2, 12), PackedInt32Array(12, 2, 13), PackedInt32Array(13, 2, 14), PackedInt32Array(14, 2, 15), PackedInt32Array(11, 17, 16), PackedInt32Array(19, 18, 20), PackedInt32Array(20, 18, 12), PackedInt32Array(13, 10, 12), PackedInt32Array(12, 16, 20), PackedInt32Array(16, 12, 11), PackedInt32Array(11, 12, 10), PackedInt32Array(24, 23, 21), PackedInt32Array(21, 23, 22)]
+vertices = PackedVector3Array(6, 0.01999998, -7, 5.25, 0.01999998, -6.5, 7.25, 0.01999998, -2.5, 9.75, 0.01999998, -2.75, 10, 0.01999998, -7.75, 6, 0.01999998, -11.5, 14.75, 0.01999998, -7.75, 14.75, 0.01999998, -11.5, -7.25, 0.01999998, -4, -7.25, 0.01999998, -3.25, -6.5, 0.01999998, -3, -6.5, 0.01999998, -4.5, -3, 0.01999998, -6.5, -7.25, 0.01999998, -2, -7.25, 0.01999998, 7.25, 7.25, 0.01999998, 7.25, -4.5, 0.01999998, -6.5, -6.5, 0.01999998, -6.5, -3.25, 2.01, -9.75, -4.25, 2.01, -9.75, -4, 0.01999998, -7, -3.0833335, 0.21999997, -7.583333, -4.125, 0.80999994, -8.375, -2.5, 2.52, -7, 0.25, 2.52, -7, 0, 2.52, -7.5, -2.5, 2.52, -7.5)
+polygons = [PackedInt32Array(0, 4, 1), PackedInt32Array(1, 4, 2), PackedInt32Array(2, 4, 3), PackedInt32Array(4, 0, 5), PackedInt32Array(6, 4, 7), PackedInt32Array(7, 4, 5), PackedInt32Array(9, 8, 10), PackedInt32Array(10, 8, 11), PackedInt32Array(1, 2, 12), PackedInt32Array(12, 2, 13), PackedInt32Array(13, 2, 14), PackedInt32Array(14, 2, 15), PackedInt32Array(11, 17, 16), PackedInt32Array(12, 20, 21), PackedInt32Array(21, 20, 22), PackedInt32Array(21, 22, 18), PackedInt32Array(18, 22, 19), PackedInt32Array(13, 10, 12), PackedInt32Array(12, 16, 20), PackedInt32Array(16, 12, 11), PackedInt32Array(11, 12, 10), PackedInt32Array(26, 25, 23), PackedInt32Array(23, 25, 24)]
 geometry_parsed_geometry_type = 1
 geometry_collision_mask = 4294967041
 cell_height = 0.01
 agent_radius = 0.25
-agent_max_climb = 0.01
+agent_max_climb = 0.2
 
 [node name="OpeningRoomTiled" type="Node3D" unique_id=2028324652]
 
@@ -183,16 +183,17 @@ distance_fade_enabled = true
 distance_fade_begin = 50.0
 distance_fade_shadow = 30.0
 
-[node name="Door1" parent="StartingSection" unique_id=812010551 node_paths=PackedStringArray("nodes_to_reveal", "nodes_to_hide") instance=ExtResource("11_achke")]
+[node name="HallwayDoor" parent="StartingSection" unique_id=812010551 node_paths=PackedStringArray("nodes_to_reveal", "nodes_to_hide") instance=ExtResource("11_achke")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.923428, 0, -6.3868637)
 dialogue = ExtResource("12_2x3w3")
-open_state_key = "door1_open"
-nodes_to_reveal = [NodePath("../../HallwayNew")]
-nodes_to_hide = [NodePath("HallwayPreviewTinyFloor")]
+open_state_key = "hallway_door_open"
+start_open = true
+nodes_to_reveal = [NodePath("../../HallwayNew"), NodePath("../../MainHallPreviewTinyFloor")]
+nodes_to_hide = [NodePath("../../HallwayPreviewTinyFloor")]
 
-[node name="HallwayPreviewTinyFloor" parent="StartingSection/Door1" unique_id=1823268011 instance=ExtResource("23_j1g1p")]
+[node name="HallwayPreviewTinyFloor" parent="." unique_id=1823268011 instance=ExtResource("23_j1g1p")]
 process_mode = 4
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.25, 0, 2.25)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, -3.5)
 
 [node name="HallwayNew" parent="." unique_id=368063215 instance=ExtResource("13_orrkt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -4)
@@ -207,16 +208,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -1)
 [node name="PlainFloorPlainWall5x5" parent="HallwayNew" unique_id=1704378009 instance=ExtResource("3_721to")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.5, 0, 1.5)
 
-[node name="Door2" parent="HallwayNew" unique_id=1954819518 node_paths=PackedStringArray("nodes_to_reveal", "nodes_to_hide") instance=ExtResource("11_achke")]
+[node name="MainHallDoor" parent="HallwayNew" unique_id=1954819518 node_paths=PackedStringArray("nodes_to_reveal", "nodes_to_hide") instance=ExtResource("11_achke")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.75, 0, 0.25)
 dialogue = ExtResource("13_0fxbs")
-open_state_key = "door2_open"
+open_state_key = "main_hall_door_open"
+start_open = true
 nodes_to_reveal = [NodePath("../../MainHallNew")]
-nodes_to_hide = [NodePath("MainHallPreviewTinyFloor")]
-
-[node name="MainHallPreviewTinyFloor" parent="HallwayNew/Door2" unique_id=768912618 instance=ExtResource("23_j1g1p")]
-process_mode = 4
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.25000024, 0, 2.25)
+nodes_to_hide = [NodePath("../../MainHallPreviewTinyFloor")]
 
 [node name="locker" parent="HallwayNew" unique_id=1768840152 instance=ExtResource("14_ig36b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1.6493535, -2.4)
@@ -235,6 +233,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 1.6493535, -2.4)
 
 [node name="locker6" parent="HallwayNew" unique_id=1699928754 instance=ExtResource("14_ig36b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 1.6493535, -2.4)
+
+[node name="MainHallPreviewTinyFloor" parent="." unique_id=768912618 instance=ExtResource("23_j1g1p")]
+process_mode = 4
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -3.4999998)
 
 [node name="MainHallNew" parent="." unique_id=482073413 instance=ExtResource("13_orrkt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0)
@@ -313,4 +315,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 7.5)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -5)
 
 [node name="PlainFloorTiny" parent="MainHallNew" unique_id=1795412399 instance=ExtResource("23_j1g1p")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4, 0, -7.5)
+
+[node name="Stairs" parent="MainHallNew" unique_id=906762880 instance=ExtResource("24_kyuk5")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4, 0, -7.5)

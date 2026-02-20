@@ -16,13 +16,15 @@
 [ext_resource type="PackedScene" uid="uid://bn7gwfj7cphha" path="res://environment_assets/elevator.tscn" id="13_hyc2t"]
 [ext_resource type="Resource" uid="uid://b4qeeysd2lv5s" path="res://words/opening_room/elevator.dialogue" id="14_0fxbs"]
 [ext_resource type="PackedScene" uid="uid://cgo1eo41jj1h" path="res://tiles/plain_floor_small.tscn" id="14_2rhjw"]
+[ext_resource type="PackedScene" uid="uid://ch0kryxtsu168" path="res://environment_assets/locker.tscn" id="14_ig36b"]
 [ext_resource type="PackedScene" uid="uid://cnxi6sqik5071" path="res://tiles/plain_floor_plain_wall_inner_corner_5x5.tscn" id="15_0fxbs"]
 [ext_resource type="PackedScene" uid="uid://b40uqnh1iy5sg" path="res://tiles/plain_floor_10x10.tscn" id="16_ig36b"]
 
 [sub_resource type="Environment" id="Environment_1tp4b"]
-background_mode = 2
+background_energy_multiplier = 0.0
+ambient_light_source = 3
 ambient_light_color = Color(1, 1, 1, 1)
-ambient_light_energy = 0.31
+ambient_light_energy = 0.11
 ssao_intensity = 8.6
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_d8hvo"]
@@ -75,17 +77,26 @@ environment = SubResource("Environment_1tp4b")
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -2.9, 5, -2.5)
 light_energy = 2.744
 shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 50.0
+distance_fade_shadow = 40.0
 spot_range = 10.0
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="Environment" unique_id=1031242693]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 3, 0)
 light_energy = 1.95
 light_bake_mode = 1
+distance_fade_enabled = true
+distance_fade_begin = 80.0
+distance_fade_shadow = 90.0
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="Environment" unique_id=182581658]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 4, -6)
 light_energy = 1.95
 light_bake_mode = 1
+distance_fade_enabled = true
+distance_fade_begin = 50.0
+distance_fade_shadow = 30.0
 
 [node name="Player" parent="." unique_id=1791314085 instance=ExtResource("1_b02xd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6734282, 0, 0.6368637)
@@ -173,6 +184,32 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12.7
 dialogue = ExtResource("13_0fxbs")
 open_state_key = "door2_open"
 
+[node name="OmniLight3D4" type="OmniLight3D" parent="Hallway" unique_id=881926365]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 2.6, -4)
+light_energy = 1.95
+light_bake_mode = 1
+distance_fade_enabled = true
+distance_fade_begin = 50.0
+distance_fade_shadow = 30.0
+
+[node name="locker" parent="Hallway" unique_id=1768840152 instance=ExtResource("14_ig36b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 1.6493535, -6.4)
+
+[node name="locker2" parent="Hallway" unique_id=861249184 instance=ExtResource("14_ig36b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 1.6493535, -6.4)
+
+[node name="locker3" parent="Hallway" unique_id=856013452 instance=ExtResource("14_ig36b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 1.6493535, -6.4)
+
+[node name="locker4" parent="Hallway" unique_id=427110550 instance=ExtResource("14_ig36b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 1.6493535, -6.4)
+
+[node name="locker5" parent="Hallway" unique_id=1060130122 instance=ExtResource("14_ig36b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 1.6493535, -6.4)
+
+[node name="locker6" parent="Hallway" unique_id=1699928754 instance=ExtResource("14_ig36b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 1.6493535, -6.4)
+
 [node name="MainHall" type="Node3D" parent="." unique_id=211042856]
 
 [node name="elevator" parent="MainHall" unique_id=1345433856 instance=ExtResource("13_hyc2t")]
@@ -211,8 +248,32 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -2.5)
 [node name="PlainFloorSmall4" parent="MainHall" unique_id=990866101 instance=ExtResource("14_2rhjw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -2.5)
 
-[node name="PlainFloor5x5" parent="." unique_id=1106338466 instance=ExtResource("2_uia4f")]
+[node name="OmniLight3D5" type="OmniLight3D" parent="MainHall" unique_id=1366634578]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.6, 2.6, -6)
+light_energy = 1.95
+light_bake_mode = 1
+distance_fade_enabled = true
+distance_fade_begin = 50.0
+distance_fade_shadow = 30.0
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="MainHall" unique_id=2114452797]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.6, 2.6, 1)
+light_energy = 1.95
+light_bake_mode = 1
+distance_fade_enabled = true
+distance_fade_begin = 50.0
+distance_fade_shadow = 30.0
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="MainHall" unique_id=568615439]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.6, 2.6, 1)
+light_energy = 1.95
+light_bake_mode = 1
+distance_fade_enabled = true
+distance_fade_begin = 50.0
+distance_fade_shadow = 30.0
+
+[node name="PlainFloor5x5" parent="MainHall" unique_id=1106338466 instance=ExtResource("2_uia4f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.5, 0, 2.5)
 
-[node name="PlainFloor5x6" parent="." unique_id=443819543 instance=ExtResource("2_uia4f")]
+[node name="PlainFloor5x6" parent="MainHall" unique_id=443819543 instance=ExtResource("2_uia4f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.5, 0, 7.5)

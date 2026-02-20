@@ -8,6 +8,8 @@
 [ext_resource type="Script" uid="uid://vw7kywh6j84x" path="res://utils/floor_collision.gd" id="6_i4jnc"]
 [ext_resource type="Material" uid="uid://b0cb4oh2jjr2" path="res://environment_assets/blue_wall/BlueWall.tres" id="6_leemh"]
 [ext_resource type="Material" uid="uid://cwbfgms642tho" path="res://environment_assets/concrete_floor/concrete_floor_material.tres" id="7_ur6k4"]
+[ext_resource type="Script" uid="uid://7w3ckhi8o2xf" path="res://scenes/rotation_room_binary_button.gd" id="9_1f1se"]
+[ext_resource type="PackedScene" uid="uid://cnxxve6eyvij6" path="res://utils/interactable.tscn" id="10_h4dxt"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_xgtno"]
 vertices = PackedVector3Array(-3, 0.01999998, -0.25, -3, 0.01999998, 0, -2.75, 0.01999998, 0, -1.75, 0.01999998, 0, -1.5, 0.01999998, 0, -1.5, 0.01999998, -0.25, -2.75, 0.01999998, 2.25, -1.75, 0.01999998, 2.25, -0.25, 0.01999998, -9.75, -4, 0.01999998, -9.75, -4, 0.01999998, -0.25, -0.25, 0.01999998, -0.25)
@@ -103,12 +105,53 @@ agent_radius = 0.01
 agent_max_slope = 60.2
 edge_max_error = 0.5
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i4jnc"]
+emission_enabled = true
+emission = Color(0.4410573, 0.6187438, 1, 1)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_leemh"]
+_surfaces = [{
+"aabb": AABB(-0.1, -0.32500002, -0.5, 0.2, 0.65000004, 1),
+"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
+"format": 34359738391,
+"material": SubResource("StandardMaterial3D_i4jnc"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("zczMvWdmpr4AAAA/zczMvWdmpr4AAAC/zczMvWdmpj4AAAC/zczMPWdmpr4AAAC/zczMvWdmpr4AAAC/zczMvWdmpr4AAAA/zczMvWdmpj4AAAC/zczMvWdmpr4AAAC/zczMPWdmpr4AAAC/zczMvWdmpj4AAAC/zczMvWdmpj4AAAA/zczMvWdmpr4AAAA/zczMvWdmpr4AAAA/zczMvWdmpj4AAAA/zczMPWdmpj4AAAA/zczMPWdmpj4AAAA/zczMvWdmpj4AAAA/zczMvWdmpj4AAAC/zczMvWdmpr4AAAA/zczMPWdmpr4AAAA/zczMPWdmpr4AAAC/zczMPWdmpj4AAAA/zczMPWdmpr4AAAA/zczMvWdmpr4AAAA/zczMPWdmpr4AAAC/zczMPWdmpr4AAAA/zczMPWdmpj4AAAA/zczMPWdmpr4AAAC/zczMPWdmpj4AAAC/zczMvWdmpj4AAAC/zczMvWdmpj4AAAC/zczMPWdmpj4AAAC/zczMPWdmpj4AAAA/zczMPWdmpj4AAAA/zczMPWdmpj4AAAC/zczMPWdmpr4AAAC/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
+}]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ur6k4"]
+size = Vector3(0.2, 0.65000004, 1)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_xgtno"]
+_surfaces = [{
+"aabb": AABB(-0.35, -0.45, -0.35, 0.7, 0.9, 0.7),
+"attribute_data": PackedByteArray("GPYVPgAAAAAAAAAAAAAAAAAAAD8AAAA/AAAAPwAAAAAAACA/AAAAAAAAID8AAIA/AAAAPwAAAAAY9hU+AAAAAAAAAD8AAAA/AAAgPwAAAAAAAEA/AAAAAAAAQD8AAIA/AAAAAAAAAAAa9hU+AAAAAAAAAD8AAAA/AADAPgAAAAAAAAA/AAAAAAAAAD8AAIA/GvYVPgAAAAD///8+AAAAAAAAAD8AAAA/AACAPgAAAAAAAMA+AAAAAAAAwD4AAIA/AAAgPwAAgD8AAAA/AACAPwAAAD8AAAAAGPYVPgAAAAAAAAAAAAAAAAAAAD8AAAA/AABAPwAAgD8AACA/AACAPwAAID8AAAAAAAAAPwAAAAAY9hU+AAAAAAAAAD8AAAA/AAAAPwAAgD8AAMA+AACAPwAAwD4AAAAAAAAAAAAAAAAa9hU+AAAAAAAAAD8AAAA/AADAPgAAgD8AAIA+AACAPwAAgD4AAAAAGvYVPgAAAAD///8+AAAAAAAAAD8AAAA/eIJaPwAAAAAAAAA/AAAAAAAAAD8AAAA/AABAPwAAAAAAAGA/AAAAAAAAYD8AAIA/AACAPwAAAAB4glo/AAAAAAAAAD8AAAA/AABgPwAAAAAAAAAAAAAAAAAAAAAAAIA/////PgAAAAB6glo/AAAAAAAAAD8AAAA/AAAAPgAAAAAAAIA+AAAAAAAAgD4AAIA/eoJaPwAAAAAAAIA/AAAAAAAAAD8AAAA/AAAAAAAAAAAAAAA+AAAAAAAAAD4AAIA/AABgPwAAgD8AAEA/AACAPwAAQD8AAAAAeIJaPwAAAAAAAAA/AAAAAAAAAD8AAAA/AAAAAAAAgD8AAGA/AACAPwAAYD8AAAAAAACAPwAAAAB4glo/AAAAAAAAAD8AAAA/AACAPgAAgD8AAAA+AACAPwAAAD4AAAAA////PgAAAAB6glo/AAAAAAAAAD8AAAA/AAAAPgAAgD8AAAAAAACAPwAAAAAAAAAAeoJaPwAAAAAAAIA/AAAAAAAAAD8AAAA/"),
+"format": 34359738391,
+"material": ExtResource("6_leemh"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 96,
+"vertex_data": PackedByteArray("VW19vmZm5r5TbX2+MzOzvmZm5r7TagOzAAAAAGZm5r4AAAAAMzOzvmZm5r7TagOzVW19vmZm5r5TbX2+VW19vmZm5j5TbX2+U2iPMWZm5r4zM7O+VW19vmZm5r5TbX2+AAAAAGZm5r4AAAAAVW19vmZm5r5TbX2+U2iPMWZm5r4zM7O+U2iPMWZm5j4zM7O+MzOzvmZm5r7TagOzVG19vmZm5r5UbX0+AAAAAGZm5r4AAAAAVG19vmZm5r5UbX0+MzOzvmZm5r7TagOzMzOzvmZm5j7TagOzVG19vmZm5r5UbX0+02qDsmZm5r4zM7M+AAAAAGZm5r4AAAAA02qDsmZm5r4zM7M+VG19vmZm5r5UbX0+VG19vmZm5j5UbX0+VW19vmZm5j5TbX2+MzOzvmZm5j7TagOzMzOzvmZm5r7TagOzMzOzvmZm5j7TagOzVW19vmZm5j5TbX2+AAAAAGZm5j4AAAAAU2iPMWZm5j4zM7O+VW19vmZm5j5TbX2+VW19vmZm5r5TbX2+VW19vmZm5j5TbX2+U2iPMWZm5j4zM7O+AAAAAGZm5j4AAAAAMzOzvmZm5j7TagOzVG19vmZm5j5UbX0+VG19vmZm5r5UbX0+VG19vmZm5j5UbX0+MzOzvmZm5j7TagOzAAAAAGZm5j4AAAAAVG19vmZm5j5UbX0+02qDsmZm5j4zM7M+02qDsmZm5r4zM7M+02qDsmZm5j4zM7M+VG19vmZm5j5UbX0+AAAAAGZm5j4AAAAAUW19PmZm5r5XbX2+U2iPMWZm5r4zM7O+AAAAAGZm5r4AAAAAU2iPMWZm5r4zM7O+UW19PmZm5r5XbX2+UW19PmZm5j5XbX2+MzOzPmZm5r4AAAAAUW19PmZm5r5XbX2+AAAAAGZm5r4AAAAAUW19PmZm5r5XbX2+MzOzPmZm5r4AAAAAMzOzPmZm5j4AAAAA02qDsmZm5r4zM7M+VG19PmZm5r5UbX0+AAAAAGZm5r4AAAAAVG19PmZm5r5UbX0+02qDsmZm5r4zM7M+02qDsmZm5j4zM7M+VG19PmZm5r5UbX0+MzOzPmZm5r4AAAAAAAAAAGZm5r4AAAAAMzOzPmZm5r4AAAAAVG19PmZm5r5UbX0+VG19PmZm5j5UbX0+UW19PmZm5j5XbX2+U2iPMWZm5j4zM7O+U2iPMWZm5r4zM7O+U2iPMWZm5j4zM7O+UW19PmZm5j5XbX2+AAAAAGZm5j4AAAAAMzOzPmZm5j4AAAAAUW19PmZm5j5XbX2+UW19PmZm5r5XbX2+UW19PmZm5j5XbX2+MzOzPmZm5j4AAAAAAAAAAGZm5j4AAAAA02qDsmZm5j4zM7M+VG19PmZm5j5UbX0+VG19PmZm5r5UbX0+VG19PmZm5j5UbX0+02qDsmZm5j4zM7M+AAAAAGZm5j4AAAAAVG19PmZm5j5UbX0+MzOzPmZm5j4AAAAAMzOzPmZm5r4AAAAAMzOzPmZm5j4AAAAAVG19PmZm5j5UbX0+AAAAAGZm5j4AAAAA/38AAP///x//fwAA//++Ev9/AAD+//8/AACGj///O/gAANXI//+U2wAAKbf//2rk/38AAP///z//fwAA////H/9/AAD+//8/AADVyP//lNv//3fwd/D/vwAAd/D//8LH/38AAHyl/7//fwAA/7//v/9/AAD///+/KTf/fwAAauQAAIaP//87+IcP/38AADv4/38AAP+//7//fwAA////v/9/AAD///+/eHD/fwAAwscpN/9/AABq5NVI/38AAJTbAAApt///auSHD/9/AAA7+AAAho///zv4/3///4Ja/z//f///glr/P/9///+CWv8/AAB38P//wscAACm3//9q5AAA1cj//5Tb/3///30l/z//f///fSX/P/9///99Jf8/hw//fwAAO/jVSP9/AACU2yk3/38AAGrk/3///wAAQO3/f///AABA7f9///8AAEDt1Uj/fwAAlNuGj/9/hw//v3hw/38AAMLH/3///wAAvdL/f///AAC90v9///8AAL3S/38AAP+//z//fwAA////P/9/AAD+//8///938Hfw/7///ym3Kbf/v///1cjVyP+//38AAHyl/z//fwAA/7//P/9/AAD+//8///8ptwAAlBt38P9////DB///ho8AAMMH/38AAP///7//fwAA////3/9/AAD///+/Kbf/fyk3/794cP9/AADCx4aP/3+HD/+//38AAP///9//fwAA//9A7f9/AAD///+/d/D/f3hw/78pt/9/KTf/v9XI/3/VSP+////VyNXI/78AAHfw///Cx///d/B38P+//3///wAAQS3/f///AABBLf9///8AAEEt//+GjwAAwwf//9XIAABqJP//KbcAAJQb/3///wAAvhL/f///AAC+Ev9///8AAL4Sho//f4cP/7/VyP9/1Uj/vym3/38pN/+//3///30l/7//f///fSX/v/9///99Jf+/1cj/f9VI/7///4aPho//v3fw/394cP+//3///4Ja/7//f///glr/v/9///+CWv+/")
+}]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0eglf"]
+size = Vector3(0.7, 0.9, 0.7)
+
 [node name="RotationRoom" type="Node3D" unique_id=1683999598]
 
 [node name="Environment" parent="." unique_id=672148315 instance=ExtResource("1_8xvy4")]
 
 [node name="Player" parent="." unique_id=1791314085 instance=ExtResource("2_i4jnc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6734282, 0, -1.3631363)
+
+[node name="CameraMarker" parent="Player" index="2" unique_id=1408571741]
+transform = Transform3D(0.9063078, -0.29883626, 0.2988363, 0, 0.7071068, 0.70710677, -0.4226183, -0.6408564, 0.64085644, 70.62378, 35.41223, 30)
+
+[node name="Camera3D" parent="Player" index="3" unique_id=1891750048]
+transform = Transform3D(0.5231716, -0.32490075, 0.7878648, -0.020572692, 0.91939306, 0.39280155, -0.8519789, -0.22171105, 0.4743162, 69.105576, 34.76163, 29.391088)
+size = 20.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=572307293]
 transform = Transform3D(0.9659259, 1.13133405e-08, 0.25881907, 0.25881907, -4.222196e-08, -0.9659258, 0, 1, -4.371139e-08, 0, 0, 0)
@@ -402,3 +445,45 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -30.05)
 
 [node name="PlainFloorPlainWall5x6" parent="BaseNavigationRegion2" unique_id=388206152 instance=ExtResource("4_1f1se")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -35.05)
+
+[node name="Terminal" type="StaticBody3D" parent="." unique_id=1615466532]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.5, -3)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Terminal" unique_id=1973422240]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4000001, 0.32500005, 0)
+visible = false
+size = Vector3(0.2, 0.65000004, 1)
+material = SubResource("StandardMaterial3D_i4jnc")
+
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="Terminal" unique_id=231146624]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4000001, 0.32500005, 0)
+mesh = SubResource("ArrayMesh_leemh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terminal" unique_id=458670662]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4000001, 0.32500005, 0)
+shape = SubResource("BoxShape3D_ur6k4")
+
+[node name="BinaryButton" type="StaticBody3D" parent="." unique_id=1522419473]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.5, -5)
+script = ExtResource("9_1f1se")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="BinaryButton" unique_id=2089778910]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.5500002, 0.3, 0)
+visible = false
+radius = 0.35
+height = 0.9
+material = ExtResource("6_leemh")
+
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="BinaryButton" unique_id=1196830390]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.5500002, 0.3, 0)
+mesh = SubResource("ArrayMesh_xgtno")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BinaryButton" unique_id=1164602714]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.5500002, 0.3, 0)
+shape = SubResource("BoxShape3D_0eglf")
+
+[node name="Interactable" parent="BinaryButton" unique_id=528907151 instance=ExtResource("10_h4dxt")]
+
+[connection signal="interaction_started" from="BinaryButton/Interactable" to="BinaryButton" method="_on_interactable_interaction_started"]
+
+[editable path="Player"]

@@ -10,6 +10,8 @@ extends Area3D
 
 @onready var navigation_target = Vector3(global_position.x, 0.0, global_position.z) + target_offset
 @onready var indicator = $Indicator
+@onready var code_prompt = $CodePrompt
+@onready var code_prompt_input = $CodePrompt/LineEdit
 
 signal interaction_started
 
@@ -79,3 +81,12 @@ func perform_interaction() -> void:
 		await DialogueManager.dialogue_ended
 
 	indicator.visible = false
+
+func prompt_for_code() -> void:
+	code_prompt.visible = true
+	code_prompt_input.text = ""
+	code_prompt_input.grab_focus()
+	await code_prompt_input.text_submitted
+	code_prompt.visible = false
+	code_prompt_input.text = ""
+	code_prompt_input.release_focus()

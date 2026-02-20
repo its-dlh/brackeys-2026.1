@@ -10,10 +10,10 @@ radius = 0.38378906
 
 [node name="science-tube" unique_id=482548221 instance=ExtResource("1_82s5m")]
 
-[node name="cylinder" parent="." index="1" unique_id=414007227]
+[node name="cylinder" parent="." index="1" unique_id=732032712]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
-[node name="CollisionShape3D" parent="cylinder" index="0" unique_id=80504763]
+[node name="CollisionShape3D" parent="cylinder" index="0" unique_id=1443658803]
 transform = Transform3D(2.2, 0, 0, 0, 2.2, 0, 0, 0, 2.2, 0.0012310054, -0.0011663791, 0.014464319)
 shape = SubResource("CylinderShape3D_8p7jl")
 
@@ -26,3 +26,4 @@ spot_angle = 55.0
 
 [node name="Interactable" parent="." index="3" unique_id=528907151 instance=ExtResource("2_nfemn")]
 dialogue = ExtResource("3_l6tre")
+indicator_offset = Vector3(0, 2, 0)

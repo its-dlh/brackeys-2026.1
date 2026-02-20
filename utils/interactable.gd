@@ -1,6 +1,7 @@
 extends Area3D
 
 @export var dialogue: DialogueResource
+@export var indicator_offset: Vector3 = Vector3(0.0, 1.75, 0.0)
 
 @export_group("Navigation")
 @export var should_navigate: bool = true
@@ -8,6 +9,7 @@ extends Area3D
 @export var acceptable_distance: float = 2.0
 
 @onready var navigation_target = Vector3(global_position.x, 0.0, global_position.z) + target_offset
+@onready var indicator = $Indicator
 
 signal interaction_started
 
@@ -16,6 +18,8 @@ var player_en_route: bool = false
 
 func _ready() -> void:
 	connect_to_related_collision_objects()
+	indicator.global_position += indicator_offset
+	indicator.visible = false
 
 	if should_navigate:
 		navigation_setup()
@@ -25,6 +29,7 @@ func navigation_setup() -> void:
 	player = get_tree().get_first_node_in_group("player")
 	player.navigation_agent.target_reached.connect(_on_navigation_target_reached)
 	player.navigation_agent.navigation_finished.connect(_on_player_navigation_finished)
+	player.navigation_agent.path_changed.connect(_on_player_path_changed)
 
 func connect_to_related_collision_objects() -> void:
 	if get_parent().is_class("CollisionObject3D"):
@@ -46,11 +51,12 @@ func _input_event(_camera: Camera3D, event: InputEvent, _event_position: Vector3
 			return
 
 		player_en_route = true
+		indicator.visible = true
 		player.navigate_to(navigation_target, acceptable_distance)
 		print('Player en route')
 
 func _on_navigation_target_reached() -> void:
-	if player_en_route and player.navigation_agent.target_position == navigation_target:
+	if player_en_route:
 		player_en_route = false
 		perform_interaction()
 
@@ -58,9 +64,18 @@ func _on_player_navigation_finished() -> void:
 	if player_en_route:
 		player_en_route = false
 
+func _on_player_path_changed() -> void:
+	if player_en_route and player.navigation_agent.target_position != navigation_target:
+		player_en_route = false
+		indicator.visible = false
+
 func perform_interaction() -> void:
 	print("Interacting with ", name)
 	interaction_started.emit()
 
 	if dialogue:
+		indicator.visible = true
 		DialogueManager.show_dialogue_balloon(dialogue, "start", [self,{ parent = get_parent() }])
+		await DialogueManager.dialogue_ended
+
+	indicator.visible = false

@@ -159,6 +159,7 @@ shape = SubResource("ConcavePolygonShape3D_gol8j")
 
 [node name="Interactable" parent="StartingSection/LeftArmBody" unique_id=917941121 instance=ExtResource("5_hcl5b")]
 dialogue = ExtResource("6_d8hvo")
+indicator_offset = Vector3(0, 1.25, 0)
 
 [node name="ArmTable" type="MeshInstance3D" parent="StartingSection" unique_id=1299585760]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.599999, 0.49999976, -8.799999)

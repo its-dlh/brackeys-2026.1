@@ -157,16 +157,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.826571, 1.5010443, -1.6368
 [node name="science-tube2" parent="StartingSection" unique_id=98386349 instance=ExtResource("5_qserd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.826571, 1.5010443, -3.6368637)
 
+[node name="PlainFloorPlainWallDoorway" parent="." unique_id=1386941741 instance=ExtResource("5_721to")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, -2.5)
+
 [node name="Door1" parent="." unique_id=812010551 node_paths=PackedStringArray("nodes_to_reveal") instance=ExtResource("11_achke")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.25, 0, -3.75)
 dialogue = ExtResource("12_2x3w3")
 open_state_key = "door1_open"
 nodes_to_reveal = [NodePath("../Hallway")]
 
-[node name="Hallway" type="Node3D" parent="." unique_id=1737833932]
+[node name="OmniLight3D4" type="OmniLight3D" parent="." unique_id=881926365]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 2.6, -4)
+light_energy = 1.95
+light_bake_mode = 1
+distance_fade_enabled = true
+distance_fade_begin = 50.0
+distance_fade_shadow = 30.0
 
-[node name="PlainFloorPlainWallDoorway" parent="Hallway" unique_id=1386941741 instance=ExtResource("5_721to")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, -2.5)
+[node name="Hallway" type="Node3D" parent="." unique_id=1737833932]
 
 [node name="PlainFloorPlainWallDoorway2" parent="Hallway" unique_id=1779057440 instance=ExtResource("5_721to")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -2.5)
@@ -177,22 +185,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, -5)
 [node name="PlainFloorPlainWall5x5" parent="Hallway" unique_id=1704378009 instance=ExtResource("3_721to")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.5, 0, -2.5)
 
-[node name="PlainFloorPlainWallCornerSmall2" parent="Hallway" unique_id=1097211662 instance=ExtResource("12_achke")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -5)
-
 [node name="Door2" parent="Hallway" unique_id=1954819518 node_paths=PackedStringArray("nodes_to_reveal") instance=ExtResource("11_achke")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 12.75, 0, -3.75)
 dialogue = ExtResource("13_0fxbs")
 open_state_key = "door2_open"
 nodes_to_reveal = [NodePath("../../MainHall")]
-
-[node name="OmniLight3D4" type="OmniLight3D" parent="Hallway" unique_id=881926365]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 2.6, -4)
-light_energy = 1.95
-light_bake_mode = 1
-distance_fade_enabled = true
-distance_fade_begin = 50.0
-distance_fade_shadow = 30.0
 
 [node name="locker" parent="Hallway" unique_id=1768840152 instance=ExtResource("14_ig36b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 1.6493535, -6.4)
@@ -279,3 +276,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.5, 0, 2.5)
 
 [node name="PlainFloor5x6" parent="MainHall" unique_id=443819543 instance=ExtResource("2_uia4f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.5, 0, 7.5)
+
+[node name="PlainFloorPlainWallCornerSmall2" parent="MainHall" unique_id=1097211662 instance=ExtResource("12_achke")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -5)

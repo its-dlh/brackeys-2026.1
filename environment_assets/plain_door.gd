@@ -12,8 +12,9 @@ extends Node3D
 func _ready() -> void:
 	RoomState.state_changed.connect(_on_state_changed)
 
-	for node in nodes_to_reveal:
-		node.visible = false
+	if not is_door_open():
+		for node in nodes_to_reveal:
+			node.visible = false
 
 	# Reflect the initial state of the door
 	_on_open_state_changed(is_door_open())

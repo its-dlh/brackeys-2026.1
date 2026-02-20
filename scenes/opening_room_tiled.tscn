@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://sgqc60qwdy11"]
 
+[ext_resource type="PackedScene" uid="uid://bmq01uqwde1x5" path="res://environment_assets/base_environment.tscn" id="1_as58u"]
 [ext_resource type="PackedScene" uid="uid://dqvawp4qq4qtp" path="res://scenes/player.tscn" id="1_b02xd"]
 [ext_resource type="PackedScene" uid="uid://kklv8hutgroy" path="res://environment_assets/workbench.tscn" id="1_d8hvo"]
 [ext_resource type="PackedScene" uid="uid://dp17d1nacv3nf" path="res://tiles/plain_floor_5x5.tscn" id="2_uia4f"]
@@ -20,13 +21,6 @@
 [ext_resource type="PackedScene" uid="uid://ch0kryxtsu168" path="res://environment_assets/locker.tscn" id="14_ig36b"]
 [ext_resource type="PackedScene" uid="uid://cnxi6sqik5071" path="res://tiles/plain_floor_plain_wall_inner_corner_5x5.tscn" id="15_0fxbs"]
 [ext_resource type="PackedScene" uid="uid://b40uqnh1iy5sg" path="res://tiles/plain_floor_10x10.tscn" id="16_ig36b"]
-
-[sub_resource type="Environment" id="Environment_1tp4b"]
-background_energy_multiplier = 0.0
-ambient_light_source = 3
-ambient_light_color = Color(1, 1, 1, 1)
-ambient_light_energy = 0.11
-ssao_intensity = 8.6
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_d8hvo"]
 vertices = PackedVector3Array(-10.076571, 1.24, -8.886864, -10.076571, 1.24, -8.386864, -8.826571, 1.01, -8.386864, -8.826571, 1.01, -8.886864, -10.076571, 0.01999998, -7.3868637, -10.076571, 0.01999998, -5.1368637, -9.076571, 0.01999998, -5.1368637, -8.076571, 0.01999998, -7.3868637, -6.0765715, 0.01999998, -4.1368637, -8.326571, 0.01999998, -4.3868637, -8.576571, 0.01999998, -0.6368637, -6.0765715, 0.01999998, -6.3868637, -1.5765715, 0.01999998, -0.6368637, -1.8265715, 0.01999998, -4.3868637, -2.0765715, 0.01999998, -3.8868637, -3.8265715, 0.01999998, -6.6368637, -3.3265715, 0.01999998, -8.886864, -7.8265715, 0.01999998, -8.886864, -1.8265715, 0.01999998, -6.3868637, 3.1734285, 0.01999998, -8.886864, 3.1734285, 0.01999998, -0.6368637, -5.0765715, 1.05, -5.6368637, -5.0765715, 1.05, -4.8868637, -2.8265715, 1.05, -4.8868637, -2.8265715, 1.05, -5.6368637, -10.326571, 3.02, -3.8868637, -10.076571, 3.02, -3.1368637, -9.326571, 3.02, -3.3868637, -9.576571, 3.02, -4.1368637, -10.326571, 3.02, -1.8868637, -10.076571, 3.02, -1.1368637, -9.326571, 3.02, -1.3868637, -9.576571, 3.02, -2.1368637)
@@ -69,35 +63,7 @@ size = Vector3(2.5, 1, 1.5)
 
 [node name="OpeningRoomTiled" type="Node3D" unique_id=2028324652]
 
-[node name="Environment" type="Node3D" parent="." unique_id=1494301003]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="Environment" unique_id=213868063]
-environment = SubResource("Environment_1tp4b")
-
-[node name="OmniLight3D" type="SpotLight3D" parent="Environment" unique_id=1391600471]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -2.9, 5, -2.5)
-light_energy = 2.744
-shadow_enabled = true
-distance_fade_enabled = true
-distance_fade_begin = 50.0
-distance_fade_shadow = 40.0
-spot_range = 10.0
-
-[node name="OmniLight3D2" type="OmniLight3D" parent="Environment" unique_id=1031242693]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 3, 0)
-light_energy = 1.95
-light_bake_mode = 1
-distance_fade_enabled = true
-distance_fade_begin = 80.0
-distance_fade_shadow = 90.0
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="Environment" unique_id=182581658]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 4, -6)
-light_energy = 1.95
-light_bake_mode = 1
-distance_fade_enabled = true
-distance_fade_begin = 50.0
-distance_fade_shadow = 30.0
+[node name="Environment" parent="." unique_id=672148315 instance=ExtResource("1_as58u")]
 
 [node name="Player" parent="." unique_id=1791314085 instance=ExtResource("1_b02xd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6734282, 0, 0.6368637)
@@ -105,6 +71,31 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6734282, 0, 0.6368637)
 [node name="StartingSection" type="NavigationRegion3D" parent="." unique_id=1048753087]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3265718, 0, 2.6368637)
 navigation_mesh = SubResource("NavigationMesh_d8hvo")
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="StartingSection" unique_id=1031242693]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.673428, 3, -2.6368637)
+light_energy = 1.95
+light_bake_mode = 1
+distance_fade_enabled = true
+distance_fade_begin = 80.0
+distance_fade_shadow = 90.0
+
+[node name="OmniLight3D" type="SpotLight3D" parent="StartingSection" unique_id=1391600471]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -4.226572, 5, -5.1368637)
+light_energy = 2.744
+shadow_enabled = true
+distance_fade_enabled = true
+distance_fade_begin = 50.0
+distance_fade_shadow = 40.0
+spot_range = 10.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="StartingSection" unique_id=182581658]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.326571, 4, -8.636864)
+light_energy = 1.95
+light_bake_mode = 1
+distance_fade_enabled = true
+distance_fade_begin = 50.0
+distance_fade_shadow = 30.0
 
 [node name="workbench" parent="StartingSection" unique_id=76713127 instance=ExtResource("1_d8hvo")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.0265718, 0.18468142, -5.2368636)

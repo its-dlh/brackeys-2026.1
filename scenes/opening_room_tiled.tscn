@@ -23,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://cnxi6sqik5071" path="res://tiles/plain_floor_plain_wall_inner_corner_5x5.tscn" id="15_0fxbs"]
 [ext_resource type="PackedScene" uid="uid://b40uqnh1iy5sg" path="res://tiles/plain_floor_10x10.tscn" id="16_ig36b"]
 [ext_resource type="Resource" uid="uid://c8n5inn1lm2av" path="res://words/opening_room/oil.dialogue" id="19_ndk15"]
+[ext_resource type="Resource" uid="uid://c5wbl3vjky8of" path="res://words/lyr_carter.dialogue" id="20_xh4c3"]
 [ext_resource type="PackedScene" uid="uid://8mxryp082s56" path="res://tiles/plain_floor_tiny.tscn" id="23_j1g1p"]
 [ext_resource type="PackedScene" uid="uid://47b6rej64ben" path="res://tiles/stairs.tscn" id="24_kyuk5"]
 [ext_resource type="Resource" uid="uid://byd4fo28afkdk" path="res://words/opening_room/staircase_door.dialogue" id="25_8b6so"]
@@ -78,6 +79,8 @@ geometry_collision_mask = 4294967041
 cell_height = 0.01
 agent_radius = 0.25
 agent_max_climb = 0.01
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_cvynx"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_8b6so"]
 vertices = PackedVector3Array(6, 0.01999998, -7, 5.25, 0.01999998, -6.5, 7.25, 0.01999998, -2.5, 9.75, 0.01999998, -2.75, 10, 0.01999998, -7.75, 6, 0.01999998, -11.5, 14.75, 0.01999998, -7.75, 14.75, 0.01999998, -11.5, -7.25, 0.01999998, -4, -7.25, 0.01999998, -3.25, -6.5, 0.01999998, -3, -6.5, 0.01999998, -4.5, -3, 0.01999998, -6.5, -7.25, 0.01999998, -2, -7.25, 0.01999998, 7.25, 7.25, 0.01999998, 7.25, -4.5, 0.01999998, -6.5, -6.5, 0.01999998, -6.5, -3.25, 2.02, -10.5, -4.25, 2.02, -10.5, -4, 0.01999998, -7, -3.0833335, 0.01999998, -7.833333, -3.1666665, 1.16, -9.166666, -4.166667, 1.41, -9.333333, -4.083333, 0.15999997, -8.166666, -2.5, 2.52, -7, 0.25, 2.52, -7, 0, 2.52, -7.5, -2.5, 2.52, -7.5)
@@ -242,6 +245,19 @@ acceptable_distance = 1.0
 
 [node name="locker6" parent="HallwayNew" unique_id=1699928754 instance=ExtResource("14_ig36b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 1.6493535, -2.4)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="HallwayNew" unique_id=766917589]
+
+[node name="Body" type="CSGCylinder3D" parent="HallwayNew/StaticBody3D" unique_id=813336994]
+transform = Transform3D(0.014939424, 0.9998884, 0, -0.9998884, 0.014939424, 0, 0, 0, 1, 2.6051636, 0, 0.86364746)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HallwayNew/StaticBody3D" unique_id=106870857]
+transform = Transform3D(0.014939424, 0.9998884, 0, -0.9998884, 0.014939424, 0, 0, 0, 1, 2.6051636, 0, 0.86364746)
+shape = SubResource("CylinderShape3D_cvynx")
+
+[node name="Interactable" parent="HallwayNew/StaticBody3D" unique_id=2059680756 instance=ExtResource("5_hcl5b")]
+transform = Transform3D(0.014939424, 0.9998884, 0, -0.9998884, 0.014939424, 0, 0, 0, 1, 2.6051636, 0, 0.86364746)
+dialogue = ExtResource("20_xh4c3")
 
 [node name="MainHallPreviewTinyFloor" parent="." unique_id=768912618 instance=ExtResource("23_j1g1p")]
 process_mode = 4

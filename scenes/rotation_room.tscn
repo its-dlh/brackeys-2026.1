@@ -93,12 +93,32 @@ _surfaces = [{
 "vertex_data": PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAAAAAAAACDAAAAgQAAAIEAAACDAAAAAAAAAAAAAACDAAAAAAAAAAAAAAAAAAAAgQAAAAAAAAAAAAAAgQAAAAAAAAAAAAAAgQAAAAAAAACDAAAAAAAAAAAAAACDAAAAAAAAAAAAAACDAAAAgQAAAAAAAACDAAAAgQAAAIEAAACDAAAAgQAAAIEAAAAAAAAAgQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgQAAAAAAAACDAAAAgQAAAAAAAAAAAAAAgQAAAIEAAAAAAAAAgQAAAIEAAAAAAAAAgQAAAIEAAACDAAAAgQAAAAAAAACDAAAAgQAAAIEAAACDAAAAgQAAAIEAAAAAAAAAAAAAAAAAAAAAA/z//v///////P/+///////8//7///////38AAP//////fwAA//////9/AAD//////38AAP//////fwAA//////9/AAD//////////wAA/7//////AAD/v/////8AAP+//3//f////7//f/9/////v/9//3////+/////f/////////9//////////3//////////f/////////9//////////3///////z//v///////P/+///////8//7//////")
 }]
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_i4jnc"]
+vertices = PackedVector3Array(-4, 0.01999998, -39.8, -4, 0.01999998, -30.3, -0.25, 0.01999998, -30.3, -0.25, 0.01999998, -39.8)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+geometry_parsed_geometry_type = 1
+geometry_collision_mask = 4294967041
+cell_height = 0.01
+agent_radius = 0.01
+agent_max_slope = 60.2
+edge_max_error = 0.5
+
 [node name="RotationRoom" type="Node3D" unique_id=1683999598]
 
 [node name="Environment" parent="." unique_id=672148315 instance=ExtResource("1_8xvy4")]
 
 [node name="Player" parent="." unique_id=1791314085 instance=ExtResource("2_i4jnc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6734282, 0, -1.3631363)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=572307293]
+transform = Transform3D(0.9659259, 1.13133405e-08, 0.25881907, 0.25881907, -4.222196e-08, -0.9659258, 0, 1, -4.371139e-08, 0, 0, 0)
+light_color = Color(0, 1, 0.9098039, 1)
+light_energy = 1.11
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="." unique_id=1104414551]
+transform = Transform3D(0.8660254, 1.5403302e-08, -0.5, 0.4829629, -0.25881907, 0.8365163, -0.12940952, -0.9659258, -0.2241439, 4.5, 0, 0)
+light_color = Color(1, 0.68235296, 0.8235294, 1)
+light_energy = 0.53
 
 [node name="BaseNavigationRegion" parent="." unique_id=482073413 instance=ExtResource("3_h3spp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.05)
@@ -112,43 +132,138 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
 [node name="PlainFloorTiny" parent="BaseNavigationRegion" unique_id=1685270604 instance=ExtResource("5_h4dxt")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2, 0, 0)
 
-[node name="NavigationRegion3D2" type="NavigationRegion3D" parent="." unique_id=1735037164]
+[node name="FlatPlat" type="NavigationRegion3D" parent="." unique_id=1735037164]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -10)
 navigation_mesh = SubResource("NavigationMesh_0eglf")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D2" unique_id=122349071]
+[node name="StaticBody3D" type="StaticBody3D" parent="FlatPlat" unique_id=122349071]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, -0.2, -1.2999992)
 script = ExtResource("6_i4jnc")
 
-[node name="Cube" type="MeshInstance3D" parent="NavigationRegion3D2/StaticBody3D" unique_id=867669185]
+[node name="Cube" type="MeshInstance3D" parent="FlatPlat/StaticBody3D" unique_id=867669185]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_gwjgr")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="NavigationRegion3D2/StaticBody3D" unique_id=84039423]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="FlatPlat/StaticBody3D" unique_id=84039423]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 8.743729e-11, -0.0020003319, 0)
 shape = SubResource("BoxShape3D_8xvy4")
 
-[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=728053542]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.95, 0, -12.55)
-navigation_mesh = SubResource("NavigationMesh_hxvvm")
+[node name="FlatPlat3" type="NavigationRegion3D" parent="." unique_id=71811064]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -20)
+navigation_mesh = SubResource("NavigationMesh_0eglf")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="NavigationRegion3D" unique_id=1369676512]
+[node name="StaticBody3D" type="StaticBody3D" parent="FlatPlat3" unique_id=668506963]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, -0.2, -1.2999992)
 script = ExtResource("6_i4jnc")
 
-[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/StaticBody3D" unique_id=702208762]
+[node name="Cube" type="MeshInstance3D" parent="FlatPlat3/StaticBody3D" unique_id=2146159487]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("ArrayMesh_gwjgr")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="FlatPlat3/StaticBody3D" unique_id=678134019]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 8.743729e-11, -0.0020003319, 0)
+shape = SubResource("BoxShape3D_8xvy4")
+
+[node name="FlatPlat2" type="NavigationRegion3D" parent="." unique_id=1631657399]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2.5, -15)
+navigation_mesh = SubResource("NavigationMesh_0eglf")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="FlatPlat2" unique_id=378971114]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, -0.2, -1.2999992)
+script = ExtResource("6_i4jnc")
+
+[node name="Cube" type="MeshInstance3D" parent="FlatPlat2/StaticBody3D" unique_id=761747728]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("ArrayMesh_gwjgr")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="FlatPlat2/StaticBody3D" unique_id=46933443]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 8.743729e-11, -0.0020003319, 0)
+shape = SubResource("BoxShape3D_8xvy4")
+
+[node name="FlatPlat4" type="NavigationRegion3D" parent="." unique_id=1912690876]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2.5, -25)
+navigation_mesh = SubResource("NavigationMesh_0eglf")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="FlatPlat4" unique_id=1104263306]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2, -0.2, -1.2999992)
+script = ExtResource("6_i4jnc")
+
+[node name="Cube" type="MeshInstance3D" parent="FlatPlat4/StaticBody3D" unique_id=1289149391]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("ArrayMesh_gwjgr")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="FlatPlat4/StaticBody3D" unique_id=1560579964]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 8.743729e-11, -0.0020003319, 0)
+shape = SubResource("BoxShape3D_8xvy4")
+
+[node name="RotationCenter" type="Node3D" parent="." unique_id=1380491516]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25, 0, -21.25)
+
+[node name="WedgePlat" type="NavigationRegion3D" parent="RotationCenter" unique_id=728053542]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3, 0, 8.7)
+navigation_mesh = SubResource("NavigationMesh_hxvvm")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="RotationCenter/WedgePlat" unique_id=1369676512]
+script = ExtResource("6_i4jnc")
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="RotationCenter/WedgePlat/StaticBody3D" unique_id=702208762]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_h3spp")
 
-[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/StaticBody3D" unique_id=620407076]
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="RotationCenter/WedgePlat/StaticBody3D" unique_id=620407076]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("ArrayMesh_1f1se")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=572307293]
-transform = Transform3D(0.9659258, 1.131334e-08, 0.25881904, 0.25881904, -4.222196e-08, -0.9659258, 0, 1, -4.371139e-08, 0, 0, 0)
-light_color = Color(0, 1, 0.9098039, 1)
-light_energy = 1.11
+[node name="WedgePlat2" type="NavigationRegion3D" parent="RotationCenter" unique_id=1076619210]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -1.2, 0, 1.2)
+navigation_mesh = SubResource("NavigationMesh_hxvvm")
 
-[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="." unique_id=1104414551]
-transform = Transform3D(0.8660254, 1.5403302e-08, -0.50000006, 0.4829629, -0.25881907, 0.8365163, -0.12940952, -0.9659258, -0.2241439, 4.5, 0, 0)
-light_color = Color(1, 0.68235296, 0.8235294, 1)
-light_energy = 0.53
+[node name="StaticBody3D" type="StaticBody3D" parent="RotationCenter/WedgePlat2" unique_id=855043943]
+script = ExtResource("6_i4jnc")
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="RotationCenter/WedgePlat2/StaticBody3D" unique_id=874903414]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_h3spp")
+
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="RotationCenter/WedgePlat2/StaticBody3D" unique_id=1489897481]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("ArrayMesh_1f1se")
+
+[node name="WedgePlat3" type="NavigationRegion3D" parent="RotationCenter" unique_id=8224892]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3, 0, -1.2999992)
+navigation_mesh = SubResource("NavigationMesh_hxvvm")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="RotationCenter/WedgePlat3" unique_id=1036229265]
+script = ExtResource("6_i4jnc")
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="RotationCenter/WedgePlat3/StaticBody3D" unique_id=1595113149]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_h3spp")
+
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="RotationCenter/WedgePlat3/StaticBody3D" unique_id=1515958738]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("ArrayMesh_1f1se")
+
+[node name="WedgePlat4" type="NavigationRegion3D" parent="RotationCenter" unique_id=588241088]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -1.2, 0, -8.799999)
+navigation_mesh = SubResource("NavigationMesh_hxvvm")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="RotationCenter/WedgePlat4" unique_id=546020951]
+script = ExtResource("6_i4jnc")
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="RotationCenter/WedgePlat4/StaticBody3D" unique_id=340783603]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_h3spp")
+
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="RotationCenter/WedgePlat4/StaticBody3D" unique_id=1202774076]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("ArrayMesh_1f1se")
+
+[node name="BaseNavigationRegion2" parent="." unique_id=428391728 instance=ExtResource("3_h3spp")]
+navigation_mesh = SubResource("NavigationMesh_i4jnc")
+
+[node name="PlainFloorPlainWall5x5" parent="BaseNavigationRegion2" unique_id=1050819538 instance=ExtResource("4_1f1se")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -30.05)
+
+[node name="PlainFloorPlainWall5x6" parent="BaseNavigationRegion2" unique_id=388206152 instance=ExtResource("4_1f1se")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -35.05)

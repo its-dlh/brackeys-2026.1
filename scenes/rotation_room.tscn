@@ -157,13 +157,23 @@ size = 20.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=572307293]
 transform = Transform3D(0.9659259, 1.13133405e-08, 0.25881907, 0.25881907, -4.222196e-08, -0.9659258, 0, 1, -4.371139e-08, 0, 0, 0)
-light_color = Color(0, 1, 0.9098039, 1)
+light_color = Color(0, 0.7833333, 1, 1)
 light_energy = 1.11
 
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="." unique_id=1104414551]
 transform = Transform3D(0.8660254, 1.5403302e-08, -0.5, 0.4829629, -0.25881907, 0.8365163, -0.12940952, -0.9659258, -0.2241439, 4.5, 0, 0)
-light_color = Color(1, 0.68235296, 0.8235294, 1)
+light_color = Color(1, 0.68, 0.68, 1)
 light_energy = 0.53
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=794876094]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 2.5, -4)
+light_energy = 0.37
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=1981276724]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25, 3.5, -21.35)
+light_energy = 1.13
+light_size = 0.33
+shadow_enabled = true
 
 [node name="BaseNavigationRegion" parent="." unique_id=482073413 instance=ExtResource("3_h3spp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.05)

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c8n5inn1lm2av"
+path="res://.godot/imported/oil.dialogue-81135cc6c8a552a49ec202a686287432.tres"
+
+[deps]
+
+source_file="res://words/opening_room/oil.dialogue"
+dest_files=["res://.godot/imported/oil.dialogue-81135cc6c8a552a49ec202a686287432.tres"]
+
+[params]
+
+defaults=true

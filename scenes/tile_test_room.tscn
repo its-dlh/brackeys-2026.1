@@ -1,15 +1,28 @@
 [gd_scene format=3 uid="uid://byj6loolns1f5"]
 
 [ext_resource type="PackedScene" uid="uid://dqvawp4qq4qtp" path="res://scenes/player.tscn" id="2_0if41"]
+[ext_resource type="PackedScene" uid="uid://ctcjlsc6uyab8" path="res://utils/entrance_exit.tscn" id="2_agn8n"]
 [ext_resource type="PackedScene" uid="uid://dp17d1nacv3nf" path="res://tiles/plain_floor_5x5.tscn" id="2_du6nb"]
+[ext_resource type="PackedScene" uid="uid://cusi63op6frb3" path="res://environment_assets/base_navigation_region.tscn" id="3_882iy"]
 [ext_resource type="PackedScene" uid="uid://bkh6x6nktallc" path="res://tiles/plain_floor_plain_wall_5x5.tscn" id="3_agn8n"]
 [ext_resource type="PackedScene" uid="uid://prahic7e4fhh" path="res://tiles/plain_floor_plain_wall_corner_5x5.tscn" id="4_882iy"]
+[ext_resource type="PackedScene" uid="uid://47b6rej64ben" path="res://tiles/stairs.tscn" id="7_rc76c"]
 
 [sub_resource type="Environment" id="Environment_1tp4b"]
 background_mode = 2
 ambient_light_color = Color(1, 1, 1, 1)
 ambient_light_energy = 0.31
 ssao_intensity = 8.6
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_n26ff"]
+vertices = PackedVector3Array(-0.25, -1.49, 5.25, 0.75, -1.49, 5.25, 0.75, 0.01999998, 3.5, -0.5, 0.01999998, 2.75, -0.375, -0.49, 4, 0.75, -0.74, 4.375, 1.25, 0.01999998, 2.75, 0, 0.01999998, -1.75, -0.25, 0.01999998, -6, -9, 0.01999998, -6, -9, 0.01999998, 2.75, 4.75, 0.01999998, 2.75, 4.75, 0.01999998, -1.75)
+polygons = [PackedInt32Array(1, 0, 5), PackedInt32Array(5, 0, 4), PackedInt32Array(5, 4, 2), PackedInt32Array(2, 4, 3), PackedInt32Array(2, 3, 6), PackedInt32Array(6, 3, 7), PackedInt32Array(7, 3, 8), PackedInt32Array(8, 3, 10), PackedInt32Array(8, 10, 9), PackedInt32Array(11, 6, 12), PackedInt32Array(12, 6, 7)]
+geometry_parsed_geometry_type = 1
+geometry_collision_mask = 4294967041
+cell_height = 0.01
+agent_radius = 0.25
+agent_max_climb = 0.95
+agent_max_slope = 47.5
 
 [node name="Tile test room" type="Node3D" unique_id=2028324652]
 
@@ -29,22 +42,33 @@ light_energy = 1.95
 shadow_enabled = true
 
 [node name="Player" parent="." unique_id=1791314085 instance=ExtResource("2_0if41")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3265718, 0, 2.6368637)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3265718, 0, 1.6368637)
 
 [node name="StartingSection" type="Node3D" parent="." unique_id=522276082]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3265718, 0, 2.6368637)
 
-[node name="PlainFloor5x5" parent="StartingSection" unique_id=707367707 instance=ExtResource("2_du6nb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3265718, 0, 0.3631363)
+[node name="EntranceExit" parent="." unique_id=1306114400 instance=ExtResource("2_agn8n")]
+transform = Transform3D(2.9802322e-08, 0, 1, 0, 1, 0, -1, 0, 2.9802322e-08, 0, 0, 4)
+connected_room_path = "uid://sgqc60qwdy11"
+connection_id = "main_hall_stairs"
 
-[node name="PlainFloorPlainWall5x5" parent="StartingSection" unique_id=122786701 instance=ExtResource("3_agn8n")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6.326572, 0, -4.6368637)
+[node name="BaseNavigationRegion" parent="." unique_id=482073413 instance=ExtResource("3_882iy")]
+navigation_mesh = SubResource("NavigationMesh_n26ff")
 
-[node name="PlainFloorPlainWallCornerCSG" parent="StartingSection" unique_id=1364384322 instance=ExtResource("4_882iy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.326572, 0, -4.6368637)
+[node name="PlainFloor5x5" parent="BaseNavigationRegion" unique_id=707367707 instance=ExtResource("2_du6nb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
 
-[node name="PlainFloorPlainWall5x6" parent="StartingSection" unique_id=1240054828 instance=ExtResource("3_agn8n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.326572, 0, 0.3631363)
+[node name="PlainFloorPlainWall5x5" parent="BaseNavigationRegion" unique_id=122786701 instance=ExtResource("3_agn8n")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -5, 0, -2)
 
-[node name="PlainFloor5x6" parent="StartingSection" unique_id=2058020347 instance=ExtResource("2_du6nb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.673428, 0, 0.3631363)
+[node name="PlainFloorPlainWallCornerCSG" parent="BaseNavigationRegion" unique_id=1364384322 instance=ExtResource("4_882iy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -2)
+
+[node name="PlainFloorPlainWall5x6" parent="BaseNavigationRegion" unique_id=1240054828 instance=ExtResource("3_agn8n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 3)
+
+[node name="PlainFloor5x6" parent="BaseNavigationRegion" unique_id=2058020347 instance=ExtResource("2_du6nb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 3)
+
+[node name="Stairs" parent="BaseNavigationRegion" unique_id=1968932540 instance=ExtResource("7_rc76c")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, -2, 5.5)

@@ -1,0 +1,12 @@
+~ start
+if parent.is_door_open() == true
+	The door is open.
+elif GameState.get_value(GameState.HAS_OILED_LEGS) == true
+	Your legs are now capable of traversing stairs, so you open the door to the staircase.
+	do parent.open_door()
+else
+	This door is labeled "Stairs".
+	Your knees are rusted and unable to bend. You cannot traverse stairs in this state.
+	# TODO writing
+	Go touch the second locker from the right, and thy knees shall be healed anew.
+=> END

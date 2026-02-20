@@ -22,8 +22,11 @@
 [ext_resource type="PackedScene" uid="uid://ch0kryxtsu168" path="res://environment_assets/locker.tscn" id="14_ig36b"]
 [ext_resource type="PackedScene" uid="uid://cnxi6sqik5071" path="res://tiles/plain_floor_plain_wall_inner_corner_5x5.tscn" id="15_0fxbs"]
 [ext_resource type="PackedScene" uid="uid://b40uqnh1iy5sg" path="res://tiles/plain_floor_10x10.tscn" id="16_ig36b"]
+[ext_resource type="Resource" uid="uid://c8n5inn1lm2av" path="res://words/opening_room/oil.dialogue" id="19_ndk15"]
 [ext_resource type="PackedScene" uid="uid://8mxryp082s56" path="res://tiles/plain_floor_tiny.tscn" id="23_j1g1p"]
 [ext_resource type="PackedScene" uid="uid://47b6rej64ben" path="res://tiles/stairs.tscn" id="24_kyuk5"]
+[ext_resource type="Resource" uid="uid://byd4fo28afkdk" path="res://words/opening_room/staircase_door.dialogue" id="25_8b6so"]
+[ext_resource type="PackedScene" uid="uid://ctcjlsc6uyab8" path="res://utils/entrance_exit.tscn" id="27_cvynx"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_j1g1p"]
 vertices = PackedVector3Array(-11.076571, 2.52, -9.886864, -11.076571, 2.52, -7.8868637, -10.576571, 2.52, -9.636864, -8.326571, 2.52, -9.636864, -10.326571, 1.24, -9.136864, -10.326571, 1.01, -8.136864, -8.576571, 1.01, -8.136864, -8.576571, 1.01, -9.136864, -9.451571, 1.01, -9.136864, -8.576571, 0.01999998, -3.1368637, -9.076571, 0.01999998, -2.8868637, -8.576571, 0.01999998, -1.1368637, -1.8265715, 0.01999998, -0.3868637, -2.3265715, 0.01999998, -4.1368637, -5.8265715, 0.01999998, -4.3868637, -10.326571, 0.01999998, -7.6368637, -10.326571, 0.01999998, -4.8868637, -9.326571, 0.01999998, -4.8868637, -8.326571, 0.01999998, -7.6368637, -8.576571, 0.01999998, -4.1368637, -5.8265715, 0.01999998, -6.1368637, -3.8265715, 0.01999998, -6.3868637, -3.8265715, 0.01999998, -9.136864, -8.076571, 0.01999998, -9.136864, -2.0765715, 0.01999998, -4.6368637, -9.326571, 0.01999998, -0.3868637, -2.3265715, 0.01999998, -6.3868637, 3.4234285, 0.01999998, -9.136864, 3.4234285, 0.01999998, -0.3868637, -5.3265715, 1.05, -5.8868637, -5.3265715, 1.05, -4.6368637, -2.5765715, 1.05, -4.6368637, -2.5765715, 1.05, -5.8868637, -9.076571, 3.01, -4.1368637, -10.576571, 3.01, -4.1368637, -10.576571, 3.01, -3.1368637, -10.076571, 3.01, -2.8868637, -9.576571, 3.01, -2.8868637, -9.076571, 3.01, -3.1368637, -10.576571, 3.01, -1.1368637, -9.076571, 3.01, -1.1368637, -10.326571, 0.01999998, -3.8868637, -10.076571, 0.01999998, -3.1368637, -9.326571, 0.01999998, -3.3868637, -9.576571, 0.01999998, -4.1368637, -10.326571, 0.01999998, -1.8868637, -10.076571, 0.01999998, -1.1368637, -9.326571, 0.01999998, -1.3868637, -9.576571, 0.01999998, -2.1368637)
@@ -77,13 +80,12 @@ agent_radius = 0.25
 agent_max_climb = 0.01
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_8b6so"]
-vertices = PackedVector3Array(6, 0.01999998, -7, 5.25, 0.01999998, -6.5, 7.25, 0.01999998, -2.5, 9.75, 0.01999998, -2.75, 10, 0.01999998, -7.75, 6, 0.01999998, -11.5, 14.75, 0.01999998, -7.75, 14.75, 0.01999998, -11.5, -7.25, 0.01999998, -4, -7.25, 0.01999998, -3.25, -6.5, 0.01999998, -3, -6.5, 0.01999998, -4.5, -3, 0.01999998, -6.5, -7.25, 0.01999998, -2, -7.25, 0.01999998, 7.25, 7.25, 0.01999998, 7.25, -4.5, 0.01999998, -6.5, -6.5, 0.01999998, -6.5, -3.25, 2.01, -9.75, -4.25, 2.01, -9.75, -4, 0.01999998, -7, -3.0833335, 0.21999997, -7.583333, -4.125, 0.80999994, -8.375, -2.5, 2.52, -7, 0.25, 2.52, -7, 0, 2.52, -7.5, -2.5, 2.52, -7.5)
-polygons = [PackedInt32Array(0, 4, 1), PackedInt32Array(1, 4, 2), PackedInt32Array(2, 4, 3), PackedInt32Array(4, 0, 5), PackedInt32Array(6, 4, 7), PackedInt32Array(7, 4, 5), PackedInt32Array(9, 8, 10), PackedInt32Array(10, 8, 11), PackedInt32Array(1, 2, 12), PackedInt32Array(12, 2, 13), PackedInt32Array(13, 2, 14), PackedInt32Array(14, 2, 15), PackedInt32Array(11, 17, 16), PackedInt32Array(12, 20, 21), PackedInt32Array(21, 20, 22), PackedInt32Array(21, 22, 18), PackedInt32Array(18, 22, 19), PackedInt32Array(13, 10, 12), PackedInt32Array(12, 16, 20), PackedInt32Array(16, 12, 11), PackedInt32Array(11, 12, 10), PackedInt32Array(26, 25, 23), PackedInt32Array(23, 25, 24)]
+vertices = PackedVector3Array(6, 0.01999998, -7, 5.25, 0.01999998, -6.5, 7.25, 0.01999998, -2.5, 9.75, 0.01999998, -2.75, 10, 0.01999998, -7.75, 6, 0.01999998, -11.5, 14.75, 0.01999998, -7.75, 14.75, 0.01999998, -11.5, -7.25, 0.01999998, -4, -7.25, 0.01999998, -3.25, -6.5, 0.01999998, -3, -6.5, 0.01999998, -4.5, -3, 0.01999998, -6.5, -7.25, 0.01999998, -2, -7.25, 0.01999998, 7.25, 7.25, 0.01999998, 7.25, -4.5, 0.01999998, -6.5, -6.5, 0.01999998, -6.5, -3.25, 2.02, -10.5, -4.25, 2.02, -10.5, -4, 0.01999998, -7, -3.0833335, 0.01999998, -7.833333, -3.1666665, 1.16, -9.166666, -4.166667, 1.41, -9.333333, -4.083333, 0.15999997, -8.166666, -2.5, 2.52, -7, 0.25, 2.52, -7, 0, 2.52, -7.5, -2.5, 2.52, -7.5)
+polygons = [PackedInt32Array(0, 4, 1), PackedInt32Array(1, 4, 2), PackedInt32Array(2, 4, 3), PackedInt32Array(4, 0, 5), PackedInt32Array(6, 4, 7), PackedInt32Array(7, 4, 5), PackedInt32Array(9, 8, 10), PackedInt32Array(10, 8, 11), PackedInt32Array(1, 2, 12), PackedInt32Array(12, 2, 13), PackedInt32Array(13, 2, 14), PackedInt32Array(14, 2, 15), PackedInt32Array(11, 17, 16), PackedInt32Array(19, 18, 23), PackedInt32Array(23, 18, 22), PackedInt32Array(23, 22, 24), PackedInt32Array(24, 22, 21), PackedInt32Array(24, 21, 20), PackedInt32Array(20, 21, 12), PackedInt32Array(13, 10, 12), PackedInt32Array(12, 16, 20), PackedInt32Array(16, 12, 11), PackedInt32Array(11, 12, 10), PackedInt32Array(28, 27, 25), PackedInt32Array(25, 27, 26)]
 geometry_parsed_geometry_type = 1
 geometry_collision_mask = 4294967041
 cell_height = 0.01
 agent_radius = 0.25
-agent_max_climb = 0.2
 
 [node name="OpeningRoomTiled" type="Node3D" unique_id=2028324652]
 
@@ -126,6 +128,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.0
 
 [node name="Interactable" parent="StartingSection/workbench" unique_id=528907151 instance=ExtResource("5_hcl5b")]
 dialogue = ExtResource("4_1uxev")
+indicator_offset = Vector3(0, 1.25, 0)
 
 [node name="PlainFloor5x5" parent="StartingSection" unique_id=707367707 instance=ExtResource("2_uia4f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3265718, 0, -0.13686371)
@@ -232,6 +235,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 1.6493535, -2.4)
 [node name="locker5" parent="HallwayNew" unique_id=1060130122 instance=ExtResource("14_ig36b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 1.6493535, -2.4)
 
+[node name="Interactable" parent="HallwayNew/locker5" unique_id=909290474 instance=ExtResource("5_hcl5b")]
+dialogue = ExtResource("19_ndk15")
+target_offset = Vector3(0, 0, 0.25)
+acceptable_distance = 1.0
+
 [node name="locker6" parent="HallwayNew" unique_id=1699928754 instance=ExtResource("14_ig36b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 1.6493535, -2.4)
 
@@ -319,4 +327,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -5)
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4, 0, -7.5)
 
 [node name="Stairs" parent="MainHallNew" unique_id=906762880 instance=ExtResource("24_kyuk5")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4, 0, -7.5)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4, 0, -8.1)
+
+[node name="StairwayDoor" parent="MainHallNew" unique_id=1416743872 instance=ExtResource("11_achke")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.75, 0, -7.25)
+dialogue = ExtResource("25_8b6so")
+
+[node name="EntranceExit" parent="MainHallNew" unique_id=1306114400 instance=ExtResource("27_cvynx")]
+transform = Transform3D(-4.371139e-08, 0, -1, -0.5, 0.8660254, 2.1855694e-08, 0.8660254, 0.5, -3.7855173e-08, -3.7000008, 1.3, -9.3)
+connected_room_path = "uid://byj6loolns1f5"
+connection_id = "main_hall_stairs"

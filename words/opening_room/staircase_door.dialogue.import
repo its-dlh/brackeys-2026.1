@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://byd4fo28afkdk"
+path="res://.godot/imported/staircase_door.dialogue-7ff97c0c5d3622d9cc17928ef175d550.tres"
+
+[deps]
+
+source_file="res://words/opening_room/staircase_door.dialogue"
+dest_files=["res://.godot/imported/staircase_door.dialogue-7ff97c0c5d3622d9cc17928ef175d550.tres"]
+
+[params]
+
+defaults=true

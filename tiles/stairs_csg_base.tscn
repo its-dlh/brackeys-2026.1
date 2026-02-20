@@ -52,8 +52,7 @@ mesh = SubResource("ArrayMesh_fdlhc")
 [node name="CSGCollisionPolygonBase" type="CSGPolygon3D" parent="Floor" unique_id=1915649943]
 process_mode = 4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0, 0.75)
-visible = false
-polygon = PackedVector2Array(-1.5, 0, -1.5, 2, 1, 0)
+polygon = PackedVector2Array(-1, 2, -1.5, 2, -1.5, 0, 1, 0)
 depth = 1.5
 material = ExtResource("2_jlrkt")
 

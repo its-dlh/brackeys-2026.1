@@ -16,7 +16,7 @@ _surfaces = [{
 }]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ns4u1"]
-data = PackedVector3Array(-1.5, 0, 0, -1.5, 0, -1.5, -1.5, 2, -1.5, -1.5, 0, -1.5, 1, 0, -1.5, -1.5, 2, -1.5, -1.5, 0, -1.5, -1.5, 0, 0, 1, 0, 0, -1.5, 2, 0, 1, 0, 0, -1.5, 0, 0, -1.5, 2, 0, -1.5, 2, -1.5, 1, 0, -1.5, -1.5, 2, -1.5, -1.5, 2, 0, -1.5, 0, 0, 1, 0, 0, 1, 0, -1.5, -1.5, 0, -1.5, 1, 0, -1.5, 1, 0, 0, -1.5, 2, 0)
+data = PackedVector3Array(-1.5, 0, 0, -1.5, 0, -1.5, -1.5, 2, -1.5, -1.5, 2, -1.5, -1.5, 0, -1.5, 1, 0, -1.5, -1.5, 0, -1.5, -1.5, 0, 0, 1, 0, 0, 1, 0, 0, -1.5, 0, 0, -1.5, 2, 0, -1.5, 2, 0, -1.5, 2, -1.5, -1, 2, -1.5, 1, 0, -1.5, -1, 2, -1.5, -1.5, 2, -1.5, -1, 2, 0, -1, 2, -1.5, 1, 0, -1.5, -1.5, 2, -1.5, -1.5, 2, 0, -1.5, 0, 0, -1, 2, -1.5, -1, 2, 0, -1.5, 2, 0, -1.5, 2, 0, -1, 2, 0, 1, 0, 0, 1, 0, 0, 1, 0, -1.5, -1.5, 0, -1.5, 1, 0, -1.5, 1, 0, 0, -1, 2, 0)
 
 [node name="Stairs" type="Node3D" unique_id=2028324652]
 
@@ -27,6 +27,6 @@ script = ExtResource("1_ns4u1")
 [node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=303777871]
 mesh = SubResource("ArrayMesh_fdlhc")
 
-[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=2057988994]
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=1369261834]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0, 0.75)
 shape = SubResource("ConcavePolygonShape3D_ns4u1")

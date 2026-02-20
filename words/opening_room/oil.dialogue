@@ -1,0 +1,8 @@
+~ start
+if GameState.get_value(GameState.HAS_OILED_LEGS) != true:
+	You touch the locker, and it does not heal your legs.
+	But there is a can of oil in the locker, so you use it to oil your legs. Now you can bend your knees!
+	do GameState.set_value(GameState.HAS_OILED_LEGS, true)
+else
+	This is where you found the oil.
+=> END

@@ -4,7 +4,8 @@ signal state_changed(key, value, prev_value, state: Dictionary)
 
 enum {
 	HAS_LEFT_ARM,
-	HAS_RIGHT_ARM
+	HAS_RIGHT_ARM,
+	HAS_OILED_LEGS
 }
 
 var state: Dictionary = {}

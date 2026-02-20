@@ -20,6 +20,7 @@ data = PackedVector3Array(-0.25, -1.25, 2.5, -0.25, -1.25, -2.5, -0.25, 1.25, -2
 [node name="PlainFloorPlainWall5x5" type="Node3D" unique_id=2028324652]
 
 [node name="WorldGeometry" type="NavigationRegion3D" parent="." unique_id=1103197185]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -2.5)
 navigation_mesh = SubResource("NavigationMesh_hy5rx")
 
 [node name="Floor" type="StaticBody3D" parent="WorldGeometry" unique_id=1107550413]

@@ -85,8 +85,8 @@ agent_max_climb = 0.01
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_cvynx"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_8b6so"]
-vertices = PackedVector3Array(6, 0.01999998, -7, 5.25, 0.01999998, -6.5, 7.25, 0.01999998, -2.5, 9.75, 0.01999998, -2.75, 10, 0.01999998, -7.75, 6, 0.01999998, -11.5, 14.75, 0.01999998, -7.75, 14.75, 0.01999998, -11.5, -6.5, 0.01999998, -4.5, -7.25, 0.01999998, -4, -7.25, 0.01999998, -3.25, -5.5, 0.01999998, -2.5, -3, 0.01999998, -6.5, -4.5, 0.01999998, -6.5, -5.5, 0.01999998, 0, -5, 0.01999998, 0.25, -6.5, 0.01999998, -6.5, -3.25, 2.02, -10.5, -4.25, 2.02, -10.5, -4, 0.01999998, -7, -3.0833335, 0.01999998, -7.833333, -3.1666665, 1.16, -9.166666, -4.166667, 1.41, -9.333333, -4.083333, 0.15999997, -8.166666, -5, 0.01999998, 2.75, -6.5, 0.01999998, 3, -6.75, 0.01999998, 7.25, 7.25, 0.01999998, 7.25, -2.5, 2.52, -7, 0.25, 2.52, -7, 0, 2.52, -7.5, -2.5, 2.52, -7.5, -6.5, 1.02, -2.25, -6.5, 1.02, -0.25, -6, 1.02, -0.25, -6, 1.02, -2.25, -6.25, 1.27, 0.5, -6.25, 1.27, 2.5, -5.5, 1.27, 2.5, -5.5, 1.27, 0.5)
-polygons = [PackedInt32Array(0, 4, 1), PackedInt32Array(1, 4, 2), PackedInt32Array(2, 4, 3), PackedInt32Array(4, 0, 5), PackedInt32Array(6, 4, 7), PackedInt32Array(7, 4, 5), PackedInt32Array(10, 9, 8), PackedInt32Array(10, 8, 11), PackedInt32Array(11, 8, 13), PackedInt32Array(11, 13, 12), PackedInt32Array(14, 11, 15), PackedInt32Array(15, 11, 12), PackedInt32Array(8, 16, 13), PackedInt32Array(18, 17, 22), PackedInt32Array(22, 17, 21), PackedInt32Array(22, 21, 23), PackedInt32Array(23, 21, 20), PackedInt32Array(23, 20, 19), PackedInt32Array(19, 20, 12), PackedInt32Array(25, 24, 26), PackedInt32Array(26, 24, 27), PackedInt32Array(12, 13, 19), PackedInt32Array(15, 12, 24), PackedInt32Array(24, 12, 1), PackedInt32Array(24, 1, 2), PackedInt32Array(24, 2, 27), PackedInt32Array(31, 30, 28), PackedInt32Array(28, 30, 29), PackedInt32Array(35, 34, 32), PackedInt32Array(32, 34, 33), PackedInt32Array(39, 38, 36), PackedInt32Array(36, 38, 37)]
+vertices = PackedVector3Array(6, 0.01999998, -7, 5.25, 0.01999998, -6.5, 7.25, 0.01999998, -2.5, 9.75, 0.01999998, -2.75, 10, 0.01999998, -7.75, 6, 0.01999998, -11.5, 14.75, 0.01999998, -7.75, 14.75, 0.01999998, -11.5, -6.5, 0.01999998, 0.5, -6.5, 0.01999998, 1, -5.75, 0.01999998, 1, -5.5, 0.01999998, 0.25, -5.5, 0.01999998, -2.25, -4.5, 0.01999998, 1.75, -6.5, 0.01999998, -4.5, -7.25, 0.01999998, -4, -7.25, 0.01999998, -3.25, -5.5, 0.01999998, 1.75, -3, 0.01999998, -6.5, -4, 0.01999998, 3, 7.25, 0.01999998, 7.25, -4.5, 0.01999998, -6.5, -6.5, 0.01999998, -6.5, -3.25, 2.02, -10.5, -4.25, 2.02, -10.5, -4, 0.01999998, -7, -3.0833335, 0.01999998, -7.833333, -3.1666665, 1.16, -9.166666, -4.166667, 1.41, -9.333333, -4.083333, 0.15999997, -8.166666, -6.5, 0.01999998, 4, -6.75, 0.01999998, 7.25, -2.5, 2.52, -7, 0.25, 2.52, -7, 0, 2.52, -7.5, -2.5, 2.52, -7.5, -6.5, 1.02, -2, -6.5, 1.02, 0, -6, 1.02, 0, -6, 1.02, -2, -6.5, 1.02, 3.5, -5.75, 1.02, 3.25, -5.75, 1.12, 2, -6.5, 1.02, 1.5, -5.25, 1.8399999, 2.75, -4.5, 1.55, 3, -4.5, 1.55, 2.25, -5.25, 1.8299999, 2.25)
+polygons = [PackedInt32Array(0, 4, 1), PackedInt32Array(1, 4, 2), PackedInt32Array(2, 4, 3), PackedInt32Array(4, 0, 5), PackedInt32Array(6, 4, 7), PackedInt32Array(7, 4, 5), PackedInt32Array(9, 8, 10), PackedInt32Array(10, 8, 11), PackedInt32Array(11, 12, 13), PackedInt32Array(16, 15, 14), PackedInt32Array(10, 11, 17), PackedInt32Array(17, 11, 13), PackedInt32Array(12, 18, 19), PackedInt32Array(19, 18, 1), PackedInt32Array(19, 1, 2), PackedInt32Array(19, 2, 20), PackedInt32Array(16, 14, 12), PackedInt32Array(12, 14, 21), PackedInt32Array(12, 21, 18), PackedInt32Array(14, 22, 21), PackedInt32Array(24, 23, 28), PackedInt32Array(28, 23, 27), PackedInt32Array(28, 27, 29), PackedInt32Array(29, 27, 26), PackedInt32Array(29, 26, 25), PackedInt32Array(25, 26, 18), PackedInt32Array(19, 13, 12), PackedInt32Array(18, 21, 25), PackedInt32Array(30, 19, 31), PackedInt32Array(31, 19, 20), PackedInt32Array(35, 34, 32), PackedInt32Array(32, 34, 33), PackedInt32Array(39, 38, 36), PackedInt32Array(36, 38, 37), PackedInt32Array(41, 40, 42), PackedInt32Array(42, 40, 43), PackedInt32Array(47, 46, 44), PackedInt32Array(44, 46, 45)]
 geometry_parsed_geometry_type = 1
 geometry_collision_mask = 4294967041
 cell_height = 0.01
@@ -269,7 +269,7 @@ process_mode = 4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -3.4999998)
 
 [node name="MainHallNew" parent="." unique_id=482073413 instance=ExtResource("13_orrkt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.013111, -4.7683716e-07, -0.0030021667)
 navigation_mesh = SubResource("NavigationMesh_8b6so")
 
 [node name="PlainFloorPlainWallDoorway2" parent="MainHallNew" unique_id=1779057440 instance=ExtResource("5_721to")]
@@ -368,19 +368,22 @@ connection_id = "main_hall_stairs"
 [node name="SpotLight3D" type="SpotLight3D" parent="MainHallNew" unique_id=1441058651]
 transform = Transform3D(1, 0, 0, 0, -0.30102208, 0.9536172, 0, -0.9536172, -0.30102208, -6.498657, 2.5548096, -1.6633301)
 
-[node name="desk" parent="MainHallNew" unique_id=1971970768 instance=ExtResource("21_lrdma")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.4240723, 0.50421166, -0.23730469)
+[node name="desk2" parent="MainHallNew" unique_id=1687982803 instance=ExtResource("21_lrdma")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0.5, 3.525)
 
-[node name="desk" parent="MainHallNew/desk" unique_id=1687982803 instance=ExtResource("21_lrdma")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.48986816, 0.24816918, 2.9355469)
+[node name="desk" parent="MainHallNew" unique_id=1971970768 instance=ExtResource("21_lrdma")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0.5, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MainHallNew" unique_id=602106562]
-transform = Transform3D(0.87374675, 0.4863811, 0, -0.4863811, 0.87374675, 0, 0, 0, 1, -5.3120117, 0.70532227, 1.324707)
+transform = Transform3D(0.87374675, 0.4863811, 0, -0.4863811, 0.87374675, 0, 0, 0, 1, -5.3120117, 0.70532227, 2.598877)
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="MainHallNew/StaticBody3D" unique_id=1333732541]
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MainHallNew/StaticBody3D" unique_id=1603795681]
 shape = SubResource("CylinderShape3D_lrdma")
+metadata/_edit_lock_ = true
 
 [node name="Interactable" parent="MainHallNew/StaticBody3D" unique_id=1029818739 instance=ExtResource("5_hcl5b")]
 dialogue = ExtResource("30_h2kv4")
+metadata/_edit_lock_ = true

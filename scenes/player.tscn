@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dqvawp4qq4qtp"]
 
 [ext_resource type="Script" uid="uid://bwd8u5t2hou8x" path="res://scenes/player.gd" id="1_3vyb7"]
+[ext_resource type="PackedScene" uid="uid://dgcwjn51tbqx5" path="res://scenes/player-character-v2.glb" id="2_g2els"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u8vuu"]
 radius = 0.25
@@ -22,6 +23,7 @@ shape = SubResource("CapsuleShape3D_u8vuu")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1131062443]
 physics_interpolation_mode = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+visible = false
 mesh = SubResource("CapsuleMesh_3vyb7")
 
 [node name="CameraMarker" type="Marker3D" parent="." unique_id=1408571741]
@@ -35,3 +37,6 @@ size = 10.0
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=818447834]
 path_desired_distance = 0.2
 target_desired_distance = 0.1
+
+[node name="player-character-v2" parent="." unique_id=1662433024 instance=ExtResource("2_g2els")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0.98, 0)

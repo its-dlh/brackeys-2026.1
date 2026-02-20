@@ -30,6 +30,9 @@
 [ext_resource type="Resource" uid="uid://byd4fo28afkdk" path="res://words/opening_room/staircase_door.dialogue" id="25_8b6so"]
 [ext_resource type="PackedScene" uid="uid://ctcjlsc6uyab8" path="res://utils/entrance_exit.tscn" id="27_cvynx"]
 [ext_resource type="Resource" uid="uid://bufvt5e7sga3q" path="res://words/sitting_technician.dialogue" id="30_h2kv4"]
+[ext_resource type="PackedScene" uid="uid://bh7r8co701lfi" path="res://environment_assets/science_tube/science-tube.glb" id="31_3kmu8"]
+[ext_resource type="PackedScene" uid="uid://cdqubgc02w3gc" path="res://environment_assets/black-blob.glb" id="32_esn4u"]
+[ext_resource type="Resource" uid="uid://bgwgrkaou8ycc" path="res://words/full-tube.dialogue" id="33_0vtoi"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_j1g1p"]
 vertices = PackedVector3Array(-11.076571, 2.52, -9.886864, -11.076571, 2.52, -7.8868637, -10.576571, 2.52, -9.636864, -8.326571, 2.52, -9.636864, -10.326571, 1.24, -9.136864, -10.326571, 1.01, -8.136864, -8.576571, 1.01, -8.136864, -8.576571, 1.01, -9.136864, -9.451571, 1.01, -9.136864, -8.576571, 0.01999998, -3.1368637, -9.076571, 0.01999998, -2.8868637, -8.576571, 0.01999998, -1.1368637, -1.8265715, 0.01999998, -0.3868637, -2.3265715, 0.01999998, -4.1368637, -5.8265715, 0.01999998, -4.3868637, -10.326571, 0.01999998, -7.6368637, -10.326571, 0.01999998, -4.8868637, -9.326571, 0.01999998, -4.8868637, -8.326571, 0.01999998, -7.6368637, -8.576571, 0.01999998, -4.1368637, -5.8265715, 0.01999998, -6.1368637, -3.8265715, 0.01999998, -6.3868637, -3.8265715, 0.01999998, -9.136864, -8.076571, 0.01999998, -9.136864, -2.0765715, 0.01999998, -4.6368637, -9.326571, 0.01999998, -0.3868637, -2.3265715, 0.01999998, -6.3868637, 3.4234285, 0.01999998, -9.136864, 3.4234285, 0.01999998, -0.3868637, -5.3265715, 1.05, -5.8868637, -5.3265715, 1.05, -4.6368637, -2.5765715, 1.05, -4.6368637, -2.5765715, 1.05, -5.8868637, -9.076571, 3.01, -4.1368637, -10.576571, 3.01, -4.1368637, -10.576571, 3.01, -3.1368637, -10.076571, 3.01, -2.8868637, -9.576571, 3.01, -2.8868637, -9.076571, 3.01, -3.1368637, -10.576571, 3.01, -1.1368637, -9.076571, 3.01, -1.1368637, -10.326571, 0.01999998, -3.8868637, -10.076571, 0.01999998, -3.1368637, -9.326571, 0.01999998, -3.3868637, -9.576571, 0.01999998, -4.1368637, -10.326571, 0.01999998, -1.8868637, -10.076571, 0.01999998, -1.1368637, -9.326571, 0.01999998, -1.3868637, -9.576571, 0.01999998, -2.1368637)
@@ -387,3 +390,12 @@ metadata/_edit_lock_ = true
 [node name="Interactable" parent="MainHallNew/StaticBody3D" unique_id=1029818739 instance=ExtResource("5_hcl5b")]
 dialogue = ExtResource("30_h2kv4")
 metadata/_edit_lock_ = true
+
+[node name="science-tube" parent="MainHallNew" unique_id=1445829019 instance=ExtResource("31_3kmu8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.75832, 1.5064129, 5.528759)
+
+[node name="black-blob" parent="MainHallNew/science-tube" unique_id=1101390636 instance=ExtResource("32_esn4u")]
+transform = Transform3D(0.72003055, 0, 0.69394237, 0, 1, 0, -0.69394237, 0, 0.72003055, -0.060800552, -0.328678, 0.092372894)
+
+[node name="Interactable" parent="MainHallNew/science-tube" unique_id=130918653 instance=ExtResource("5_hcl5b")]
+dialogue = ExtResource("33_0vtoi")

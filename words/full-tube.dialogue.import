@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bgwgrkaou8ycc"
+path="res://.godot/imported/full-tube.dialogue-1b4c211abe2cda2a8b36f32124b477f8.tres"
+
+[deps]
+
+source_file="res://words/full-tube.dialogue"
+dest_files=["res://.godot/imported/full-tube.dialogue-1b4c211abe2cda2a8b36f32124b477f8.tres"]
+
+[params]
+
+defaults=true

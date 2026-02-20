@@ -9,7 +9,9 @@
 [ext_resource type="Material" uid="uid://b0cb4oh2jjr2" path="res://environment_assets/blue_wall/BlueWall.tres" id="6_leemh"]
 [ext_resource type="Material" uid="uid://cwbfgms642tho" path="res://environment_assets/concrete_floor/concrete_floor_material.tres" id="7_ur6k4"]
 [ext_resource type="Script" uid="uid://7w3ckhi8o2xf" path="res://scenes/rotation_room_binary_button.gd" id="9_1f1se"]
+[ext_resource type="Script" uid="uid://cyvguhm6cbbrk" path="res://scenes/rotation_room_terminal.gd" id="9_h4dxt"]
 [ext_resource type="PackedScene" uid="uid://cnxxve6eyvij6" path="res://utils/interactable.tscn" id="10_h4dxt"]
+[ext_resource type="Resource" uid="uid://ihenxvbghpvk" path="res://words/rotation_room/terminal.dialogue" id="11_leemh"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_xgtno"]
 vertices = PackedVector3Array(-3, 0.01999998, -0.25, -3, 0.01999998, 0, -2.75, 0.01999998, 0, -1.75, 0.01999998, 0, -1.5, 0.01999998, 0, -1.5, 0.01999998, -0.25, -2.75, 0.01999998, 2.25, -1.75, 0.01999998, 2.25, -0.25, 0.01999998, -9.75, -4, 0.01999998, -9.75, -4, 0.01999998, -0.25, -0.25, 0.01999998, -0.25)
@@ -448,6 +450,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -35.05)
 
 [node name="Terminal" type="StaticBody3D" parent="." unique_id=1615466532]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.5, -3)
+script = ExtResource("9_h4dxt")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Terminal" unique_id=1973422240]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4000001, 0.32500005, 0)
@@ -462,6 +465,9 @@ mesh = SubResource("ArrayMesh_leemh")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Terminal" unique_id=458670662]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4000001, 0.32500005, 0)
 shape = SubResource("BoxShape3D_ur6k4")
+
+[node name="Interactable" parent="Terminal" unique_id=528907151 instance=ExtResource("10_h4dxt")]
+dialogue = ExtResource("11_leemh")
 
 [node name="BinaryButton" type="StaticBody3D" parent="." unique_id=1522419473]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.5, -5)
@@ -482,7 +488,7 @@ mesh = SubResource("ArrayMesh_xgtno")
 transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -0.5500002, 0.3, 0)
 shape = SubResource("BoxShape3D_0eglf")
 
-[node name="Interactable" parent="BinaryButton" unique_id=528907151 instance=ExtResource("10_h4dxt")]
+[node name="Interactable" parent="BinaryButton" unique_id=1442414356 instance=ExtResource("10_h4dxt")]
 
 [connection signal="interaction_started" from="BinaryButton/Interactable" to="BinaryButton" method="_on_interactable_interaction_started"]
 

@@ -1,6 +1,6 @@
 extends StaticBody3D
 
-@export var starting_bitfield: int = 5
+@export var starting_bitfield: int = 12
 
 @onready var flat_plat_1 = $"../FlatPlat"
 @onready var flat_plat_2 = $"../FlatPlat2"

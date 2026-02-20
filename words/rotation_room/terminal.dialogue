@@ -1,0 +1,4 @@
+~ start
+The terminal asks for a number.
+do parent.set_rotation_amount(prompt("Enter number"))
+=> END

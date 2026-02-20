@@ -4,13 +4,6 @@
 [ext_resource type="Material" uid="uid://rgcl3mpxidm6" path="res://environment_assets/plain_floor_material.tres" id="2_ap8g3"]
 [ext_resource type="PackedScene" uid="uid://bmmugkjd0alku" path="res://environment_assets/blue_wall/blue-wall.glb" id="3_d1pfb"]
 
-[sub_resource type="NavigationMesh" id="NavigationMesh_hy5rx"]
-vertices = PackedVector3Array(-1.5, 0.01999998, -1.5, -1.5, 0.01999998, -0.5, -0.5, 0.01999998, -0.5, -0.5, 0.01999998, -1.5)
-polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
-cell_size = 0.1
-cell_height = 0.01
-agent_max_climb = 0.01
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_d1pfb"]
 lightmap_size_hint = Vector2i(114, 86)
 _surfaces = [{
@@ -31,22 +24,19 @@ data = PackedVector3Array(-1.25, -0.25, 1.25, -1.25, -0.25, -1.25, -1.25, 0.25, 
 
 [node name="PlainFloorBlueWallCornerSmall" type="Node3D" unique_id=2028324652]
 
-[node name="WorldGeometry" type="NavigationRegion3D" parent="." unique_id=1103197185]
-navigation_mesh = SubResource("NavigationMesh_hy5rx")
-
-[node name="Floor" type="StaticBody3D" parent="WorldGeometry" unique_id=1107550413]
+[node name="Floor" type="StaticBody3D" parent="." unique_id=1107550413]
 script = ExtResource("1_d1pfb")
 
-[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="WorldGeometry/Floor" unique_id=432165462]
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=432165462]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25, -0.25, -1.25)
 mesh = SubResource("ArrayMesh_d1pfb")
 
-[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="WorldGeometry/Floor" unique_id=308757188]
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=308757188]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25, -0.25, -1.25)
 shape = SubResource("ConcavePolygonShape3D_vhjra")
 
-[node name="blue-wall" parent="WorldGeometry" unique_id=984111477 instance=ExtResource("3_d1pfb")]
+[node name="blue-wall" parent="." unique_id=984111477 instance=ExtResource("3_d1pfb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25, 1.25, -1.25)
 
-[node name="blue-wall2" parent="WorldGeometry" unique_id=403406035 instance=ExtResource("3_d1pfb")]
+[node name="blue-wall2" parent="." unique_id=403406035 instance=ExtResource("3_d1pfb")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.25, 1.25, -2.25)

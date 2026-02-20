@@ -3,13 +3,6 @@
 [ext_resource type="Script" uid="uid://vw7kywh6j84x" path="res://utils/floor_collision.gd" id="1_3nrhb"]
 [ext_resource type="Material" uid="uid://rgcl3mpxidm6" path="res://environment_assets/plain_floor_material.tres" id="2_316ur"]
 
-[sub_resource type="NavigationMesh" id="NavigationMesh_hy5rx"]
-vertices = PackedVector3Array(-2, 0.01999998, -2, -2, 0.01999998, -0.5, -0.5, 0.01999998, -0.5, -0.5, 0.01999998, -2)
-polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
-cell_size = 0.1
-cell_height = 0.01
-agent_max_climb = 0.01
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_1qmcc"]
 _surfaces = [{
 "aabb": AABB(-1.25, -0.25, -1.25, 2.5, 0.5, 2.5),
@@ -27,17 +20,14 @@ size = Vector3(2.5, 0.5, 2.5)
 
 [node name="PlainFloorSmall" type="Node3D" unique_id=2028324652]
 
-[node name="WorldGeometry" type="NavigationRegion3D" parent="." unique_id=1103197185]
-navigation_mesh = SubResource("NavigationMesh_hy5rx")
-
-[node name="Floor" type="StaticBody3D" parent="WorldGeometry" unique_id=1107550413]
+[node name="Floor" type="StaticBody3D" parent="." unique_id=1107550413]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25, 0, -1.25)
 script = ExtResource("1_3nrhb")
 
-[node name="FloorMesh" type="MeshInstance3D" parent="WorldGeometry/Floor" unique_id=1153642682]
+[node name="FloorMesh" type="MeshInstance3D" parent="Floor" unique_id=1153642682]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 mesh = SubResource("ArrayMesh_1qmcc")
 
-[node name="FloorCollisionShape" type="CollisionShape3D" parent="WorldGeometry/Floor" unique_id=720788053]
+[node name="FloorCollisionShape" type="CollisionShape3D" parent="Floor" unique_id=720788053]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 shape = SubResource("BoxShape3D_2v3ke")

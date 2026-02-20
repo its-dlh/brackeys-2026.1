@@ -4,13 +4,6 @@
 [ext_resource type="Material" uid="uid://rgcl3mpxidm6" path="res://environment_assets/plain_floor_material.tres" id="2_1hyqc"]
 [ext_resource type="Material" uid="uid://861ncltoup8o" path="res://environment_assets/plain_wall_material.tres" id="3_1hyqc"]
 
-[sub_resource type="NavigationMesh" id="NavigationMesh_hy5rx"]
-vertices = PackedVector3Array(-1.4, 0.01999998, -1.4, -1.4, 0.01999998, 2, 2, 0.01999998, 2, 2, 0.01999998, -1.4)
-polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
-cell_size = 0.1
-cell_height = 0.01
-agent_max_climb = 0.01
-
 [sub_resource type="ArrayMesh" id="ArrayMesh_rvp7r"]
 lightmap_size_hint = Vector2i(214, 138)
 _surfaces = [{
@@ -64,35 +57,32 @@ _surfaces = [{
 
 [node name="PlainFloorPlainWallCornerCSG" type="Node3D" unique_id=2028324652]
 
-[node name="WorldGeometry" type="NavigationRegion3D" parent="." unique_id=1103197185]
+[node name="Floor" type="StaticBody3D" parent="." unique_id=1107550413]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -2.5)
-navigation_mesh = SubResource("NavigationMesh_hy5rx")
-
-[node name="Floor" type="StaticBody3D" parent="WorldGeometry" unique_id=1107550413]
 script = ExtResource("1_jfjdr")
 
-[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="WorldGeometry/Floor" unique_id=272178054]
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=272178054]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 mesh = SubResource("ArrayMesh_rvp7r")
 
-[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="WorldGeometry/Floor" unique_id=628876614]
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=628876614]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 shape = SubResource("ConcavePolygonShape3D_nogom")
 
-[node name="NWWall" type="StaticBody3D" parent="WorldGeometry" unique_id=779937111]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25, 1.25, 0)
+[node name="NWWall" type="StaticBody3D" parent="." unique_id=779937111]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.75, 1.25, -2.5)
 
-[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="WorldGeometry/NWWall" unique_id=1258899230]
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="NWWall" unique_id=1258899230]
 mesh = SubResource("ArrayMesh_tq6gy")
 
-[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="WorldGeometry/NWWall" unique_id=1787895111]
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="NWWall" unique_id=1787895111]
 shape = SubResource("ConcavePolygonShape3D_ftkub")
 
-[node name="NEWall" type="StaticBody3D" parent="WorldGeometry" unique_id=1771327451]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 1.25, -2.25)
+[node name="NEWall" type="StaticBody3D" parent="." unique_id=1771327451]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.5, 1.25, -4.75)
 
-[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="WorldGeometry/NEWall" unique_id=1138579287]
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="NEWall" unique_id=1138579287]
 mesh = SubResource("ArrayMesh_mv30h")
 
-[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="WorldGeometry/NEWall" unique_id=1529257910]
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="NEWall" unique_id=1529257910]
 shape = SubResource("ConcavePolygonShape3D_ftkub")

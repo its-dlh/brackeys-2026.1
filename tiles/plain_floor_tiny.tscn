@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://8mxryp082s56"]
+
+[ext_resource type="Script" uid="uid://vw7kywh6j84x" path="res://utils/floor_collision.gd" id="1_ltlpq"]
+[ext_resource type="Material" uid="uid://cwbfgms642tho" path="res://environment_assets/concrete_floor/concrete_floor_material.tres" id="2_ltlpq"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_1xj8j"]
+material = ExtResource("2_ltlpq")
+size = Vector3(2.5, 0.5, 1.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ltlpq"]
+size = Vector3(2.5, 0.5, 1.5)
+
+[node name="PlainFloorTiny" type="Node3D" unique_id=2028324652]
+
+[node name="Floor" type="StaticBody3D" parent="." unique_id=1107550413]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25, 0, -0.25)
+script = ExtResource("1_ltlpq")
+
+[node name="FloorMesh" type="MeshInstance3D" parent="Floor" unique_id=1153642682]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+mesh = SubResource("BoxMesh_1xj8j")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=1363211413]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+shape = SubResource("BoxShape3D_ltlpq")

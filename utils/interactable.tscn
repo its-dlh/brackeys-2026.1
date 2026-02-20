@@ -8,6 +8,7 @@ script = ExtResource("1_drdt1")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1016907309]
 
 [node name="Indicator" type="Label3D" parent="." unique_id=2018957290]
+visible = false
 layers = 513
 sorting_offset = 10000.0
 sorting_use_aabb_center = false

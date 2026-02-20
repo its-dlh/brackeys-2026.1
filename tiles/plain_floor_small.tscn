@@ -1,14 +1,14 @@
 [gd_scene format=4 uid="uid://cgo1eo41jj1h"]
 
 [ext_resource type="Script" uid="uid://vw7kywh6j84x" path="res://utils/floor_collision.gd" id="1_3nrhb"]
-[ext_resource type="Material" uid="uid://rgcl3mpxidm6" path="res://environment_assets/plain_floor_material.tres" id="2_316ur"]
+[ext_resource type="Material" uid="uid://cwbfgms642tho" path="res://environment_assets/concrete_floor/concrete_floor_material.tres" id="2_3nrhb"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_1qmcc"]
 _surfaces = [{
 "aabb": AABB(-1.25, -0.25, -1.25, 2.5, 0.5, 2.5),
 "attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
 "format": 34359738391,
-"material": ExtResource("2_316ur"),
+"material": ExtResource("2_3nrhb"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 36,

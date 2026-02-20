@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://cv8chdxrxc58x"]
 
 [ext_resource type="Script" uid="uid://vw7kywh6j84x" path="res://utils/floor_collision.gd" id="1_d1pfb"]
-[ext_resource type="Material" uid="uid://rgcl3mpxidm6" path="res://environment_assets/plain_floor_material.tres" id="2_ap8g3"]
+[ext_resource type="Material" uid="uid://cwbfgms642tho" path="res://environment_assets/concrete_floor/concrete_floor_material.tres" id="2_d1pfb"]
 [ext_resource type="PackedScene" uid="uid://bmmugkjd0alku" path="res://environment_assets/blue_wall/blue-wall.glb" id="3_d1pfb"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_d1pfb"]
@@ -12,7 +12,7 @@ _surfaces = [{
 "format": 34359742519,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAwAEAAUABgAHAAgAAgAJAAAACgALAAwADQAOAA8ABQAQAAMADAARAAoAEgATABQACAAVAAYADwAWAA0AFAAXABIA"),
-"material": ExtResource("2_ap8g3"),
+"material": ExtResource("2_d1pfb"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 24,

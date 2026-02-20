@@ -22,6 +22,7 @@ GameState="*uid://b2e473vwkhajy"
 RoomState="*uid://dc0nxwwjf0w1m"
 EditorOnlyGroupVisibility="*uid://dechndssy5om0"
 RoomTransitionManager="*uid://co208iex5wqno"
+MusicPlayer="*uid://bpssmesxrk1wi"
 
 [editor_plugins]
 

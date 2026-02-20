@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bpssmesxrk1wi"]
+
+[ext_resource type="AudioStream" uid="uid://67avb3u7ig4r" path="res://audio/bgmusic-v2.mp3" id="1_uyuvo"]
+
+[node name="MusicPlayer" type="AudioStreamPlayer" unique_id=1031905119]
+stream = ExtResource("1_uyuvo")
+autoplay = true

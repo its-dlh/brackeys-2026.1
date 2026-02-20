@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://kklv8hutgroy" path="res://environment_assets/workbench.tscn" id="1_d8hvo"]
 [ext_resource type="PackedScene" uid="uid://dp17d1nacv3nf" path="res://tiles/plain_floor_5x5.tscn" id="2_uia4f"]
 [ext_resource type="PackedScene" uid="uid://bkh6x6nktallc" path="res://tiles/plain_floor_plain_wall_5x5.tscn" id="3_721to"]
+[ext_resource type="Resource" uid="uid://xgxuyp8c3tb6" path="res://words/opening_room/workbench.dialogue" id="4_1uxev"]
 [ext_resource type="PackedScene" uid="uid://prahic7e4fhh" path="res://tiles/plain_floor_plain_wall_corner_5x5.tscn" id="4_qserd"]
 [ext_resource type="PackedScene" uid="uid://7bxqkmdlkkqr" path="res://tiles/plain_floor_plain_wall_doorway.tscn" id="5_721to"]
 [ext_resource type="PackedScene" uid="uid://cnxxve6eyvij6" path="res://utils/interactable.tscn" id="5_hcl5b"]
@@ -108,6 +109,9 @@ navigation_mesh = SubResource("NavigationMesh_d8hvo")
 [node name="workbench" parent="StartingSection" unique_id=76713127 instance=ExtResource("1_d8hvo")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.0265718, 0.18468142, -5.2368636)
 
+[node name="Interactable" parent="StartingSection/workbench" unique_id=528907151 instance=ExtResource("5_hcl5b")]
+dialogue = ExtResource("4_1uxev")
+
 [node name="PlainFloor5x5" parent="StartingSection" unique_id=707367707 instance=ExtResource("2_uia4f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3265718, 0, -0.13686371)
 
@@ -138,7 +142,7 @@ size = Vector3(0.29382324, 0.22265625, 1.1157227)
 transform = Transform3D(0.81871134, 0, 0.57420534, 0, 1, 0, -0.57420534, 0, 0.81871134, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_gol8j")
 
-[node name="Interactable" parent="StartingSection/LeftArmBody" unique_id=528907151 instance=ExtResource("5_hcl5b")]
+[node name="Interactable" parent="StartingSection/LeftArmBody" unique_id=917941121 instance=ExtResource("5_hcl5b")]
 dialogue = ExtResource("6_d8hvo")
 acceptable_distance = 1.0
 

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://xgxuyp8c3tb6"
+path="res://.godot/imported/workbench.dialogue-b89c05d2827f18da53fd10624ebac0ba.tres"
+
+[deps]
+
+source_file="res://words/opening_room/workbench.dialogue"
+dest_files=["res://.godot/imported/workbench.dialogue-b89c05d2827f18da53fd10624ebac0ba.tres"]
+
+[params]
+
+defaults=true

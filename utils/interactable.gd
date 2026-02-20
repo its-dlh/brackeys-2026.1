@@ -13,6 +13,8 @@ extends Area3D
 @onready var code_prompt = $CodePrompt
 @onready var code_prompt_input = $CodePrompt/LineEdit
 
+var entered_code: String = ""
+
 signal interaction_started
 
 var player: CharacterBody3D
@@ -83,10 +85,12 @@ func perform_interaction() -> void:
 	indicator.visible = false
 
 func prompt_for_code() -> void:
+	entered_code = ""
 	code_prompt.visible = true
 	code_prompt_input.text = ""
 	code_prompt_input.grab_focus()
 	await code_prompt_input.text_submitted
+	entered_code = code_prompt_input.text
 	code_prompt.visible = false
 	code_prompt_input.text = ""
 	code_prompt_input.release_focus()

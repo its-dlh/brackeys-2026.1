@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c5wbl3vjky8of"
+path="res://.godot/imported/lyr_carter.dialogue-50cdc9ba5fe0e715e71a04e0c99d115c.tres"
+
+[deps]
+
+source_file="res://words/lyr_carter.dialogue"
+dest_files=["res://.godot/imported/lyr_carter.dialogue-50cdc9ba5fe0e715e71a04e0c99d115c.tres"]
+
+[params]
+
+defaults=true

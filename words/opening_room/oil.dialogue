@@ -1,7 +1,7 @@
 ~ start
 if GameState.get_value(GameState.HAS_OILED_LEGS) != true:
 	What is the code?
-	if prompt_for_code() == "1234":
+	if prompt("Enter locker code") == "1234":
 		=> success
 	else:
 		You did not enter the correct code.

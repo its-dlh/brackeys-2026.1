@@ -68,8 +68,8 @@ size = Vector3(2.5, 1, 1.5)
 size = Vector3(2.5, 1, 1.5)
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_kyuk5"]
-vertices = PackedVector3Array(-2, 2.99, -2.75, -2, 2.99, -2, 4, 2.99, -2, 4, 2.99, -2.75, -2.75, 0.01999998, 0, -2.75, 0.01999998, 0.75, -2, 0.01999998, 1.25, -2, 0.01999998, -0.5, 4.25, 0.01999998, 1.25, 4.5, 0.01999998, 0, 4.25, 0.01999998, -1.5, 4.5, 0.01999998, 0.75, 6.75, 0.01999998, 1.25, 6.75, 0.01999998, -0.75, 5.5, 0.01999998, -0.75, -2, 0.01999998, -1.5)
-polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1), PackedInt32Array(6, 5, 4), PackedInt32Array(4, 7, 6), PackedInt32Array(6, 7, 8), PackedInt32Array(8, 7, 9), PackedInt32Array(9, 7, 10), PackedInt32Array(9, 14, 11), PackedInt32Array(11, 14, 13), PackedInt32Array(11, 13, 12), PackedInt32Array(7, 15, 10), PackedInt32Array(11, 8, 9)]
+vertices = PackedVector3Array(-2, 2.99, -2.75, -2, 2.99, -2, 4, 2.99, -2, 4, 2.99, -2.75, -2.75, 0.01999998, 0, -2.75, 0.01999998, 0.75, -2, 0.01999998, 1.25, 4.25, 0.01999998, 1.25, 4.25, 0.01999998, -1.5, -2, 0.01999998, -0.5, -2, 0.01999998, -1.5)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1), PackedInt32Array(4, 9, 5), PackedInt32Array(5, 9, 6), PackedInt32Array(6, 9, 7), PackedInt32Array(7, 9, 8), PackedInt32Array(9, 10, 8)]
 geometry_parsed_geometry_type = 1
 geometry_collision_mask = 4294967041
 cell_height = 0.01
@@ -77,8 +77,8 @@ agent_radius = 0.25
 agent_max_climb = 0.01
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_8b6so"]
-vertices = PackedVector3Array(6, 0.01999998, -7, 5.25, 0.01999998, -6.5, 7.25, 0.01999998, -2.5, 9.75, 0.01999998, -2.75, 10, 0.01999998, -7.75, 6, 0.01999998, -11.5, 14.75, 0.01999998, -7.75, 14.75, 0.01999998, -11.5, -6.5, 0.01999998, -6.5, -6.5, 0.01999998, -5.25, -4.75, 0.01999998, -5, -4.5, 0.01999998, -6.5, -4.75, 0.01999998, -2.5, -7.25, 0.01999998, -2.25, -7.25, 0.01999998, 7.25, -4, 0.01999998, -7, -3, 0.01999998, -6.5, -3.25, 0.01999998, -9.75, -4.25, 0.01999998, -9.75, 7.25, 0.01999998, 7.25, -2.5, 2.52, -7, 0.25, 2.52, -7, 0, 2.52, -7.5, -2.5, 2.52, -7.5)
-polygons = [PackedInt32Array(0, 4, 1), PackedInt32Array(1, 4, 2), PackedInt32Array(2, 4, 3), PackedInt32Array(4, 0, 5), PackedInt32Array(6, 4, 7), PackedInt32Array(7, 4, 5), PackedInt32Array(9, 8, 10), PackedInt32Array(10, 8, 11), PackedInt32Array(14, 13, 12), PackedInt32Array(15, 16, 11), PackedInt32Array(11, 16, 10), PackedInt32Array(10, 16, 12), PackedInt32Array(18, 17, 15), PackedInt32Array(15, 17, 16), PackedInt32Array(16, 1, 12), PackedInt32Array(12, 1, 2), PackedInt32Array(12, 2, 19), PackedInt32Array(12, 19, 14), PackedInt32Array(23, 22, 20), PackedInt32Array(20, 22, 21)]
+vertices = PackedVector3Array(6, 0.01999998, -7, 5.25, 0.01999998, -6.5, 7.25, 0.01999998, -2.5, 9.75, 0.01999998, -2.75, 10, 0.01999998, -7.75, 6, 0.01999998, -11.5, 14.75, 0.01999998, -7.75, 14.75, 0.01999998, -11.5, -7.25, 0.01999998, -4, -7.25, 0.01999998, -3.25, -6.5, 0.01999998, -3, -6.5, 0.01999998, -4.5, -3, 0.01999998, -6.5, -7.25, 0.01999998, -2, -7.25, 0.01999998, 7.25, 7.25, 0.01999998, 7.25, -4.5, 0.01999998, -6.5, -6.5, 0.01999998, -6.5, -3.25, 0.01999998, -9.75, -4.25, 0.01999998, -9.75, -4, 0.01999998, -7, -2.5, 2.52, -7, 0.25, 2.52, -7, 0, 2.52, -7.5, -2.5, 2.52, -7.5)
+polygons = [PackedInt32Array(0, 4, 1), PackedInt32Array(1, 4, 2), PackedInt32Array(2, 4, 3), PackedInt32Array(4, 0, 5), PackedInt32Array(6, 4, 7), PackedInt32Array(7, 4, 5), PackedInt32Array(9, 8, 10), PackedInt32Array(10, 8, 11), PackedInt32Array(1, 2, 12), PackedInt32Array(12, 2, 13), PackedInt32Array(13, 2, 14), PackedInt32Array(14, 2, 15), PackedInt32Array(11, 17, 16), PackedInt32Array(19, 18, 20), PackedInt32Array(20, 18, 12), PackedInt32Array(13, 10, 12), PackedInt32Array(12, 16, 20), PackedInt32Array(16, 12, 11), PackedInt32Array(11, 12, 10), PackedInt32Array(24, 23, 21), PackedInt32Array(21, 23, 22)]
 geometry_parsed_geometry_type = 1
 geometry_collision_mask = 4294967041
 cell_height = 0.01
@@ -183,26 +183,23 @@ distance_fade_enabled = true
 distance_fade_begin = 50.0
 distance_fade_shadow = 30.0
 
-[node name="Door1" parent="StartingSection" unique_id=812010551 node_paths=PackedStringArray("nodes_to_reveal") instance=ExtResource("11_achke")]
+[node name="Door1" parent="StartingSection" unique_id=812010551 node_paths=PackedStringArray("nodes_to_reveal", "nodes_to_hide") instance=ExtResource("11_achke")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.923428, 0, -6.3868637)
 dialogue = ExtResource("12_2x3w3")
 open_state_key = "door1_open"
 nodes_to_reveal = [NodePath("../../HallwayNew")]
+nodes_to_hide = [NodePath("HallwayPreviewTinyFloor")]
 
-[node name="PlainFloorTiny" parent="StartingSection" unique_id=1823268011 instance=ExtResource("23_j1g1p")]
+[node name="HallwayPreviewTinyFloor" parent="StartingSection/Door1" unique_id=1823268011 instance=ExtResource("23_j1g1p")]
 process_mode = 4
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.173428, 0, -6.1368637)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.25, 0, 2.25)
 
 [node name="HallwayNew" parent="." unique_id=368063215 instance=ExtResource("13_orrkt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -4)
-visible = false
 navigation_mesh = SubResource("NavigationMesh_kyuk5")
 
 [node name="PlainFloorPlainWallDoorway" parent="HallwayNew" unique_id=1386941741 instance=ExtResource("5_721to")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 1.5)
-
-[node name="PlainFloorPlainWallDoorway2" parent="HallwayNew" unique_id=1779057440 instance=ExtResource("5_721to")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 1.5)
 
 [node name="PlainFloorPlainWallCornerSmall" parent="HallwayNew" unique_id=395624250 instance=ExtResource("12_achke")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -1)
@@ -210,11 +207,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -1)
 [node name="PlainFloorPlainWall5x5" parent="HallwayNew" unique_id=1704378009 instance=ExtResource("3_721to")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.5, 0, 1.5)
 
-[node name="Door2" parent="HallwayNew" unique_id=1954819518 node_paths=PackedStringArray("nodes_to_reveal") instance=ExtResource("11_achke")]
+[node name="Door2" parent="HallwayNew" unique_id=1954819518 node_paths=PackedStringArray("nodes_to_reveal", "nodes_to_hide") instance=ExtResource("11_achke")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.75, 0, 0.25)
 dialogue = ExtResource("13_0fxbs")
 open_state_key = "door2_open"
 nodes_to_reveal = [NodePath("../../MainHallNew")]
+nodes_to_hide = [NodePath("MainHallPreviewTinyFloor")]
+
+[node name="MainHallPreviewTinyFloor" parent="HallwayNew/Door2" unique_id=768912618 instance=ExtResource("23_j1g1p")]
+process_mode = 4
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.25000024, 0, 2.25)
 
 [node name="locker" parent="HallwayNew" unique_id=1768840152 instance=ExtResource("14_ig36b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1.6493535, -2.4)
@@ -237,6 +239,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 1.6493535, -2.4)
 [node name="MainHallNew" parent="." unique_id=482073413 instance=ExtResource("13_orrkt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0)
 navigation_mesh = SubResource("NavigationMesh_8b6so")
+
+[node name="PlainFloorPlainWallDoorway2" parent="MainHallNew" unique_id=1779057440 instance=ExtResource("5_721to")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -2.5)
 
 [node name="elevator" parent="MainHallNew" unique_id=1345433856 instance=ExtResource("13_hyc2t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25, 1.25, -7.25)

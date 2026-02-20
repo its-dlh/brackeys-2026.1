@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bufvt5e7sga3q"
+path="res://.godot/imported/sitting_technician.dialogue-ed15c4d6fc1680237613b73e6eb6c245.tres"
+
+[deps]
+
+source_file="res://words/sitting_technician.dialogue"
+dest_files=["res://.godot/imported/sitting_technician.dialogue-ed15c4d6fc1680237613b73e6eb6c245.tres"]
+
+[params]
+
+defaults=true

@@ -2,6 +2,7 @@ extends Node3D
 
 @export var dialogue: DialogueResource
 @export var open_state_key: String = "door_open"
+@export var nodes_to_reveal: Array[Node3D] = []
 
 @onready var interactable = $Interactable
 @onready var door_mesh: MeshInstance3D = $MeshInstance3D
@@ -10,6 +11,9 @@ extends Node3D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	RoomState.state_changed.connect(_on_state_changed)
+
+	for node in nodes_to_reveal:
+		node.visible = false
 
 	# Reflect the initial state of the door
 	_on_open_state_changed(is_door_open())
@@ -26,6 +30,8 @@ func _on_open_state_changed(is_open: bool) -> void:
 		print('Reflecting door state: open')
 		door_mesh.position.x = 1.4
 		door_collision_shape.set_deferred("disabled", true)
+		for node in nodes_to_reveal:
+			node.visible = true
 	else:
 		print('Reflecting door state: closed')
 		door_mesh.position.x = 0.0

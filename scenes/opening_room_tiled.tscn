@@ -233,19 +233,19 @@ nodes_to_reveal = [NodePath("../../MainHallNew")]
 nodes_to_hide = [NodePath("../../MainHallPreviewTinyFloor")]
 
 [node name="locker" parent="HallwayNew" unique_id=1768840152 instance=ExtResource("14_ig36b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1.6493535, -2.4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1.6493535, -2.4)
 
 [node name="locker2" parent="HallwayNew" unique_id=861249184 instance=ExtResource("14_ig36b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1.6493535, -2.4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.6493535, -2.4)
 
 [node name="locker3" parent="HallwayNew" unique_id=856013452 instance=ExtResource("14_ig36b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.6493535, -2.4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6493535, -2.4)
 
 [node name="locker4" parent="HallwayNew" unique_id=427110550 instance=ExtResource("14_ig36b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 1.6493535, -2.4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.6493535, -2.4)
 
 [node name="locker5" parent="HallwayNew" unique_id=1060130122 instance=ExtResource("14_ig36b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 1.6493535, -2.4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.6493535, -2.4)
 
 [node name="Interactable" parent="HallwayNew/locker5" unique_id=909290474 instance=ExtResource("5_hcl5b")]
 dialogue = ExtResource("19_ndk15")
@@ -253,7 +253,10 @@ target_offset = Vector3(0, 0, 0.25)
 acceptable_distance = 1.0
 
 [node name="locker6" parent="HallwayNew" unique_id=1699928754 instance=ExtResource("14_ig36b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 1.6493535, -2.4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1.6493535, -2.4)
+
+[node name="locker7" parent="HallwayNew" unique_id=1042447005 instance=ExtResource("14_ig36b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1.6493535, -2.4)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="HallwayNew" unique_id=766917589]
 transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, 0, 0, 0)

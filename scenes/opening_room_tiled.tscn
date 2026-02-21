@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://dtpgsvbsthrrl" path="res://tiles/plain_floor_plain_wall_corner_small.tscn" id="12_achke"]
 [ext_resource type="Resource" uid="uid://ged82wy52wki" path="res://words/generic_door.dialogue" id="13_0fxbs"]
 [ext_resource type="PackedScene" uid="uid://bn7gwfj7cphha" path="res://environment_assets/elevator.tscn" id="13_hyc2t"]
-[ext_resource type="Material" path="res://environment_assets/plain_floor_material.tres" id="13_i42y4"]
+[ext_resource type="Material" uid="uid://rgcl3mpxidm6" path="res://environment_assets/plain_floor_material.tres" id="13_i42y4"]
 [ext_resource type="PackedScene" uid="uid://cusi63op6frb3" path="res://environment_assets/base_navigation_region.tscn" id="13_orrkt"]
 [ext_resource type="Resource" uid="uid://b4qeeysd2lv5s" path="res://words/opening_room/elevator.dialogue" id="14_0fxbs"]
 [ext_resource type="PackedScene" uid="uid://cgo1eo41jj1h" path="res://tiles/plain_floor_small.tscn" id="14_2rhjw"]
@@ -44,6 +44,7 @@
 [ext_resource type="PackedScene" uid="uid://umb1pd0bbkve" path="res://environment_assets/robo_parts/robo-head.glb" id="39_ljktu"]
 [ext_resource type="PackedScene" uid="uid://cxtebijyxmer5" path="res://environment_assets/robo_parts/robo-torso.glb" id="40_cmcjj"]
 [ext_resource type="Resource" uid="uid://1tc4vmbllrea" path="res://words/b_carter_workstation.dialogue" id="42_btffm"]
+[ext_resource type="Script" uid="uid://c14uptaury057" path="res://utils/music_start.gd" id="45_u3grh"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_j1g1p"]
 vertices = PackedVector3Array(-11.076571, 2.52, -9.886864, -11.076571, 2.52, -0.3868637, -10.826571, 2.52, -9.386864, -8.326571, 2.52, -9.636864, -9.576571, 1.02, -7.8868637, -8.576571, 1.01, -8.136864, -8.576571, 1.01, -9.136864, -10.326571, 1.24, -9.136864, -9.451571, 1.01, -9.136864, -10.326571, 1.02, -0.3868637, -9.576571, 1.02, -0.3868637, -10.326571, 1.02, -7.67853, -2.3265715, 0.01999998, -6.3868637, -2.0765715, 0.01999998, -5.8868637, -1.8265715, 0.01999998, -9.136864, -1.8265715, 0.01999998, -0.3868637, -2.0765715, 0.01999998, -4.6368637, -2.3265715, 0.01999998, -4.1368637, -5.8265715, 0.01999998, -6.1368637, -8.076571, 0.01999998, -9.136864, -8.076571, 0.01999998, -7.8868637, -5.5765715, 0.01999998, -4.1368637, -9.076571, 0.01999998, -0.3868637, -9.076571, 0.01999998, -7.6368637, 3.4234285, 0.01999998, -0.3868637, 3.4234285, 0.01999998, -9.136864, -5.3265715, 1.05, -5.8868637, -5.3265715, 1.05, -4.6368637, -2.5765715, 1.05, -4.6368637, -2.5765715, 1.05, -5.8868637)
@@ -116,6 +117,9 @@ cell_height = 0.01
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_btffm"]
 size = Vector3(1.1967773, 0.7685547, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_28nw1"]
+size = Vector3(3, 2, 3)
 
 [node name="OpeningRoomTiled" type="Node3D" unique_id=2028324652]
 
@@ -540,3 +544,16 @@ dialogue = ExtResource("42_btffm")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ComputerRoom/computer-workstation3" unique_id=2120955021]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.644947, 1.2747307, -1.0802498)
 shape = SubResource("BoxShape3D_btffm")
+
+[node name="MusicStart" type="Area3D" parent="." unique_id=703759874]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -5)
+collision_layer = 0
+collision_mask = 2
+input_ray_pickable = false
+script = ExtResource("45_u3grh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MusicStart" unique_id=455392106]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8000002, 1, 1)
+shape = SubResource("BoxShape3D_28nw1")
+
+[connection signal="body_entered" from="MusicStart" to="MusicStart" method="_on_body_entered"]

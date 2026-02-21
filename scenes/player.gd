@@ -4,7 +4,10 @@ extends CharacterBody3D
 @onready var camera_marker: Marker3D = $CameraMarker
 @onready var navigation_agent: NavigationAgent3D = $NavigationAgent3D
 @onready var mesh: Node3D = $"player-character-v2"
-@onready var rusty_player = $RustyPlayer
+@onready var rusty_footsteps_player = $RustyFootstepsPlayer
+@onready var oiled_footsteps_player = $OiledFootstepsPlayer
+
+@onready var current_footsteps_player: AudioStreamPlayer = rusty_footsteps_player
 
 const CAMERA_LAG_FACTOR = 2.5
 const SPEED = 5.0
@@ -18,6 +21,7 @@ func _ready() -> void:
 	camera_3d.global_position = camera_marker.global_position
 	navigation_agent.path_changed.connect(_on_path_changed)
 	navigation_agent.navigation_finished.connect(_on_navigation_finished)
+	check_footsteps_type()
 
 func _physics_process(delta: float) -> void:
 	if navigation_agent.is_navigation_finished():
@@ -50,7 +54,16 @@ func _physics_process(delta: float) -> void:
 		delta * CAMERA_LAG_FACTOR
 	)
 
-func _game_state_change(key, value, old_state, new_state):
+func check_footsteps_type() -> void:
+	if GameState.get_value(GameState.HAS_OILED_LEGS) == true and current_footsteps_player == rusty_footsteps_player:
+		current_footsteps_player = oiled_footsteps_player
+		if rusty_footsteps_player.playing:
+			rusty_footsteps_player.stop()
+			oiled_footsteps_player.play(0.0)
+
+
+func _game_state_change(key, value, _previous_value, _new_state):
+	check_footsteps_type()
 	if key == GameState.HAS_LEFT_ARM:
 		mesh.get_node("LeftArm").visible = GameState.get_value(GameState.HAS_LEFT_ARM)
 
@@ -64,9 +77,9 @@ func navigate_to(target_position: Vector3, desired_distance: float = 0.1) -> voi
 	navigation_agent.target_desired_distance = desired_distance
 
 func _on_path_changed() -> void:
-	if not rusty_player.playing:
-		rusty_player.play(0.0)
+	if not current_footsteps_player.playing:
+		current_footsteps_player.play(0.0)
 
 func _on_navigation_finished() -> void:
-	if rusty_player.playing:
-		rusty_player.stop()
+	if current_footsteps_player.playing:
+		current_footsteps_player.stop()

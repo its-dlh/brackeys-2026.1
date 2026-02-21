@@ -4,9 +4,16 @@ extends StaticBody3D
 
 var rotation_amount: int = 0
 
+const ROTATION_AMOUNT_PER_SECOND = 90
 
+func _physics_process(delta: float) -> void:
+	var rotation_diff = rotation_amount - rotation_center.rotation.y
+	if abs(rotation_diff) > 0.001:
+		var sign = abs(rotation_diff) / rotation_diff
+		var abs_rotation_delta = min(abs(rotation_diff), ROTATION_AMOUNT_PER_SECOND * delta)
+		rotation_center.rotation.y += sign * abs_rotation_delta
 
-func set_rotation_amount(amount) -> void:
-	# Parse string to int
-	rotation_amount = int(amount)
-	rotation_center.rotation.y = deg_to_rad(rotation_amount + 45)
+func set_rotation_amount(amount: String) -> void:
+	if not amount.is_valid_int():
+		return
+	rotation_amount = deg_to_rad(int(amount) + 45)

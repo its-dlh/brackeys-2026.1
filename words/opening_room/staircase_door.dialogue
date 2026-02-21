@@ -7,6 +7,5 @@ elif GameState.get_value(GameState.HAS_OILED_LEGS) == true
 else
 	This door is labeled "Stairs".
 	Your knees are rusted and unable to bend. You cannot traverse stairs in this state.
-	# TODO writing
-	Go touch the second locker from the right, and thy knees shall be healed anew.
+	You don't see anything nearby that could help, but you will keep looking.
 => END

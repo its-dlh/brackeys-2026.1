@@ -1,0 +1,8 @@
+~ start
+A sign reads, "ROTARY TORMENT NEXUS\: Do not enter without a radiation suit!"
+A printed piece of paper is taped to the door with additional information\: "This includes access to backup administrative controls."
+if RoomState.get_value("has_seen_lockdown_panel") == true
+	You wonder if "administrative controls" pertain to lockdowns.
+As you open the door, your circuits start to receive significant noise from several of your sensors. You ignore this and proceed.
+do parent.open_door()
+=> END

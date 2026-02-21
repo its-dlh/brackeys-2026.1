@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://djdbb4chxw53e"
+path="res://.godot/imported/rotation_room_door.dialogue-70b00330b2d8bd56d948f96c540e6359.tres"
+
+[deps]
+
+source_file="res://words/ground_floor/rotation_room_door.dialogue"
+dest_files=["res://.godot/imported/rotation_room_door.dialogue-70b00330b2d8bd56d948f96c540e6359.tres"]
+
+[params]
+
+defaults=true

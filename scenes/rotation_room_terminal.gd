@@ -2,9 +2,9 @@ extends StaticBody3D
 
 @onready var rotation_center = $"../RotationCenter"
 
-var rotation_amount: int = 0
+@onready var rotation_amount: float = PI / 4
 
-const ROTATION_AMOUNT_PER_SECOND = 90
+const ROTATION_AMOUNT_PER_SECOND = PI / 2
 
 func _physics_process(delta: float) -> void:
 	var rotation_diff = rotation_amount - rotation_center.rotation.y
@@ -17,3 +17,6 @@ func set_rotation_amount(amount: String) -> void:
 	if not amount.is_valid_int():
 		return
 	rotation_amount = deg_to_rad(int(amount) + 45)
+
+func get_rotation_amount() -> String:
+	return str(int(rad_to_deg(rotation_amount) - 45))

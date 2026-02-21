@@ -51,6 +51,8 @@ func _on_open_state_changed(is_open: bool) -> void:
 				node.visible = false
 
 func open_door() -> void:
+	if not start_open:
+		SoundEffects.play_door_sound()
 	RoomState.set_value(open_state_key, true)
 
 func close_door() -> void:

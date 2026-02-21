@@ -23,6 +23,7 @@ RoomState="*uid://dc0nxwwjf0w1m"
 EditorOnlyGroupVisibility="*uid://dechndssy5om0"
 RoomTransitionManager="*uid://co208iex5wqno"
 MusicPlayer="*uid://bpssmesxrk1wi"
+SoundEffects="*uid://dhgw3ppnbj67x"
 
 [editor_plugins]
 

@@ -2,9 +2,12 @@ extends StaticBody3D
 
 @onready var rotation_center = $"../RotationCenter"
 
-@onready var rotation_amount: float = PI / 4
+@onready var rotation_amount: float = PI / 4 + 2 * PI
 
 const ROTATION_AMOUNT_PER_SECOND = PI / 2
+
+func _ready() -> void:
+	rotation_center.rotation.y = rotation_amount
 
 func _physics_process(delta: float) -> void:
 	var rotation_diff = rotation_amount - rotation_center.rotation.y

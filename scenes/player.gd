@@ -11,6 +11,8 @@ const ROTATION_SPEED = 10.0
 const JUMP_VELOCITY = 4.5
 
 func _ready() -> void:
+	mesh.get_node("LeftArm").visible = GameState.get_value(GameState.HAS_LEFT_ARM) or false
+	GameState.state_changed.connect(_game_state_change)
 	camera_3d.global_position = camera_marker.global_position
 
 func _physics_process(delta: float) -> void:
@@ -44,11 +46,14 @@ func _physics_process(delta: float) -> void:
 		delta * CAMERA_LAG_FACTOR
 	)
 
+func _game_state_change(key, value, old_state, new_state):
+	# This should probably be a little more bigger
+	mesh.get_node("LeftArm").visible = GameState.get_value(GameState.HAS_LEFT_ARM)
+
 # func _input(event):
 # 	# Mouse in viewport coordinates.
 # 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 # 		print("Mouse click at: ", event.position)
-
 
 func navigate_to(target_position: Vector3, desired_distance: float = 0.1) -> void:
 	navigation_agent.set_target_position(target_position)

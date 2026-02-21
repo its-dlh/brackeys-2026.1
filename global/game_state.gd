@@ -18,4 +18,3 @@ func set_value(key, value) -> void:
 
 func get_value(key):
 	return state.get(key, null)
-

@@ -8,6 +8,7 @@ extends Node3D
 @onready var locker_state_key: String = "locker_opened:" + locker_name
 @onready var code_correct_dialogue = DialogueManager.create_resource_from_text("~ start\nYou entered the code successfully, and you open the locker.")
 @onready var code_incorrect_dialogue = DialogueManager.create_resource_from_text("~ start\nYou did not enter the correct code.")
+@onready var animation_player = $AnimationPlayer
 
 func prompt_for_code() -> void:
 	_do_prompt_for_code.call_deferred()
@@ -22,6 +23,7 @@ func _do_prompt_for_code() -> void:
 		DialogueManager.show_dialogue_balloon(code_incorrect_dialogue)
 
 func open_locker() -> void:
+	animation_player.play("DoorAction")
 	RoomState.set_value(locker_state_key, true)
 	show_open_dialogue()
 

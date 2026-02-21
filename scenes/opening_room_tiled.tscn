@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://prahic7e4fhh" path="res://tiles/plain_floor_plain_wall_corner_5x5.tscn" id="4_qserd"]
 [ext_resource type="PackedScene" uid="uid://7bxqkmdlkkqr" path="res://tiles/plain_floor_plain_wall_doorway.tscn" id="5_721to"]
 [ext_resource type="PackedScene" uid="uid://cnxxve6eyvij6" path="res://utils/interactable.tscn" id="5_hcl5b"]
-[ext_resource type="PackedScene" uid="uid://dscpy108f4usr" path="res://environment_assets/science_tube.tscn" id="5_qserd"]
 [ext_resource type="Resource" uid="uid://cpgvtlte14nhn" path="res://words/upgrades_and_items/left_arm.dialogue" id="6_d8hvo"]
 [ext_resource type="PackedScene" uid="uid://dstjwfvti4pgo" path="res://environment_assets/robo_parts/robo-left-arm.glb" id="10_lgq05"]
 [ext_resource type="PackedScene" uid="uid://bql73sqxxamhs" path="res://environment_assets/plain_door.tscn" id="11_achke"]
@@ -40,8 +39,8 @@
 [ext_resource type="PackedScene" uid="uid://bdu3upj4s1fvx" path="res://environment_assets/computer-workstation.glb" id="36_0xg4s"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_j1g1p"]
-vertices = PackedVector3Array(-11.076571, 2.52, -9.886864, -11.076571, 2.52, -7.8868637, -10.576571, 2.52, -9.636864, -8.326571, 2.52, -9.636864, -10.326571, 1.24, -9.136864, -10.326571, 1.01, -8.136864, -8.576571, 1.01, -8.136864, -8.576571, 1.01, -9.136864, -9.451571, 1.01, -9.136864, -8.576571, 0.01999998, -3.1368637, -9.076571, 0.01999998, -2.8868637, -8.576571, 0.01999998, -1.1368637, -1.8265715, 0.01999998, -0.3868637, -2.3265715, 0.01999998, -4.1368637, -5.8265715, 0.01999998, -4.3868637, -10.326571, 0.01999998, -7.6368637, -10.326571, 0.01999998, -4.8868637, -9.326571, 0.01999998, -4.8868637, -8.326571, 0.01999998, -7.6368637, -8.576571, 0.01999998, -4.1368637, -5.8265715, 0.01999998, -6.1368637, -3.8265715, 0.01999998, -6.3868637, -3.8265715, 0.01999998, -9.136864, -8.076571, 0.01999998, -9.136864, -2.0765715, 0.01999998, -4.6368637, -9.326571, 0.01999998, -0.3868637, -2.3265715, 0.01999998, -6.3868637, 3.4234285, 0.01999998, -9.136864, 3.4234285, 0.01999998, -0.3868637, -5.3265715, 1.05, -5.8868637, -5.3265715, 1.05, -4.6368637, -2.5765715, 1.05, -4.6368637, -2.5765715, 1.05, -5.8868637, -9.076571, 3.01, -4.1368637, -10.576571, 3.01, -4.1368637, -10.576571, 3.01, -3.1368637, -10.076571, 3.01, -2.8868637, -9.576571, 3.01, -2.8868637, -9.076571, 3.01, -3.1368637, -10.576571, 3.01, -1.1368637, -9.076571, 3.01, -1.1368637, -10.326571, 0.01999998, -3.8868637, -10.076571, 0.01999998, -3.1368637, -9.326571, 0.01999998, -3.3868637, -9.576571, 0.01999998, -4.1368637, -10.326571, 0.01999998, -1.8868637, -10.076571, 0.01999998, -1.1368637, -9.326571, 0.01999998, -1.3868637, -9.576571, 0.01999998, -2.1368637)
-polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(3, 2, 0), PackedInt32Array(7, 6, 8), PackedInt32Array(8, 6, 4), PackedInt32Array(4, 6, 5), PackedInt32Array(10, 9, 11), PackedInt32Array(11, 9, 14), PackedInt32Array(11, 14, 13), PackedInt32Array(11, 13, 12), PackedInt32Array(16, 15, 17), PackedInt32Array(17, 15, 18), PackedInt32Array(9, 19, 14), PackedInt32Array(19, 17, 14), PackedInt32Array(14, 17, 20), PackedInt32Array(20, 17, 18), PackedInt32Array(18, 23, 20), PackedInt32Array(20, 23, 21), PackedInt32Array(21, 23, 22), PackedInt32Array(13, 24, 12), PackedInt32Array(12, 25, 11), PackedInt32Array(21, 22, 26), PackedInt32Array(26, 22, 27), PackedInt32Array(26, 27, 24), PackedInt32Array(24, 27, 28), PackedInt32Array(24, 28, 12), PackedInt32Array(32, 31, 29), PackedInt32Array(29, 31, 30), PackedInt32Array(36, 35, 37), PackedInt32Array(37, 35, 38), PackedInt32Array(38, 35, 34), PackedInt32Array(38, 34, 33), PackedInt32Array(37, 40, 36), PackedInt32Array(36, 40, 39), PackedInt32Array(44, 43, 41), PackedInt32Array(41, 43, 42), PackedInt32Array(48, 47, 45), PackedInt32Array(45, 47, 46)]
+vertices = PackedVector3Array(-11.076571, 2.52, -9.886864, -11.076571, 2.52, -7.8868637, -10.576571, 2.52, -9.636864, -8.326571, 2.52, -9.636864, -10.326571, 1.24, -9.136864, -10.326571, 1.01, -8.136864, -8.576571, 1.01, -8.136864, -8.576571, 1.01, -9.136864, -9.451571, 1.01, -9.136864, -5.8265715, 0.01999998, -6.1368637, -4.0765715, 0.01999998, -6.3868637, -3.5765715, 0.01999998, -9.136864, -8.076571, 0.01999998, -9.136864, -8.326571, 0.01999998, -7.6368637, -5.8265715, 0.01999998, -4.3868637, -10.326571, 0.01999998, -7.6368637, -10.326571, 0.01999998, -0.3868637, -3.8265715, 0.01999998, -0.3868637, -3.8265715, 0.01999998, -4.1368637, -2.0765715, 0.01999998, -6.1368637, 3.4234285, 0.01999998, -9.136864, -2.0765715, 0.01999998, -4.3868637, 3.4234285, 0.01999998, -0.3868637, -5.3265715, 1.05, -5.8868637, -5.3265715, 1.05, -4.6368637, -2.5765715, 1.05, -4.6368637, -2.5765715, 1.05, -5.8868637)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(3, 2, 0), PackedInt32Array(7, 6, 8), PackedInt32Array(8, 6, 4), PackedInt32Array(4, 6, 5), PackedInt32Array(13, 12, 9), PackedInt32Array(9, 12, 10), PackedInt32Array(10, 12, 11), PackedInt32Array(13, 14, 15), PackedInt32Array(15, 14, 16), PackedInt32Array(16, 14, 17), PackedInt32Array(17, 14, 18), PackedInt32Array(13, 9, 14), PackedInt32Array(10, 11, 19), PackedInt32Array(19, 11, 20), PackedInt32Array(18, 21, 17), PackedInt32Array(17, 21, 22), PackedInt32Array(19, 20, 21), PackedInt32Array(21, 20, 22), PackedInt32Array(26, 25, 23), PackedInt32Array(23, 25, 24)]
 geometry_parsed_geometry_type = 1
 geometry_collision_mask = 4294967041
 cell_height = 0.01
@@ -180,12 +179,6 @@ mesh = SubResource("BoxMesh_y8m3h")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StartingSection/ArmTable/StaticBody3D" unique_id=1852749632]
 shape = SubResource("BoxShape3D_y8m3h")
-
-[node name="science-tube" parent="StartingSection" unique_id=482548221 instance=ExtResource("5_qserd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.826571, 1.5010443, -1.6368637)
-
-[node name="science-tube2" parent="StartingSection" unique_id=98386349 instance=ExtResource("5_qserd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.826571, 1.5010443, -3.6368637)
 
 [node name="OmniLightHallway" type="OmniLight3D" parent="StartingSection" unique_id=881926365]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.673428, 2.6, -6.6368637)
@@ -367,6 +360,9 @@ connection_id = "main_hall_stairs"
 
 [node name="SpotLight3D" type="SpotLight3D" parent="MainHallNew" unique_id=1441058651]
 transform = Transform3D(1, 0, 0, 0, -0.30102208, 0.9536172, 0, -0.9536172, -0.30102208, -6.498657, 2.5548096, -1.6633301)
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="MainHallNew" unique_id=1382478592]
+transform = Transform3D(1, 0, 0, 0, -0.30102208, 0.9536172, 0, -0.9536172, -0.30102208, -6.498657, 2.5548096, 2.3482506)
 
 [node name="desk2" parent="MainHallNew" unique_id=1687982803 instance=ExtResource("21_lrdma")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0.5, 3.525)

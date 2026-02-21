@@ -48,8 +48,8 @@ func _physics_process(delta: float) -> void:
 	)
 
 func _game_state_change(key, value, old_state, new_state):
-	# This should probably be a little more bigger
-	mesh.get_node("LeftArm").visible = GameState.get_value(GameState.HAS_LEFT_ARM)
+	if key == GameState.HAS_LEFT_ARM:
+		mesh.get_node("LeftArm").visible = GameState.get_value(GameState.HAS_LEFT_ARM)
 
 # func _input(event):
 # 	# Mouse in viewport coordinates.

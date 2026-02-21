@@ -24,6 +24,7 @@ func _do_prompt_for_code() -> void:
 
 func open_locker() -> void:
 	animation_player.play("DoorAction")
+	SoundEffects.play_squeaky_locker_sound()
 	RoomState.set_value(locker_state_key, true)
 	show_open_dialogue()
 

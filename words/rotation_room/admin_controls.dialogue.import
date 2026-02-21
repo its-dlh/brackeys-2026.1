@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cspg8brl73bf8"
+path="res://.godot/imported/admin_controls.dialogue-3c4948e40c30f96323146471bb6050d4.tres"
+
+[deps]
+
+source_file="res://words/rotation_room/admin_controls.dialogue"
+dest_files=["res://.godot/imported/admin_controls.dialogue-3c4948e40c30f96323146471bb6050d4.tres"]
+
+[params]
+
+defaults=true

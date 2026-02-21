@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://ctcjlsc6uyab8" path="res://utils/entrance_exit.tscn" id="9_ur6k4"]
 [ext_resource type="PackedScene" uid="uid://cnxxve6eyvij6" path="res://utils/interactable.tscn" id="10_h4dxt"]
 [ext_resource type="Resource" uid="uid://ihenxvbghpvk" path="res://words/rotation_room/terminal.dialogue" id="11_leemh"]
+[ext_resource type="Resource" uid="uid://cspg8brl73bf8" path="res://words/rotation_room/admin_controls.dialogue" id="11_xgtno"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_xgtno"]
 vertices = PackedVector3Array(-3, 0.01999998, -0.25, -3, 0.01999998, 0, -2.75, 0.01999998, 0, -1.75, 0.01999998, 0, -1.5, 0.01999998, 0, -1.5, 0.01999998, -0.25, -2.75, 0.01999998, 2.25, -1.75, 0.01999998, 2.25, -0.25, 0.01999998, -9.75, -4, 0.01999998, -9.75, -4, 0.01999998, -0.25, -0.25, 0.01999998, -0.25)
@@ -99,14 +100,39 @@ _surfaces = [{
 }]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_i4jnc"]
-vertices = PackedVector3Array(-4, 0.01999998, -39.8, -4, 0.01999998, -30.3, -0.25, 0.01999998, -30.3, -0.25, 0.01999998, -39.8)
-polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+vertices = PackedVector3Array(-2, 0.01999998, -38.05, -2, 0.01999998, -37.8, -1.75, 0.01999998, -37.8, -1.75, 0.01999998, -37.3, -2, 0.01999998, -37.3, -2, 0.01999998, -37.05, -0.25, 0.01999998, -36.8, -4, 0.01999998, -37.55, -2.75, 0.01999998, -37.55, -2.5, 0.01999998, -38.05, -4, 0.01999998, -39.8, -0.25, 0.01999998, -39.8, -2.5, 0.01999998, -37.05, -4, 0.01999998, -30.3, -0.25, 0.01999998, -30.3)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(4, 3, 5), PackedInt32Array(5, 3, 6), PackedInt32Array(8, 7, 9), PackedInt32Array(9, 7, 10), PackedInt32Array(9, 10, 0), PackedInt32Array(0, 10, 11), PackedInt32Array(6, 3, 2), PackedInt32Array(2, 0, 6), PackedInt32Array(6, 0, 11), PackedInt32Array(8, 12, 7), PackedInt32Array(7, 12, 13), PackedInt32Array(5, 6, 12), PackedInt32Array(12, 6, 14), PackedInt32Array(12, 14, 13)]
 geometry_parsed_geometry_type = 1
 geometry_collision_mask = 4294967041
 cell_height = 0.01
 agent_radius = 0.01
 agent_max_slope = 60.2
 edge_max_error = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ur6k4"]
+albedo_color = Color(1, 0, 0, 1)
+roughness = 0.0
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xgtno"]
+roughness = 0.0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0eglf"]
+_surfaces = [{
+"aabb": AABB(-0.2, -0.5, -0.2, 0.4, 1, 0.4),
+"attribute_data": PackedByteArray("GPYVPgAAAAAAAAAAAAAAAAAAAD8AAAA/AAAAPwAAAAAAACA/AAAAAAAAID8AAIA/AAAAPwAAAAAY9hU+AAAAAAAAAD8AAAA/AAAgPwAAAAAAAEA/AAAAAAAAQD8AAIA/AAAAAAAAAAAa9hU+AAAAAAAAAD8AAAA/AADAPgAAAAAAAAA/AAAAAAAAAD8AAIA/GvYVPgAAAAD///8+AAAAAAAAAD8AAAA/AACAPgAAAAAAAMA+AAAAAAAAwD4AAIA/AAAgPwAAgD8AAAA/AACAPwAAAD8AAAAAGPYVPgAAAAAAAAAAAAAAAAAAAD8AAAA/AABAPwAAgD8AACA/AACAPwAAID8AAAAAAAAAPwAAAAAY9hU+AAAAAAAAAD8AAAA/AAAAPwAAgD8AAMA+AACAPwAAwD4AAAAAAAAAAAAAAAAa9hU+AAAAAAAAAD8AAAA/AADAPgAAgD8AAIA+AACAPwAAgD4AAAAAGvYVPgAAAAD///8+AAAAAAAAAD8AAAA/eIJaPwAAAAAAAAA/AAAAAAAAAD8AAAA/AABAPwAAAAAAAGA/AAAAAAAAYD8AAIA/AACAPwAAAAB4glo/AAAAAAAAAD8AAAA/AABgPwAAAAAAAAAAAAAAAAAAAAAAAIA/////PgAAAAB6glo/AAAAAAAAAD8AAAA/AAAAPgAAAAAAAIA+AAAAAAAAgD4AAIA/eoJaPwAAAAAAAIA/AAAAAAAAAD8AAAA/AAAAAAAAAAAAAAA+AAAAAAAAAD4AAIA/AABgPwAAgD8AAEA/AACAPwAAQD8AAAAAeIJaPwAAAAAAAAA/AAAAAAAAAD8AAAA/AAAAAAAAgD8AAGA/AACAPwAAYD8AAAAAAACAPwAAAAB4glo/AAAAAAAAAD8AAAA/AACAPgAAgD8AAAA+AACAPwAAAD4AAAAA////PgAAAAB6glo/AAAAAAAAAD8AAAA/AAAAPgAAgD8AAAAAAACAPwAAAAAAAAAAeoJaPwAAAAAAAIA/AAAAAAAAAD8AAAA/"),
+"format": 34359738391,
+"material": SubResource("StandardMaterial3D_xgtno"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 96,
+"vertex_data": PackedByteArray("w9AQvgAAAL/C0BC+zcxMvgAAAL/yMJayAAAAAAAAAL8AAAAAzcxMvgAAAL/yMJayw9AQvgAAAL/C0BC+w9AQvgAAAD/C0BC+8uQjMQAAAL/NzEy+w9AQvgAAAL/C0BC+AAAAAAAAAL8AAAAAw9AQvgAAAL/C0BC+8uQjMQAAAL/NzEy+8uQjMQAAAD/NzEy+zcxMvgAAAL/yMJayw9AQvgAAAL/D0BA+AAAAAAAAAL8AAAAAw9AQvgAAAL/D0BA+zcxMvgAAAL/yMJayzcxMvgAAAD/yMJayw9AQvgAAAL/D0BA+8jAWsgAAAL/NzEw+AAAAAAAAAL8AAAAA8jAWsgAAAL/NzEw+w9AQvgAAAL/D0BA+w9AQvgAAAD/D0BA+w9AQvgAAAD/C0BC+zcxMvgAAAD/yMJayzcxMvgAAAL/yMJayzcxMvgAAAD/yMJayw9AQvgAAAD/C0BC+AAAAAAAAAD8AAAAA8uQjMQAAAD/NzEy+w9AQvgAAAD/C0BC+w9AQvgAAAL/C0BC+w9AQvgAAAD/C0BC+8uQjMQAAAD/NzEy+AAAAAAAAAD8AAAAAzcxMvgAAAD/yMJayw9AQvgAAAD/D0BA+w9AQvgAAAL/D0BA+w9AQvgAAAD/D0BA+zcxMvgAAAD/yMJayAAAAAAAAAD8AAAAAw9AQvgAAAD/D0BA+8jAWsgAAAD/NzEw+8jAWsgAAAL/NzEw+8jAWsgAAAD/NzEw+w9AQvgAAAD/D0BA+AAAAAAAAAD8AAAAAwdAQPgAAAL/E0BC+8uQjMQAAAL/NzEy+AAAAAAAAAL8AAAAA8uQjMQAAAL/NzEy+wdAQPgAAAL/E0BC+wdAQPgAAAD/E0BC+zcxMPgAAAL8AAAAAwdAQPgAAAL/E0BC+AAAAAAAAAL8AAAAAwdAQPgAAAL/E0BC+zcxMPgAAAL8AAAAAzcxMPgAAAD8AAAAA8jAWsgAAAL/NzEw+w9AQPgAAAL/D0BA+AAAAAAAAAL8AAAAAw9AQPgAAAL/D0BA+8jAWsgAAAL/NzEw+8jAWsgAAAD/NzEw+w9AQPgAAAL/D0BA+zcxMPgAAAL8AAAAAAAAAAAAAAL8AAAAAzcxMPgAAAL8AAAAAw9AQPgAAAL/D0BA+w9AQPgAAAD/D0BA+wdAQPgAAAD/E0BC+8uQjMQAAAD/NzEy+8uQjMQAAAL/NzEy+8uQjMQAAAD/NzEy+wdAQPgAAAD/E0BC+AAAAAAAAAD8AAAAAzcxMPgAAAD8AAAAAwdAQPgAAAD/E0BC+wdAQPgAAAL/E0BC+wdAQPgAAAD/E0BC+zcxMPgAAAD8AAAAAAAAAAAAAAD8AAAAA8jAWsgAAAD/NzEw+w9AQPgAAAD/D0BA+w9AQPgAAAL/D0BA+w9AQPgAAAD/D0BA+8jAWsgAAAD/NzEw+AAAAAAAAAD8AAAAAw9AQPgAAAD/D0BA+zcxMPgAAAD8AAAAAzcxMPgAAAL8AAAAAzcxMPgAAAD8AAAAAw9AQPgAAAD/D0BA+AAAAAAAAAD8AAAAA/38AAP///x//fwAA//++Ev9/AAD///8/AACGj///O/gAANXI//+U2wAAKbf//2rk/38AAP///z//fwAA////H/9/AAD///8/AADVyP//lNv//3fwd/D/vwAAd/D//8LH/38AAHyl/7//fwAA/7//v/9/AAD///+/KTf/fwAAauQAAIaP//87+IcP/38AADv4/38AAP+//7//fwAA////v/9/AAD///+/eHD/fwAAwscpN/9/AABq5NVI/38AAJTbAAApt///auSHD/9/AAA7+AAAho///zv4/3///4Ja/z//f///glr/P/9///+CWv8/AAB38P//wscAACm3//9q5AAA1cj//5Tb/3///30l/z//f///fSX/P/9///99Jf8/hw//fwAAO/jVSP9/AACU2yk3/38AAGrk/3///wAAQO3/f///AABA7f9///8AAEDt1Uj/fwAAlNuGj/9/hw//v3hw/38AAMLH/3///wAAvdL/f///AAC90v9///8AAL3S/38AAP+//z//fwAA////P/9/AAD///8///938Hfw/7///ym3Kbf/v///1cjVyP+//38AAHyl/z//fwAA/7//P/9/AAD///8///8ptwAAlBt38P9////DB///ho8AAMMH/38AAP///7//fwAA////3/9/AAD///+/Kbf/fyk3/794cP9/AADCx4aP/3+HD/+//38AAP///9//fwAA//9A7f9/AAD///+/d/D/f3hw/78pt/9/KTf/v9XI/3/VSP+////VyNXI/78AAHfw///Cx///d/B38P+//3///wAAQS3/f///AABBLf9///8AAEEt//+GjwAAwwf//9XIAABqJP//KbcAAJQb/3///wAAvhL/f///AAC+Ev9///8AAL4Sho//f4cP/7/VyP9/1Uj/vym3/38pN/+//3///30l/7//f///fSX/v/9///99Jf+/1cj/f9VI/7///4aPho//v3fw/394cP+//3///4Ja/7//f///glr/v/9///+CWv+/")
+}]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_hxvvm"]
+height = 1.0
+radius = 0.2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i4jnc"]
 emission_enabled = true
@@ -456,6 +482,27 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.2
 connected_room_path = "uid://bjy6ax42fpocw"
 connection_id = "rotation_room_door"
 
+[node name="AdminControls" type="StaticBody3D" parent="BaseNavigationRegion2" unique_id=924004138]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.05)
+
+[node name="AdminButton" type="CSGCylinder3D" parent="BaseNavigationRegion2/AdminControls" unique_id=1363303460]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3, 1.05, -37.5)
+radius = 0.15
+height = 0.099999994
+material = SubResource("StandardMaterial3D_ur6k4")
+
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="BaseNavigationRegion2/AdminControls" unique_id=989162814]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3, 0.5, -37.5)
+mesh = SubResource("ArrayMesh_0eglf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BaseNavigationRegion2/AdminControls" unique_id=1669446521]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3, 0.5, -37.5)
+shape = SubResource("CylinderShape3D_hxvvm")
+
+[node name="Interactable" parent="BaseNavigationRegion2/AdminControls" unique_id=528907151 instance=ExtResource("10_h4dxt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3, 0.4, -37.5)
+dialogue = ExtResource("11_xgtno")
+
 [node name="Terminal" type="StaticBody3D" parent="." unique_id=1615466532]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.5, -3)
 script = ExtResource("9_h4dxt")
@@ -474,7 +521,7 @@ mesh = SubResource("ArrayMesh_leemh")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4000001, 0.32500005, 0)
 shape = SubResource("BoxShape3D_ur6k4")
 
-[node name="Interactable" parent="Terminal" unique_id=528907151 instance=ExtResource("10_h4dxt")]
+[node name="Interactable" parent="Terminal" unique_id=57095281 instance=ExtResource("10_h4dxt")]
 dialogue = ExtResource("11_leemh")
 
 [node name="BinaryButton" type="StaticBody3D" parent="." unique_id=1522419473]

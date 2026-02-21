@@ -1,0 +1,8 @@
+~ start
+if GameState.get_value(GameState.IS_LOCKDOWN_CLEARED) != true
+	You press the button. The lockdown is cleared.
+	do GameState.set_value(GameState.IS_LOCKDOWN_CLEARED, true)
+else
+	You press the button. The lockdown is in progress again. Is this what you want?
+	do GameState.set_value(GameState.IS_LOCKDOWN_CLEARED, false)
+=> END

@@ -1,3 +1,12 @@
 [gd_scene format=3 uid="uid://b1edrkt1xytg3"]
 
+[ext_resource type="Script" uid="uid://dtxtftnjdf8er" path="res://scenes/outside.gd" id="1_nsm10"]
+[ext_resource type="AudioStream" uid="uid://wnasnanhmqlg" path="res://audio/end-music.mp3" id="1_p61qw"]
+
 [node name="Outside" type="Node3D" unique_id=315287410]
+script = ExtResource("1_nsm10")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1110312940]
+stream = ExtResource("1_p61qw")
+volume_db = -3.0
+autoplay = true

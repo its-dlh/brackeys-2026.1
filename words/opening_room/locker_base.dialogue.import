@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://ba7xb06j8cb7"
+path="res://.godot/imported/locker_base.dialogue-d3545602fea1dbc1324415f9a341dc28.tres"
+
+[deps]
+
+source_file="res://words/opening_room/locker_base.dialogue"
+dest_files=["res://.godot/imported/locker_base.dialogue-d3545602fea1dbc1324415f9a341dc28.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,10 @@
+~ start
+There is a nameplate on the locker that says "{{parent.locker_name}}".
+if RoomState.get_value(parent.locker_state_key) != true:
+	There is a number pad on the locker. It appears to take a four-digit code.
+	- Use number pad
+		do parent.prompt_for_code()
+	- Leave
+else
+	do parent.show_open_dialogue()
+=> END

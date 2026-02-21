@@ -1,0 +1,6 @@
+~ start
+There is a blue jacket hanging inside.
+if RoomState.get_value("has_blue_key") != true:
+	The blue jacket has a blue key card sticking out of its left pocket. You take the blue key card.
+	do RoomState.set_value("has_blue_key", true)
+=> END

@@ -1,5 +1,14 @@
 [gd_scene format=3 uid="uid://ch0kryxtsu168"]
 
 [ext_resource type="PackedScene" uid="uid://bgkia056w082a" path="res://environment_assets/locker/locker.glb" id="1_xqdw6"]
+[ext_resource type="Script" uid="uid://bsimqq58gmh4w" path="res://environment_assets/locker.gd" id="2_dvbrt"]
+[ext_resource type="PackedScene" uid="uid://cnxxve6eyvij6" path="res://utils/interactable.tscn" id="2_pgu5a"]
+[ext_resource type="Resource" uid="uid://ba7xb06j8cb7" path="res://words/opening_room/locker_base.dialogue" id="3_dvbrt"]
 
 [node name="locker" unique_id=1768840152 instance=ExtResource("1_xqdw6")]
+script = ExtResource("2_dvbrt")
+
+[node name="Interactable" parent="." index="4" unique_id=528907151 instance=ExtResource("2_pgu5a")]
+dialogue = ExtResource("3_dvbrt")
+target_offset = Vector3(0, 0, 0.25)
+acceptable_distance = 1.0

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://0kvuesgcjemc"
+path="res://.godot/imported/locker_x_ramirez.dialogue-5ef0edb7d76d4687f6fa3002b52c2c98.tres"
+
+[deps]
+
+source_file="res://words/opening_room/locker_x_ramirez.dialogue"
+dest_files=["res://.godot/imported/locker_x_ramirez.dialogue-5ef0edb7d76d4687f6fa3002b52c2c98.tres"]
+
+[params]
+
+defaults=true

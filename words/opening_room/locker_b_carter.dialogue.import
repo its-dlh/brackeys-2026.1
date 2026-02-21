@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c8n5inn1lm2av"
+path="res://.godot/imported/locker_b_carter.dialogue-5bc90b96f2b73eca931c68190d8304d9.tres"
+
+[deps]
+
+source_file="res://words/opening_room/locker_b_carter.dialogue"
+dest_files=["res://.godot/imported/locker_b_carter.dialogue-5bc90b96f2b73eca931c68190d8304d9.tres"]
+
+[params]
+
+defaults=true

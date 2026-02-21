@@ -22,7 +22,8 @@
 [ext_resource type="PackedScene" uid="uid://ch0kryxtsu168" path="res://environment_assets/locker.tscn" id="14_ig36b"]
 [ext_resource type="PackedScene" uid="uid://cnxi6sqik5071" path="res://tiles/plain_floor_plain_wall_inner_corner_5x5.tscn" id="15_0fxbs"]
 [ext_resource type="PackedScene" uid="uid://b40uqnh1iy5sg" path="res://tiles/plain_floor_10x10.tscn" id="16_ig36b"]
-[ext_resource type="Resource" uid="uid://c8n5inn1lm2av" path="res://words/opening_room/locker_lyr_carter.dialogue" id="19_ndk15"]
+[ext_resource type="Resource" uid="uid://0kvuesgcjemc" path="res://words/opening_room/locker_x_ramirez.dialogue" id="19_0vtoi"]
+[ext_resource type="Resource" uid="uid://c8n5inn1lm2av" path="res://words/opening_room/locker_b_carter.dialogue" id="19_0xg4s"]
 [ext_resource type="Resource" uid="uid://c5wbl3vjky8of" path="res://words/lyr_carter.dialogue" id="20_xh4c3"]
 [ext_resource type="PackedScene" uid="uid://u5mrw2fqrrch" path="res://environment_assets/desk.glb" id="21_lrdma"]
 [ext_resource type="PackedScene" uid="uid://8mxryp082s56" path="res://tiles/plain_floor_tiny.tscn" id="23_j1g1p"]
@@ -237,26 +238,31 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1.6493535, -2.4)
 
 [node name="locker2" parent="HallwayNew" unique_id=861249184 instance=ExtResource("14_ig36b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.6493535, -2.4)
+locker_name = "B. Carter"
+locker_code = "1021"
+open_dialogue = ExtResource("19_0xg4s")
 
 [node name="locker3" parent="HallwayNew" unique_id=856013452 instance=ExtResource("14_ig36b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6493535, -2.4)
+locker_name = "L. Carter"
 
 [node name="locker4" parent="HallwayNew" unique_id=427110550 instance=ExtResource("14_ig36b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.6493535, -2.4)
+locker_name = "A.B. Aaronson"
 
 [node name="locker5" parent="HallwayNew" unique_id=1060130122 instance=ExtResource("14_ig36b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.6493535, -2.4)
-
-[node name="Interactable" parent="HallwayNew/locker5" unique_id=909290474 instance=ExtResource("5_hcl5b")]
-dialogue = ExtResource("19_ndk15")
-target_offset = Vector3(0, 0, 0.25)
-acceptable_distance = 1.0
+locker_name = "X. Ramirez"
+locker_code = "7777"
+open_dialogue = ExtResource("19_0vtoi")
 
 [node name="locker6" parent="HallwayNew" unique_id=1699928754 instance=ExtResource("14_ig36b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1.6493535, -2.4)
+locker_name = "A.C. Aaronson"
 
 [node name="locker7" parent="HallwayNew" unique_id=1042447005 instance=ExtResource("14_ig36b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1.6493535, -2.4)
+locker_name = "A.D. Aaronson"
 
 [node name="StaticBody3D" type="StaticBody3D" parent="HallwayNew" unique_id=766917589]
 transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, 0, 0, 0)

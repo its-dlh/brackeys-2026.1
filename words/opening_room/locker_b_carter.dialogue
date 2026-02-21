@@ -1,0 +1,6 @@
+~ start
+There is a pair of pearl earrings on the top shelf. The spectral graph of the light that it reflects is said to be pleasing.
+if GameState.get_value(GameState.HAS_OILED_LEGS) != true:
+	There is also an oil can inside, so you use it to oil your legs. Now you can bend your knees!
+	do GameState.set_value(GameState.HAS_OILED_LEGS, true)
+=> END

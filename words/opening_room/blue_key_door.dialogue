@@ -1,0 +1,10 @@
+~ start
+if parent.is_door_open() == true
+	The door is open.
+elif RoomState.get_value("has_blue_key") == true
+	You touch the blue key card to the door handle, and the door opens.
+	do parent.open_door()
+else
+	This door appears to be locked.
+	There is a small pad on the door handle with a blue rectangle printed on it.
+=> END

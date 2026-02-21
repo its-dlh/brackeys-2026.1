@@ -1,0 +1,20 @@
+~ start
+There is a nameplate on the locker that says "Lyr Carter".
+if RoomState.get_value("has_blue_key") != true:
+	There is a number pad on the locker. It appears to take a four-digit code.
+	- Use number pad
+		[next=0.1]Enter locker code
+		if prompt() == "1234":
+			=> success
+		else:
+			You did not enter the correct code.
+	- Leave
+else
+	This is where you found the blue key.
+=> END
+
+~ success
+You entered the code successfully, and you open the locker.
+There is a blue card key inside. You take it.
+do RoomState.set_value("has_blue_key", true)
+=> END

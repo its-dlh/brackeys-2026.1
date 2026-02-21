@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cqmsqh6cfvcjb"
+path="res://.godot/imported/blue_key_door.dialogue-1b012760771669b9a006e6525ae4a4cc.tres"
+
+[deps]
+
+source_file="res://words/opening_room/blue_key_door.dialogue"
+dest_files=["res://.godot/imported/blue_key_door.dialogue-1b012760771669b9a006e6525ae4a4cc.tres"]
+
+[params]
+
+defaults=true

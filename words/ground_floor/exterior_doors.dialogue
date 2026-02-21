@@ -1,0 +1,16 @@
+~ start
+if RoomState.get_value("has_seen_exterior_door") != true
+	These are clearly exterior doors. You must be on the ground level.
+if parent.is_door_open() == true
+	The doors are open.
+elif GameState.get_value(GameState.IS_LOCKDOWN_CLEARED) == true
+	if RoomState.get_value("has_seen_lockdown_panel") == true
+		The panel on the left door that used to read, "LOCKDOWN IN PROGRESS" is now blank.
+	You open the doors, and are hit by a blast of air from the outside.
+	do parent.open_door()
+else
+	A panel on the left door reads, "LOCKDOWN IN PROGRESS."
+	You are unable to open the doors.
+	do RoomState.set_value("has_seen_exterior_door", true)
+	do RoomState.set_value("has_seen_lockdown_panel", true)
+=> END

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://jaxx3guq6tfk"
+path="res://.godot/imported/exterior_doors.dialogue-87708deec19117a12aaf03df2d17f2df.tres"
+
+[deps]
+
+source_file="res://words/ground_floor/exterior_doors.dialogue"
+dest_files=["res://.godot/imported/exterior_doors.dialogue-87708deec19117a12aaf03df2d17f2df.tres"]
+
+[params]
+
+defaults=true

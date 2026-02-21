@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bwd8u5t2hou8x" path="res://scenes/player.gd" id="1_3vyb7"]
 [ext_resource type="PackedScene" uid="uid://dgcwjn51tbqx5" path="res://scenes/player-character-v2.glb" id="2_g2els"]
+[ext_resource type="AudioStream" uid="uid://dvh2nr3jnkrqy" path="res://audio/footsteps-rusty.wav" id="3_qhqgy"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u8vuu"]
 radius = 0.25
@@ -40,3 +41,7 @@ target_desired_distance = 0.1
 
 [node name="player-character-v2" parent="." unique_id=1662433024 instance=ExtResource("2_g2els")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0.98, 0)
+
+[node name="RustyPlayer" type="AudioStreamPlayer" parent="." unique_id=637112623]
+stream = ExtResource("3_qhqgy")
+volume_db = -12.0

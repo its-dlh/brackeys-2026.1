@@ -10,18 +10,16 @@
 [ext_resource type="PackedScene" uid="uid://cgo1eo41jj1h" path="res://tiles/plain_floor_small.tscn" id="8_073vx"]
 [ext_resource type="PackedScene" uid="uid://bkh6x6nktallc" path="res://tiles/plain_floor_plain_wall_5x5.tscn" id="9_p0opx"]
 [ext_resource type="PackedScene" uid="uid://cnxi6sqik5071" path="res://tiles/plain_floor_plain_wall_inner_corner_5x5.tscn" id="10_fej2q"]
-[ext_resource type="PackedScene" uid="uid://b40uqnh1iy5sg" path="res://tiles/plain_floor_10x10.tscn" id="11_xyv66"]
 [ext_resource type="PackedScene" uid="uid://dp17d1nacv3nf" path="res://tiles/plain_floor_5x5.tscn" id="12_kh2en"]
 [ext_resource type="PackedScene" uid="uid://dtpgsvbsthrrl" path="res://tiles/plain_floor_plain_wall_corner_small.tscn" id="13_5wn6j"]
 [ext_resource type="PackedScene" uid="uid://47b6rej64ben" path="res://tiles/stairs.tscn" id="15_xq234"]
 [ext_resource type="PackedScene" uid="uid://bql73sqxxamhs" path="res://environment_assets/plain_door.tscn" id="16_bk1yd"]
 [ext_resource type="PackedScene" uid="uid://ctcjlsc6uyab8" path="res://utils/entrance_exit.tscn" id="17_amnol"]
 [ext_resource type="PackedScene" uid="uid://cu1y42f4ap1ke" path="res://tiles/plain_floor_plain_wall_small.tscn" id="18_ucjfc"]
-[ext_resource type="Resource" uid="uid://ged82wy52wki" path="res://words/generic_door.dialogue" id="19_11dqp"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_8b6so"]
-vertices = PackedVector3Array(-7.25, 0.01999998, -4, -7.25, 0.01999998, -3.25, -6.5, 0.01999998, -3, -6.5, 0.01999998, -4.5, 7.25, 0.01999998, -2.5, 5.5, 0.01999998, -6.5, -3, 0.01999998, -6.5, -6.75, 0.01999998, 7.25, 7.25, 0.01999998, 7.25, -4.5, 0.01999998, -6.5, -6.5, 0.01999998, -6.5, -3, -1.49, -9.75, -4.25, -1.49, -9.75, -4, 0.01999998, -7, -3, 0.01999998, -7.583333, -4.125, -0.24000001, -8.375, 9.75, 0.01999998, -9.75, 6, 0.01999998, -7, 9.75, 0.01999998, -2.75, 5.75, 0.01999998, -9.75, 4.75, 2.5199997, -7.5, 5.5, 2.5199997, -7.25, 5.25, 2.5199997, -9.75, -2.5, 2.5199997, -7, 0.25, 2.5199997, -7, 0, 2.5199997, -7.5, -2.5, 2.5199997, -7.5)
-polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(5, 4, 6), PackedInt32Array(6, 4, 2), PackedInt32Array(2, 4, 8), PackedInt32Array(2, 8, 7), PackedInt32Array(3, 10, 9), PackedInt32Array(6, 13, 14), PackedInt32Array(14, 13, 15), PackedInt32Array(14, 15, 12), PackedInt32Array(14, 12, 11), PackedInt32Array(5, 17, 4), PackedInt32Array(4, 17, 18), PackedInt32Array(18, 17, 16), PackedInt32Array(6, 9, 13), PackedInt32Array(9, 6, 3), PackedInt32Array(3, 6, 2), PackedInt32Array(16, 17, 19), PackedInt32Array(22, 21, 20), PackedInt32Array(26, 25, 23), PackedInt32Array(23, 25, 24)]
+vertices = PackedVector3Array(9.75, 0.01999998, -11.5, 9.25, 0.01999998, -12.25, 8.5, 0.01999998, -12.25, 8, 0.01999998, -11.5, 6, 0.01999998, -7, 7.25, 0.01999998, -2.5, 9.75, 0.01999998, -2.75, 5.25, 0.01999998, -6.5, 6, 0.01999998, -11.5, -3, -1.49, -9.75, -4.25, -1.49, -9.75, -4, 0.01999998, -7, -3, 0.01999998, -6.5, -3, 0.01999998, -7.583333, -4.125, -0.24000001, -8.375, -1.5, 0.01999998, 7.25, 1, 0.01999998, 7.25, -4.5, 0.01999998, -6.5, -1.25, 0.01999998, 9.75, 0.75, 0.01999998, 9.75, -6.5, 0.01999998, -6.5, -6.5, 0.01999998, 7.25, 7.25, 0.01999998, 7.25, -2.5, 2.5199997, -7, 0.25, 2.5199997, -7, 0, 2.5199997, -7.5, -2.5, 2.5199997, -7.5)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(2, 0, 3), PackedInt32Array(3, 0, 4), PackedInt32Array(4, 0, 5), PackedInt32Array(5, 0, 6), PackedInt32Array(5, 7, 4), PackedInt32Array(4, 8, 3), PackedInt32Array(12, 11, 13), PackedInt32Array(13, 11, 14), PackedInt32Array(13, 14, 10), PackedInt32Array(13, 10, 9), PackedInt32Array(5, 16, 15), PackedInt32Array(12, 17, 11), PackedInt32Array(18, 15, 19), PackedInt32Array(19, 15, 16), PackedInt32Array(17, 5, 20), PackedInt32Array(20, 5, 15), PackedInt32Array(20, 15, 21), PackedInt32Array(7, 5, 12), PackedInt32Array(5, 22, 16), PackedInt32Array(17, 12, 5), PackedInt32Array(26, 25, 23), PackedInt32Array(23, 25, 24)]
 geometry_parsed_geometry_type = 1
 geometry_collision_mask = 4294967041
 cell_height = 0.01
@@ -37,11 +35,8 @@ agent_max_slope = 61.2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.326571, 0, 0.6368637)
 
 [node name="MainHallNew" parent="." unique_id=482073413 instance=ExtResource("3_vjqai")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.013111, -4.7683716e-07, -0.0030021667)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 2.5)
 navigation_mesh = SubResource("NavigationMesh_8b6so")
-
-[node name="PlainFloorPlainWallDoorway2" parent="MainHallNew" unique_id=1779057440 instance=ExtResource("4_b7iwo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -2.5)
 
 [node name="elevator" parent="MainHallNew" unique_id=1345433856 instance=ExtResource("5_q1tgf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25, 1.25, -7.25)
@@ -61,14 +56,8 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0
 [node name="PlainFloorPlainWallInnerCorner5x5" parent="MainHallNew" unique_id=1521166541 instance=ExtResource("10_fej2q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -2.5)
 
-[node name="PlainFloorSmall2" parent="MainHallNew" unique_id=968121281 instance=ExtResource("8_073vx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -2.5)
-
 [node name="PlainFloorPlainWall5x7" parent="MainHallNew" unique_id=211527698 instance=ExtResource("9_p0opx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 2.5)
-
-[node name="PlainFloor10x10" parent="MainHallNew" unique_id=1625307401 instance=ExtResource("11_xyv66")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 2.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 0)
 
 [node name="PlainFloorSmall3" parent="MainHallNew" unique_id=2008209791 instance=ExtResource("8_073vx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.5)
@@ -100,11 +89,26 @@ distance_fade_enabled = true
 distance_fade_begin = 50.0
 distance_fade_shadow = 30.0
 
+[node name="OmniLight3D8" type="OmniLight3D" parent="MainHallNew" unique_id=1241574708]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.700001, 1.0999999, -11.5)
+light_color = Color(1, 0, 0, 1)
+light_energy = 1.95
+light_bake_mode = 1
+distance_fade_enabled = true
+distance_fade_begin = 50.0
+distance_fade_shadow = 30.0
+
 [node name="PlainFloor5x5" parent="MainHallNew" unique_id=1106338466 instance=ExtResource("12_kh2en")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 2.5)
 
 [node name="PlainFloor5x6" parent="MainHallNew" unique_id=443819543 instance=ExtResource("12_kh2en")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 7.5)
+
+[node name="PlainFloor5x7" parent="MainHallNew" unique_id=1727134104 instance=ExtResource("12_kh2en")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 2.5)
+
+[node name="PlainFloor5x8" parent="MainHallNew" unique_id=414767923 instance=ExtResource("12_kh2en")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 7.5)
 
 [node name="PlainFloorPlainWallCornerSmall2" parent="MainHallNew" unique_id=1097211662 instance=ExtResource("13_5wn6j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -5)
@@ -117,6 +121,14 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -3.7
 open_state_key = ""
 start_open = true
 
+[node name="ExteriorDoorL" parent="MainHallNew" unique_id=812010551 instance=ExtResource("16_bk1yd")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.75, 0, 7.3500004)
+open_state_key = "exterior_doors_open"
+
+[node name="RotationRoomDoor" parent="MainHallNew" unique_id=749341589 instance=ExtResource("16_bk1yd")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8.75, 0, -12.25)
+open_state_key = "rotation_room_door"
+
 [node name="EntranceExit" parent="MainHallNew" unique_id=1306114400 instance=ExtResource("17_amnol")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.7000008, 0.29999995, -7.8999996)
 connected_room_path = "uid://sgqc60qwdy11"
@@ -124,15 +136,28 @@ connection_id = "main_hall_stairs"
 entrance_offset = Vector3(1.25, 0, 0)
 
 [node name="PlainFloorPlainWall5x8" parent="MainHallNew" unique_id=181537580 instance=ExtResource("9_p0opx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 7)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 5)
 
 [node name="PlainFloorSmall5" parent="MainHallNew" unique_id=960141138 instance=ExtResource("8_073vx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.986889, 4.7683716e-07, -7.496998)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -7.5)
 
 [node name="PlainFloorPlainWallSmall" parent="MainHallNew" unique_id=310630741 instance=ExtResource("18_ucjfc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.486889, 4.7683716e-07, -7.496998)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, -7.5)
 
-[node name="MainHallDoor" parent="MainHallNew" unique_id=1954819518 instance=ExtResource("16_bk1yd")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7.263111, 4.7683716e-07, -3.7469978)
-dialogue = ExtResource("19_11dqp")
-open_state_key = "unlocked_door"
+[node name="PlainFloorSmall2" parent="MainHallNew" unique_id=162644614 instance=ExtResource("8_073vx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 7.5)
+
+[node name="PlainFloorSmall6" parent="MainHallNew" unique_id=1756187972 instance=ExtResource("8_073vx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 10)
+
+[node name="PlainFloorPlainWallSmall2" parent="MainHallNew" unique_id=342987240 instance=ExtResource("18_ucjfc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 7.5)
+
+[node name="PlainFloorPlainWallCornerSmall" parent="MainHallNew" unique_id=2008243069 instance=ExtResource("13_5wn6j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, -10)
+
+[node name="PlainFloorPlainWallDoorway2" parent="MainHallNew" unique_id=1131883406 instance=ExtResource("4_b7iwo")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.5, 0, -10)
+
+[node name="EntranceExit2" parent="MainHallNew" unique_id=1927663575 instance=ExtResource("17_amnol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.5)

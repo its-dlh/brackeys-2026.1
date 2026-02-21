@@ -87,6 +87,7 @@ func prompt(label: String = "", default_value: String = "") -> String:
 	text_prompt_label.text = label
 	text_prompt.visible = true
 	text_prompt_input.text = default_value
+	text_prompt_input.caret_column = default_value.length()
 	text_prompt_input.grab_focus()
 	await text_prompt_input.text_submitted
 	var entered_code = text_prompt_input.text.strip_edges()

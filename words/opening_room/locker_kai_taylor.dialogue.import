@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://h3uwsthilgfg"
+path="res://.godot/imported/locker_kai_taylor.dialogue-f0983c9c280293997ae6530fbdacf41c.tres"
+
+[deps]
+
+source_file="res://words/opening_room/locker_kai_taylor.dialogue"
+dest_files=["res://.godot/imported/locker_kai_taylor.dialogue-f0983c9c280293997ae6530fbdacf41c.tres"]
+
+[params]
+
+defaults=true

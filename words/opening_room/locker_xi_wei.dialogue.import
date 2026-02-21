@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://2cnekc1all81"
+path="res://.godot/imported/locker_xi_wei.dialogue-4161f30f8cb2e01398faddd25955cb7a.tres"
+
+[deps]
+
+source_file="res://words/opening_room/locker_xi_wei.dialogue"
+dest_files=["res://.godot/imported/locker_xi_wei.dialogue-4161f30f8cb2e01398faddd25955cb7a.tres"]
+
+[params]
+
+defaults=true

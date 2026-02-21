@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://prahic7e4fhh" path="res://tiles/plain_floor_plain_wall_corner_5x5.tscn" id="4_qserd"]
 [ext_resource type="PackedScene" uid="uid://7bxqkmdlkkqr" path="res://tiles/plain_floor_plain_wall_doorway.tscn" id="5_721to"]
 [ext_resource type="PackedScene" uid="uid://cnxxve6eyvij6" path="res://utils/interactable.tscn" id="5_hcl5b"]
+[ext_resource type="PackedScene" uid="uid://dscpy108f4usr" path="res://environment_assets/science_tube.tscn" id="5_qserd"]
 [ext_resource type="Resource" uid="uid://cpgvtlte14nhn" path="res://words/upgrades_and_items/left_arm.dialogue" id="6_d8hvo"]
 [ext_resource type="PackedScene" uid="uid://dstjwfvti4pgo" path="res://environment_assets/robo_parts/robo-left-arm.glb" id="10_lgq05"]
 [ext_resource type="PackedScene" uid="uid://bql73sqxxamhs" path="res://environment_assets/plain_door.tscn" id="11_achke"]
@@ -25,8 +26,10 @@
 [ext_resource type="PackedScene" uid="uid://b40uqnh1iy5sg" path="res://tiles/plain_floor_10x10.tscn" id="16_ig36b"]
 [ext_resource type="Resource" uid="uid://0kvuesgcjemc" path="res://words/opening_room/locker_x_ramirez.dialogue" id="19_0vtoi"]
 [ext_resource type="Resource" uid="uid://c8n5inn1lm2av" path="res://words/opening_room/locker_b_carter.dialogue" id="19_0xg4s"]
+[ext_resource type="Resource" uid="uid://2cnekc1all81" path="res://words/opening_room/locker_xi_wei.dialogue" id="20_ljktu"]
 [ext_resource type="Resource" uid="uid://c5wbl3vjky8of" path="res://words/lyr_carter.dialogue" id="20_xh4c3"]
 [ext_resource type="PackedScene" uid="uid://u5mrw2fqrrch" path="res://environment_assets/desk.glb" id="21_lrdma"]
+[ext_resource type="Resource" uid="uid://h3uwsthilgfg" path="res://words/opening_room/locker_kai_taylor.dialogue" id="22_cmcjj"]
 [ext_resource type="PackedScene" uid="uid://8mxryp082s56" path="res://tiles/plain_floor_tiny.tscn" id="23_j1g1p"]
 [ext_resource type="PackedScene" uid="uid://47b6rej64ben" path="res://tiles/stairs.tscn" id="24_kyuk5"]
 [ext_resource type="Resource" uid="uid://byd4fo28afkdk" path="res://words/opening_room/staircase_door.dialogue" id="25_8b6so"]
@@ -36,10 +39,10 @@
 [ext_resource type="PackedScene" uid="uid://cdqubgc02w3gc" path="res://environment_assets/black-blob.glb" id="32_esn4u"]
 [ext_resource type="Resource" uid="uid://bgwgrkaou8ycc" path="res://words/full-tube.dialogue" id="33_0vtoi"]
 [ext_resource type="PackedScene" uid="uid://cu1y42f4ap1ke" path="res://tiles/plain_floor_plain_wall_small.tscn" id="34_esn4u"]
-[ext_resource type="Resource" uid="uid://cqmsqh6cfvcjb" path="res://words/opening_room/blue_key_door.dialogue" id="35_0vtoi"]
 [ext_resource type="PackedScene" uid="uid://bdu3upj4s1fvx" path="res://environment_assets/computer-workstation.glb" id="36_0xg4s"]
 [ext_resource type="PackedScene" uid="uid://umb1pd0bbkve" path="res://environment_assets/robo_parts/robo-head.glb" id="39_ljktu"]
 [ext_resource type="PackedScene" uid="uid://cxtebijyxmer5" path="res://environment_assets/robo_parts/robo-torso.glb" id="40_cmcjj"]
+[ext_resource type="Resource" uid="uid://1tc4vmbllrea" path="res://words/b_carter_workstation.dialogue" id="42_btffm"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_j1g1p"]
 vertices = PackedVector3Array(-11.076571, 2.52, -9.886864, -11.076571, 2.52, -0.3868637, -10.826571, 2.52, -9.386864, -8.326571, 2.52, -9.636864, -9.576571, 1.02, -7.8868637, -8.576571, 1.01, -8.136864, -8.576571, 1.01, -9.136864, -10.326571, 1.24, -9.136864, -9.451571, 1.01, -9.136864, -10.326571, 1.02, -0.3868637, -9.576571, 1.02, -0.3868637, -10.326571, 1.02, -7.67853, -2.3265715, 0.01999998, -6.3868637, -2.0765715, 0.01999998, -5.8868637, -1.8265715, 0.01999998, -9.136864, -1.8265715, 0.01999998, -0.3868637, -2.0765715, 0.01999998, -4.6368637, -2.3265715, 0.01999998, -4.1368637, -5.8265715, 0.01999998, -6.1368637, -8.076571, 0.01999998, -9.136864, -8.076571, 0.01999998, -7.8868637, -5.5765715, 0.01999998, -4.1368637, -9.076571, 0.01999998, -0.3868637, -9.076571, 0.01999998, -7.6368637, 3.4234285, 0.01999998, -0.3868637, 3.4234285, 0.01999998, -9.136864, -5.3265715, 1.05, -5.8868637, -5.3265715, 1.05, -4.6368637, -2.5765715, 1.05, -4.6368637, -2.5765715, 1.05, -5.8868637)
@@ -95,14 +98,17 @@ agent_max_climb = 0.01
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_cvynx"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_8b6so"]
-vertices = PackedVector3Array(9, 0.01999998, -11.746998, 9.25, 0.01999998, -14.746998, 8, 0.01999998, -14.746998, 8, 0.01999998, -11.496998, 5.75, 0.01999998, -11.496998, 6, 0.01999998, -6.996998, 9.75, 0.01999998, -11.496998, 7.5, 0.01999998, -2.7469978, 9.75, 0.01999998, -2.7469978, 5.5, 0.01999998, -6.746998, 7.25, 0.01999998, -2.2469978, 5.5, 2.52, -7.496998, 5.5, 2.52, -12.246998, 5, 2.52, -12.246998, 4.75, 2.52, -7.496998, -7.25, 2.52, -7.496998, -7.25, 2.52, -6.996998, -6.5, 0.01999998, 0.50300217, -6.5, 0.01999998, 1.0030022, -5.75, 0.01999998, 1.0030022, -5.5, 0.01999998, 0.25300217, -4.5, 0.01999998, 5.753002, -5.25, 0.01999998, 6.753002, 7.25, 0.01999998, 7.253002, -6.5, 0.01999998, -4.496998, -7.25, 0.01999998, -4.246998, -7.25, 0.01999998, -3.4969978, -6.5, 0.01999998, -3.2469978, -5.5, 0.01999998, -2.2469978, -4.5, 0.01999998, 1.7530022, -6.5, 0.01999998, -2.4969978, -5.5, 0.01999998, 1.7530022, -6.5, 0.01999998, 4.003002, -6.5, 0.01999998, 4.503002, -5, 0.01999998, 4.503002, -4, 0.01999998, 3.0030022, -6.5, 0.01999998, 6.503002, -6.75, 0.01999998, 7.253002, -2.5, 0.01999998, -6.496998, -4, 0.01999998, -6.996998, -6.5, 0.01999998, -6.746998, -3.25, 0.01999998, -6.996998, -3.25, 2.02, -10.496998, -4.25, 2.02, -10.496998, -3.25, 0.15999997, -8.163664, -3.25, 1.41, -9.330331, -4.166667, 1.41, -9.330331, -4.083333, 0.15999997, -8.163664, -6.5, 1.02, -1.9969978, -6.5, 1.02, 0.0030021667, -6, 1.02, 0.0030021667, -6, 1.02, -1.9969978, -6.5, 1.02, 3.5030022, -5.75, 1.02, 3.2530022, -5.75, 1.12, 2.0030022, -6.5, 1.02, 1.5030022, -5.25, 1.8399999, 2.7530022, -4.5, 1.55, 3.0030022, -4.5, 1.55, 2.2530022, -5.25, 1.8299999, 2.2530022, -6.25, 3.05, 6.253002, -5.25, 3.05, 6.253002, -5, 3.05, 5.753002, -5.5, 3.05, 4.753002, -6.5, 3.05, 5.253002, -6.25, 0.01999998, 5.503002, -5.5, 0.01999998, 6.003002, -5.5, 0.01999998, 5.253002)
-polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(5, 4, 3), PackedInt32Array(0, 6, 3), PackedInt32Array(3, 6, 5), PackedInt32Array(5, 6, 7), PackedInt32Array(7, 6, 8), PackedInt32Array(5, 7, 9), PackedInt32Array(9, 7, 10), PackedInt32Array(12, 11, 13), PackedInt32Array(13, 11, 14), PackedInt32Array(14, 16, 15), PackedInt32Array(14, 11, 16), PackedInt32Array(18, 17, 19), PackedInt32Array(19, 17, 20), PackedInt32Array(23, 22, 21), PackedInt32Array(25, 24, 26), PackedInt32Array(26, 24, 27), PackedInt32Array(20, 28, 29), PackedInt32Array(28, 30, 27), PackedInt32Array(19, 20, 31), PackedInt32Array(31, 20, 29), PackedInt32Array(33, 32, 34), PackedInt32Array(34, 32, 35), PackedInt32Array(22, 37, 36), PackedInt32Array(28, 38, 35), PackedInt32Array(35, 38, 9), PackedInt32Array(35, 9, 10), PackedInt32Array(35, 10, 23), PackedInt32Array(35, 29, 28), PackedInt32Array(28, 27, 24), PackedInt32Array(34, 35, 21), PackedInt32Array(21, 35, 23), PackedInt32Array(41, 38, 39), PackedInt32Array(39, 38, 40), PackedInt32Array(40, 38, 24), PackedInt32Array(24, 38, 28), PackedInt32Array(41, 39, 44), PackedInt32Array(44, 39, 47), PackedInt32Array(44, 47, 45), PackedInt32Array(45, 47, 46), PackedInt32Array(45, 46, 42), PackedInt32Array(42, 46, 43), PackedInt32Array(23, 37, 22), PackedInt32Array(51, 50, 48), PackedInt32Array(48, 50, 49), PackedInt32Array(53, 52, 54), PackedInt32Array(54, 52, 55), PackedInt32Array(59, 58, 56), PackedInt32Array(56, 58, 57), PackedInt32Array(61, 60, 62), PackedInt32Array(62, 60, 64), PackedInt32Array(62, 64, 63), PackedInt32Array(67, 66, 65)]
+vertices = PackedVector3Array(5.5, 2.52, -7.496998, 5.5, 2.52, -12.246998, 5, 2.52, -12.246998, 4.75, 2.52, -7.496998, -7.25, 2.52, -7.496998, -7.25, 2.52, -6.996998, 10, 0.01999998, -8.746998, 10.25, 0.01999998, -8.246998, 11.75, 0.01999998, -8.246998, 11.75, 0.01999998, -10.246998, 10.25, 0.01999998, -10.246998, 10, 0.01999998, -9.496998, 7.5, 0.01999998, -9.746998, 5.75, 0.01999998, -11.496998, 6, 0.01999998, -6.996998, 9, 0.01999998, -7.746998, 5.5, 0.01999998, -6.746998, 7.25, 0.01999998, -2.2469978, 7.5, 0.01999998, -2.7469978, 9.75, 0.01999998, -2.7469978, 9.75, 0.01999998, -7.496998, 9, 0.01999998, -8.496998, 7.25, 0.01999998, -11.496998, -6.5, 0.01999998, 0.50300217, -6.5, 0.01999998, 1.0030022, -5.75, 0.01999998, 1.0030022, -5.5, 0.01999998, 0.25300217, -4.5, 0.01999998, 5.753002, -5.25, 0.01999998, 6.753002, 7.25, 0.01999998, 7.253002, -6.5, 0.01999998, -4.496998, -7.25, 0.01999998, -4.246998, -7.25, 0.01999998, -3.4969978, -6.5, 0.01999998, -3.2469978, -5.5, 0.01999998, -2.2469978, -4.5, 0.01999998, 1.7530022, -6.5, 0.01999998, -2.4969978, -5.5, 0.01999998, 1.7530022, -6.5, 0.01999998, 4.003002, -6.5, 0.01999998, 4.503002, -5, 0.01999998, 4.503002, -4, 0.01999998, 3.0030022, -6.5, 0.01999998, 6.503002, -6.75, 0.01999998, 7.253002, -2.5, 0.01999998, -6.496998, -4, 0.01999998, -6.996998, -6.5, 0.01999998, -6.746998, -3.25, 0.01999998, -6.996998, -3.25, 2.02, -10.496998, -4.25, 2.02, -10.496998, -3.25, 0.15999997, -8.163664, -3.25, 1.41, -9.330331, -4.166667, 1.41, -9.330331, -4.083333, 0.15999997, -8.163664, -6.5, 1.02, -1.9969978, -6.5, 1.02, 0.0030021667, -6, 1.02, 0.0030021667, -6, 1.02, -1.9969978, -6.5, 1.02, 3.5030022, -5.75, 1.02, 3.2530022, -5.75, 1.12, 2.0030022, -6.5, 1.02, 1.5030022, -5.25, 1.8399999, 2.7530022, -4.5, 1.55, 3.0030022, -4.5, 1.55, 2.2530022, -5.25, 1.8299999, 2.2530022, -6.25, 3.05, 6.253002, -5.25, 3.05, 6.253002, -5, 3.05, 5.753002, -5.5, 3.05, 4.753002, -6.5, 3.05, 5.253002, -6.25, 0.01999998, 5.503002, -5.5, 0.01999998, 6.003002, -5.5, 0.01999998, 5.253002)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(3, 5, 4), PackedInt32Array(3, 0, 5), PackedInt32Array(6, 11, 7), PackedInt32Array(7, 11, 10), PackedInt32Array(7, 10, 9), PackedInt32Array(7, 9, 8), PackedInt32Array(15, 14, 12), PackedInt32Array(12, 14, 13), PackedInt32Array(18, 17, 16), PackedInt32Array(14, 15, 16), PackedInt32Array(16, 15, 20), PackedInt32Array(16, 20, 18), PackedInt32Array(18, 20, 19), PackedInt32Array(6, 21, 11), PackedInt32Array(11, 21, 12), PackedInt32Array(12, 21, 15), PackedInt32Array(13, 22, 12), PackedInt32Array(24, 23, 25), PackedInt32Array(25, 23, 26), PackedInt32Array(29, 28, 27), PackedInt32Array(31, 30, 32), PackedInt32Array(32, 30, 33), PackedInt32Array(26, 34, 35), PackedInt32Array(34, 36, 33), PackedInt32Array(25, 26, 37), PackedInt32Array(37, 26, 35), PackedInt32Array(39, 38, 40), PackedInt32Array(40, 38, 41), PackedInt32Array(28, 43, 42), PackedInt32Array(34, 44, 41), PackedInt32Array(41, 44, 16), PackedInt32Array(41, 16, 17), PackedInt32Array(41, 17, 29), PackedInt32Array(41, 35, 34), PackedInt32Array(34, 33, 30), PackedInt32Array(40, 41, 27), PackedInt32Array(27, 41, 29), PackedInt32Array(47, 44, 45), PackedInt32Array(45, 44, 46), PackedInt32Array(46, 44, 30), PackedInt32Array(30, 44, 34), PackedInt32Array(47, 45, 50), PackedInt32Array(50, 45, 53), PackedInt32Array(50, 53, 51), PackedInt32Array(51, 53, 52), PackedInt32Array(51, 52, 48), PackedInt32Array(48, 52, 49), PackedInt32Array(29, 43, 28), PackedInt32Array(57, 56, 54), PackedInt32Array(54, 56, 55), PackedInt32Array(59, 58, 60), PackedInt32Array(60, 58, 61), PackedInt32Array(65, 64, 62), PackedInt32Array(62, 64, 63), PackedInt32Array(67, 66, 68), PackedInt32Array(68, 66, 70), PackedInt32Array(68, 70, 69), PackedInt32Array(73, 72, 71)]
 geometry_parsed_geometry_type = 1
 geometry_collision_mask = 4294967041
 cell_height = 0.01
 agent_radius = 0.25
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_lrdma"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_btffm"]
+size = Vector3(1.1967773, 0.7685547, 1)
 
 [node name="OpeningRoomTiled" type="Node3D" unique_id=2028324652]
 
@@ -213,6 +219,21 @@ mesh = SubResource("BoxMesh_btffm")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StartingSection/LongBench/StaticBody3D" unique_id=969013620]
 shape = SubResource("BoxShape3D_34hgh")
 
+[node name="robo-head" parent="StartingSection" unique_id=1593364373 instance=ExtResource("39_ljktu")]
+transform = Transform3D(0.008380812, -0.9939495, 0.10951814, 0.07583967, 0.109838344, 0.9910519, -0.9970848, 0, 0.07630133, -9.520297, 1.0068359, -6.127037)
+
+[node name="robo-torso" parent="StartingSection" unique_id=593129008 instance=ExtResource("40_cmcjj")]
+transform = Transform3D(1, 0, 0, 0, 0.03571926, -0.9993619, 0, 0.9993619, 0.03571926, -9.873935, 1.1270752, -7.227379)
+
+[node name="robo-torso2" parent="StartingSection" unique_id=1164445835 instance=ExtResource("40_cmcjj")]
+transform = Transform3D(-0.11131316, -0.37151372, -0.9217305, -0.04454237, 0.92842746, -0.36883384, 0.99278677, 0, -0.119894296, -10.40195, 1.0068359, -6.5721664)
+
+[node name="robo-head2" parent="StartingSection" unique_id=2010858456 instance=ExtResource("39_ljktu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.234469, 0.1822815, -7.3566513)
+
+[node name="robo-torso3" parent="StartingSection" unique_id=2090820190 instance=ExtResource("40_cmcjj")]
+transform = Transform3D(0.8195423, -0.573011, -0.00298029, 0, 0.0052010342, -0.99998647, 0.5730187, 0.8195312, 0.0042624674, -10.107821, 1.0812988, -4.5740585)
+
 [node name="HallwayPreviewTinyFloor" parent="." unique_id=1823268011 instance=ExtResource("23_j1g1p")]
 process_mode = 4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, -3.5)
@@ -241,6 +262,8 @@ nodes_to_hide = [NodePath("../../MainHallPreviewTinyFloor")]
 [node name="locker" parent="HallwayNew" unique_id=1768840152 instance=ExtResource("14_ig36b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1.6493535, -2.4)
 locker_name = "Xi Wei"
+locker_code = "5678"
+open_dialogue = ExtResource("20_ljktu")
 
 [node name="locker2" parent="HallwayNew" unique_id=861249184 instance=ExtResource("14_ig36b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.6493535, -2.4)
@@ -253,8 +276,10 @@ transform = Transform3D(1, 9.7578486e-05, -7.267104e-05, -9.7578486e-05, 1, 1.11
 locker_name = "L. Carter"
 
 [node name="locker4" parent="HallwayNew" unique_id=427110550 instance=ExtResource("14_ig36b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.6493535, -2.4)
-locker_name = "A.B. Aaronson"
+transform = Transform3D(0.99991155, 0, -0.013299017, 0, 1, 0, 0.013299017, 0, 0.99991155, 1, 1.6493535, -2.4)
+locker_name = "K. Taylor"
+locker_code = "1234"
+open_dialogue = ExtResource("22_cmcjj")
 
 [node name="locker5" parent="HallwayNew" unique_id=1060130122 instance=ExtResource("14_ig36b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.6493535, -2.4)
@@ -264,11 +289,11 @@ open_dialogue = ExtResource("19_0vtoi")
 
 [node name="locker6" parent="HallwayNew" unique_id=1699928754 instance=ExtResource("14_ig36b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1.6493535, -2.4)
-locker_name = "A.C. Aaronson"
+locker_name = "R. Patel"
 
 [node name="locker7" parent="HallwayNew" unique_id=1042447005 instance=ExtResource("14_ig36b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1.6493535, -2.4)
-locker_name = "A.D. Aaronson"
+locker_name = "L. Harrison"
 
 [node name="StaticBody3D" type="StaticBody3D" parent="HallwayNew" unique_id=766917589]
 transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, 0, 0, 0)
@@ -407,9 +432,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.75832, 1.5064129, 5.528759
 
 [node name="black-blob" parent="MainHallNew/science-tube" unique_id=1101390636 instance=ExtResource("32_esn4u")]
 transform = Transform3D(0.72003055, 0, 0.69394237, 0, 1, 0, -0.69394237, 0, 0.72003055, -0.060800552, -0.328678, 0.092372894)
+metadata/_edit_lock_ = true
 
 [node name="Interactable" parent="MainHallNew/science-tube" unique_id=130918653 instance=ExtResource("5_hcl5b")]
 dialogue = ExtResource("33_0vtoi")
+metadata/_edit_lock_ = true
+
+[node name="SpotLight3D" type="SpotLight3D" parent="MainHallNew/science-tube" unique_id=2137833405]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 1.0000001, 0)
+light_color = Color(0.27350816, 0.5214213, 0.19641906, 1)
+metadata/_edit_lock_ = true
 
 [node name="PlainFloorPlainWall5x8" parent="MainHallNew" unique_id=181537580 instance=ExtResource("3_721to")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 7)
@@ -417,40 +449,36 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 7)
 [node name="PlainFloorSmall5" parent="MainHallNew" unique_id=960141138 instance=ExtResource("14_2rhjw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.986889, 4.7683716e-07, -7.496998)
 
-[node name="PlainFloorTiny2" parent="MainHallNew" unique_id=647266615 instance=ExtResource("23_j1g1p")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.486889, 4.7683716e-07, -12.496998)
-
-[node name="PlainFloorPlainWallDoorway3" parent="MainHallNew" unique_id=865345017 instance=ExtResource("5_721to")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.486889, 4.7683716e-07, -9.996998)
-
 [node name="PlainFloorPlainWallCornerSmall" parent="MainHallNew" unique_id=1357501942 instance=ExtResource("12_achke")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.486889, 4.7683716e-07, -9.996998)
 
 [node name="PlainFloorPlainWallSmall" parent="MainHallNew" unique_id=310630741 instance=ExtResource("34_esn4u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.486889, 4.7683716e-07, -7.496998)
 
-[node name="BlueKeyDoor" parent="MainHallNew" unique_id=898746648 instance=ExtResource("11_achke")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 8.75, 0, -12.25)
-dialogue = ExtResource("35_0vtoi")
-open_state_key = "blue_key_door_open"
-
 [node name="computer-workstation2" parent="MainHallNew" unique_id=2090284479 instance=ExtResource("36_0xg4s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.2751236, 1.6138535, 2.8119736)
 
-[node name="computer-workstation" parent="MainHallNew" unique_id=1176328872 instance=ExtResource("36_0xg4s")]
+[node name="PlainFloorPlainWallCornerSmall3" parent="MainHallNew" unique_id=1865082840 instance=ExtResource("12_achke")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.486889, 4.7683716e-07, -9.996998)
+
+[node name="PlainFloorPlainWallDoorway3" parent="MainHallNew" unique_id=1762663437 instance=ExtResource("5_721to")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.986889, 4.7683716e-07, -7.996998)
+
+[node name="science-tube3" parent="MainHallNew" unique_id=1563497450 instance=ExtResource("5_qserd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.7951965, 1.6254578, 3.837688)
+
+[node name="science-tube2" parent="MainHallNew" unique_id=482548221 instance=ExtResource("5_qserd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.464798, 1.5087891, 6.003)
+
+[node name="computer-workstation3" type="StaticBody3D" parent="MainHallNew" unique_id=2136405231]
+
+[node name="computer-workstation" parent="MainHallNew/computer-workstation3" unique_id=1176328872 instance=ExtResource("36_0xg4s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7433357, 1.3904533, -1.0802498)
 
-[node name="robo-head" parent="." unique_id=1593364373 instance=ExtResource("39_ljktu")]
-transform = Transform3D(0.008380812, -0.9939495, 0.10951814, 0.07583967, 0.109838344, 0.9910519, -0.9970848, 0, 0.07630133, -8.201904, 1.0068359, -3.4813843)
+[node name="Interactable" parent="MainHallNew/computer-workstation3" unique_id=2060513878 instance=ExtResource("5_hcl5b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7433357, 1.3904533, -1.0802498)
+dialogue = ExtResource("42_btffm")
 
-[node name="robo-torso" parent="." unique_id=593129008 instance=ExtResource("40_cmcjj")]
-transform = Transform3D(1, 0, 0, 0, 0.03571926, -0.9993619, 0, 0.9993619, 0.03571926, -8.555542, 1.1270752, -4.581726)
-
-[node name="robo-torso2" parent="." unique_id=1164445835 instance=ExtResource("40_cmcjj")]
-transform = Transform3D(-0.11131316, -0.37151372, -0.9217305, -0.04454237, 0.92842746, -0.36883384, 0.99278677, 0, -0.119894296, -9.083557, 1.0068359, -3.9265137)
-
-[node name="robo-head2" parent="." unique_id=2010858456 instance=ExtResource("39_ljktu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.916077, 0.1822815, -4.7109985)
-
-[node name="robo-torso3" parent="." unique_id=2090820190 instance=ExtResource("40_cmcjj")]
-transform = Transform3D(0.8195423, -0.573011, -0.00298029, 0, 0.0052010342, -0.99998647, 0.5730187, 0.8195312, 0.0042624674, -8.789429, 1.0812988, -1.9284058)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MainHallNew/computer-workstation3" unique_id=2120955021]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.644947, 1.2747307, -1.0802498)
+shape = SubResource("BoxShape3D_btffm")

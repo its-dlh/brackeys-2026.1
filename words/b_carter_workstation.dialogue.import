@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://1tc4vmbllrea"
+path="res://.godot/imported/b_carter_workstation.dialogue-4835ff50ffc01e5c93c64dd5f90b290b.tres"
+
+[deps]
+
+source_file="res://words/b_carter_workstation.dialogue"
+dest_files=["res://.godot/imported/b_carter_workstation.dialogue-4835ff50ffc01e5c93c64dd5f90b290b.tres"]
+
+[params]
+
+defaults=true

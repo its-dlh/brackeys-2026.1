@@ -118,9 +118,10 @@ open_state_key = ""
 start_open = true
 
 [node name="EntranceExit" parent="MainHallNew" unique_id=1306114400 instance=ExtResource("17_amnol")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.7000008, 0.29999995, -8.45)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.7000008, 0.29999995, -7.8999996)
 connected_room_path = "uid://sgqc60qwdy11"
 connection_id = "main_hall_stairs"
+entrance_offset = Vector3(1.25, 0, 0)
 
 [node name="PlainFloorPlainWall5x8" parent="MainHallNew" unique_id=181537580 instance=ExtResource("9_p0opx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 7)

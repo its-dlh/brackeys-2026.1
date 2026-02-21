@@ -39,6 +39,7 @@
 [ext_resource type="PackedScene" uid="uid://cdqubgc02w3gc" path="res://environment_assets/black-blob.glb" id="32_esn4u"]
 [ext_resource type="Resource" uid="uid://bgwgrkaou8ycc" path="res://words/full-tube.dialogue" id="33_0vtoi"]
 [ext_resource type="PackedScene" uid="uid://cu1y42f4ap1ke" path="res://tiles/plain_floor_plain_wall_small.tscn" id="34_esn4u"]
+[ext_resource type="Resource" uid="uid://cqmsqh6cfvcjb" path="res://words/opening_room/blue_key_door.dialogue" id="35_0vtoi"]
 [ext_resource type="PackedScene" uid="uid://bdu3upj4s1fvx" path="res://environment_assets/computer-workstation.glb" id="36_0xg4s"]
 [ext_resource type="PackedScene" uid="uid://umb1pd0bbkve" path="res://environment_assets/robo_parts/robo-head.glb" id="39_ljktu"]
 [ext_resource type="PackedScene" uid="uid://cxtebijyxmer5" path="res://environment_assets/robo_parts/robo-torso.glb" id="40_cmcjj"]
@@ -482,3 +483,8 @@ dialogue = ExtResource("42_btffm")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MainHallNew/computer-workstation3" unique_id=2120955021]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.644947, 1.2747307, -1.0802498)
 shape = SubResource("BoxShape3D_btffm")
+
+[node name="BlueKeyDoor" parent="MainHallNew" unique_id=1957741243 instance=ExtResource("11_achke")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.732397, 0.036689878, -9.232265)
+dialogue = ExtResource("35_0vtoi")
+open_state_key = "has_blue_key"

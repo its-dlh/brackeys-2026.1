@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dbxnsila3w6ct"]
+
+[ext_resource type="Texture2D" uid="uid://c2oe2fgum6eir" path="res://environment_assets/outside/dead-tree-1_TreeBake.png" id="1_5vabs"]
+[ext_resource type="Texture2D" uid="uid://b0ymaq36lfhwf" path="res://environment_assets/outside/dead-tree-1_TreeBakeRoughness.png" id="2_x0sx2"]
+
+[resource]
+resource_name = "GrayWood"
+cull_mode = 2
+albedo_texture = ExtResource("1_5vabs")
+metallic_texture = ExtResource("2_x0sx2")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_x0sx2")
+roughness_texture_channel = 1

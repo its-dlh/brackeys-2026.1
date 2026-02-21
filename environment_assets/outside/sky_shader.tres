@@ -1,0 +1,26 @@
+[gd_resource type="VisualShader" format=3 uid="uid://bw1p6su1ywudt"]
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_vedrm"]
+input_name = "sky_coords"
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_akisj"]
+source = 5
+
+[sub_resource type="VisualShaderNodeTexture2DParameter" id="VisualShaderNodeTexture2DParameter_71aum"]
+parameter_name = "tex"
+texture_type = 1
+color_default = 1
+
+[resource]
+mode = 3
+flags/use_half_res_pass = false
+flags/use_quarter_res_pass = false
+flags/disable_fog = false
+flags/use_debanding = false
+nodes/sky/2/node = SubResource("VisualShaderNodeInput_vedrm")
+nodes/sky/2/position = Vector2(-260, 80)
+nodes/sky/3/node = SubResource("VisualShaderNodeTexture_akisj")
+nodes/sky/3/position = Vector2(140, 140)
+nodes/sky/4/node = SubResource("VisualShaderNodeTexture2DParameter_71aum")
+nodes/sky/4/position = Vector2(-280, 240)
+nodes/sky/connections = PackedInt32Array(2, 0, 3, 0, 3, 0, 0, 0, 4, 0, 3, 2)

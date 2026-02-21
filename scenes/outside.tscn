@@ -1,7 +1,21 @@
 [gd_scene format=3 uid="uid://b1edrkt1xytg3"]
 
-[ext_resource type="Script" uid="uid://dtxtftnjdf8er" path="res://scenes/outside.gd" id="1_nsm10"]
+[ext_resource type="Script" path="res://scenes/outside.gd" id="1_nsm10"]
 [ext_resource type="AudioStream" uid="uid://wnasnanhmqlg" path="res://audio/end-music.mp3" id="1_p61qw"]
+[ext_resource type="Shader" uid="uid://bw1p6su1ywudt" path="res://environment_assets/outside/sky_shader.tres" id="3_7r1kg"]
+[ext_resource type="PackedScene" uid="uid://1kwgg8vvumgk" path="res://environment_assets/outside/dead-tree-1.glb" id="3_8lkp2"]
+[ext_resource type="PackedScene" uid="uid://ceb710qk551gr" path="res://environment_assets/outside/branch-coral.glb" id="5_bkgx0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uaw8k"]
+shader = ExtResource("3_7r1kg")
+
+[sub_resource type="Sky" id="Sky_lt5my"]
+sky_material = SubResource("ShaderMaterial_uaw8k")
+
+[sub_resource type="Environment" id="Environment_udpx5"]
+background_mode = 2
+sky = SubResource("Sky_lt5my")
+ambient_light_energy = 0.2
 
 [node name="Outside" type="Node3D" unique_id=315287410]
 script = ExtResource("1_nsm10")
@@ -10,3 +24,46 @@ script = ExtResource("1_nsm10")
 stream = ExtResource("1_p61qw")
 volume_db = -3.0
 autoplay = true
+
+[node name="Environment" type="Node3D" parent="." unique_id=607131224]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Environment" unique_id=1557604879]
+environment = SubResource("Environment_udpx5")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment" unique_id=1184639616]
+transform = Transform3D(1, 0, 0, 0, 0.49711025, 0.8676874, 0, -0.8676874, 0.49711025, 0, 5.7934794, 7.136049)
+light_color = Color(0.7018471, 0.78961235, 1, 1)
+light_energy = 0.2
+
+[node name="Props" type="Node3D" parent="." unique_id=887544503]
+
+[node name="dead-tree-1" parent="Props" unique_id=246453485 instance=ExtResource("3_8lkp2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008942008, 0, -0.011259079)
+
+[node name="dead-tree-2" parent="Props" unique_id=1723373655 instance=ExtResource("3_8lkp2")]
+transform = Transform3D(0.7151806, 0, -0.69893974, 0, 1, 0, 0.69893974, 0, 0.7151806, 1.587265, -2.3841858e-07, 0.07242894)
+
+[node name="dead-tree-3" parent="Props" unique_id=91236690 instance=ExtResource("3_8lkp2")]
+transform = Transform3D(0.7212285, 0, 0.6926972, 0, 1, 0, -0.6926972, 0, 0.7212285, 2.9538064, 0, 0.03946209)
+
+[node name="dead-tree-4" parent="Props" unique_id=1621173561 instance=ExtResource("3_8lkp2")]
+transform = Transform3D(-0.07847652, 0, -0.99691594, -0.07322056, 0.99729913, 0.00576387, 0.9942234, 0.07344707, -0.078264564, 0.24846363, -0.34971452, -3.0035448)
+
+[node name="branch-coral" parent="Props" unique_id=627694091 instance=ExtResource("5_bkgx0")]
+transform = Transform3D(0.4523606, 0.027295344, -0.89141726, -0.28580558, 0.9512521, -0.11590801, 0.84479886, 0.30720425, 0.43811008, 0.7433653, 0, -5.5908403)
+
+[node name="branch-coral2" parent="Props" unique_id=375622137 instance=ExtResource("5_bkgx0")]
+transform = Transform3D(0.98306996, -0.1764086, -0.049533065, 0.18323077, 0.94646764, 0.26575488, 0, -0.2703316, 0.9627673, -1.2984347, 0, -5.4499874)
+
+[node name="branch-coral3" parent="Props" unique_id=298380960 instance=ExtResource("5_bkgx0")]
+transform = Transform3D(0.9575294, -0.25336012, -0.13764453, 0.21810919, 0.9486885, -0.22895113, 0.18858881, 0.18920593, 0.9636573, -0.6448908, 0, -4.2939672)
+
+[node name="branch-coral4" parent="Props" unique_id=1079314608 instance=ExtResource("5_bkgx0")]
+transform = Transform3D(-0.12070503, -0.23944813, 0.963377, -0.042172097, 0.97083324, 0.2360175, -0.9917923, -0.0121391285, -0.1272825, -0.6227336, 0, -6.0617404)
+
+[node name="branch-coral5" parent="Props" unique_id=1315791982 instance=ExtResource("5_bkgx0")]
+transform = Transform3D(1, 0, 0, 0, 0.99576974, -0.09188398, 0, 0.09188398, 0.99576974, 3.0261216, -0.38459015, -1.3736985)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=467386672]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.965866, -0.49074924, -3.8478012)
+size = Vector3(44.346466, 1, 47.30629)

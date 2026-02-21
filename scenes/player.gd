@@ -12,6 +12,7 @@ const JUMP_VELOCITY = 4.5
 
 func _ready() -> void:
 	mesh.get_node("LeftArm").visible = GameState.get_value(GameState.HAS_LEFT_ARM) or false
+	mesh.get_node("RightArm").visible = GameState.get_value(GameState.HAS_RIGHT_ARM) or false
 	GameState.state_changed.connect(_game_state_change)
 	camera_3d.global_position = camera_marker.global_position
 

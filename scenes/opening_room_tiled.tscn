@@ -130,7 +130,7 @@ size = Vector3(3, 2, 3)
 [node name="Environment" parent="." unique_id=672148315 instance=ExtResource("1_as58u")]
 
 [node name="Player" parent="." unique_id=1791314085 instance=ExtResource("1_b02xd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7335478, -0.27270508, 0.94667816)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7335477, -0.27270508, -1.0533218)
 
 [node name="StartingSection" type="NavigationRegion3D" parent="." unique_id=1048753087]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3183931, 0, 2.6456528)

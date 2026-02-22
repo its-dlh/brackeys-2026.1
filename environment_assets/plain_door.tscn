@@ -29,6 +29,7 @@ collision_mask = 2
 shape = SubResource("BoxShape3D_0qnrc")
 
 [node name="Interactable" parent="." unique_id=528907151 instance=ExtResource("2_n7fsw")]
+indicator_offset = Vector3(0, 2.5, 0)
 acceptable_distance = 1.5
 
 [node name="Label3D" type="Label3D" parent="." unique_id=733367115 groups=["editor_only"]]

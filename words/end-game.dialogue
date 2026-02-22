@@ -1,11 +1,7 @@
 ~ start
-Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
-Nathan: Here are some choices.
-- First one
-	Nathan: You picked the first one.
-- Second one
-	Nathan: You picked the second one.
-- Start again => start
-- End the conversation => END
-Nathan: For more information see the online documentation.
+You emerge from the lab to the sun rising over the horizon. Beyond the confines of the lab is more of the same. No birds chirp to greet the sun, the trees are bare and no insects crawl over them, more bodies lay undigested by the passage of time.
+
+Perhaps it was the whole world that stopped - the whole world except you.
+
+Thanks for playing our demo! Art by Dawson, Coding/Music by DLH.
 => END

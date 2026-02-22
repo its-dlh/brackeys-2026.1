@@ -1,0 +1,6 @@
+~ start
+This locker is very cluttered.
+if GameState.get_value(GameState.HAS_RED_KEY) != true:
+	It takes some digging, but you finally find a red key card.
+	do GameState.set_value(GameState.HAS_RED_KEY, true)
+=> END

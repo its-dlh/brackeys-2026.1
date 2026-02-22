@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://fta5kseiav7e"
+path="res://.godot/imported/unknown_workstation.dialogue-37471a9c2072be88039e8a495fdf3828.tres"
+
+[deps]
+
+source_file="res://words/opening_room/unknown_workstation.dialogue"
+dest_files=["res://.godot/imported/unknown_workstation.dialogue-37471a9c2072be88039e8a495fdf3828.tres"]
+
+[params]
+
+defaults=true

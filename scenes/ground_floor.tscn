@@ -20,6 +20,9 @@
 [ext_resource type="PackedScene" uid="uid://ctcjlsc6uyab8" path="res://utils/entrance_exit.tscn" id="17_amnol"]
 [ext_resource type="PackedScene" uid="uid://cu1y42f4ap1ke" path="res://tiles/plain_floor_plain_wall_small.tscn" id="18_ucjfc"]
 [ext_resource type="Script" uid="uid://c14uptaury057" path="res://utils/music_start.gd" id="20_7mu4p"]
+[ext_resource type="PackedScene" uid="uid://u5mrw2fqrrch" path="res://environment_assets/desk.glb" id="20_q1tgf"]
+[ext_resource type="PackedScene" uid="uid://bdu3upj4s1fvx" path="res://environment_assets/computer-workstation.glb" id="21_milhk"]
+[ext_resource type="Resource" uid="uid://dvr1q7sspgppp" path="res://words/ground_floor/rpatel_workstation.dialogue" id="22_7la5a"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_8b6so"]
 vertices = PackedVector3Array(9.25, 0.01999998, -14.75, 8.25, 0.01999998, -14.75, 8.5, 0.01999998, -12, 9.25, 0.01999998, -11.75, 8, 0.01999998, -11.5, 6, 0.01999998, -7, 7.25, 0.01999998, -2.5, 9.75, 0.01999998, -2.75, 9.75, 0.01999998, -11.5, 6, 0.01999998, -11.5, 5.25, 0.01999998, -6.5, -3, -1.49, -9.75, -4.25, -1.49, -9.75, -4, 0.01999998, -7, -3, 0.01999998, -6.5, -3, 0.01999998, -7.583333, -4.125, -0.24000001, -8.375, -1.5, 0.01999998, 7.25, 1.5, 0.01999998, 7.25, -4.5, 0.01999998, -6.5, -1.25, 0.01999998, 9.75, 1.25, 0.01999998, 9.75, -6.5, 0.01999998, -6.5, -6.5, 0.01999998, 7.25, 7.25, 0.01999998, 7.25, -2.5, 2.5199997, -7, 0.25, 2.5199997, -7, 0, 2.5199997, -7.5, -2.5, 2.5199997, -7.5)
@@ -30,6 +33,9 @@ cell_height = 0.01
 agent_radius = 0.1
 agent_max_climb = 0.75
 agent_max_slope = 61.2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_073vx"]
+size = Vector3(1.1967773, 0.7685547, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vjqai"]
 size = Vector3(3, 2, 3)
@@ -184,6 +190,27 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.5,
 [node name="EntranceExit2" parent="MainHallNew" unique_id=1927663575 instance=ExtResource("17_amnol")]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 0, 0, 8.5)
 connected_room_path = "uid://b1edrkt1xytg3"
+
+[node name="desk3" parent="MainHallNew" unique_id=1581380068 instance=ExtResource("20_q1tgf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.0419445, 0.5, 1.4550536)
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="MainHallNew/desk3" unique_id=927314456]
+transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, -9.536743e-07, 2, -1.3170166)
+metadata/_edit_lock_ = true
+
+[node name="computer-workstation5" type="StaticBody3D" parent="MainHallNew" unique_id=928668957]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.45505333, -4.7683716e-07, 1.341944)
+
+[node name="computer-workstation" parent="MainHallNew/computer-workstation5" unique_id=164572316 instance=ExtResource("21_milhk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7433357, 1.3904533, -1.0802498)
+
+[node name="Interactable" parent="MainHallNew/computer-workstation5" unique_id=528907151 instance=ExtResource("6_milhk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7433357, 1.3904533, -1.0802498)
+dialogue = ExtResource("22_7la5a")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MainHallNew/computer-workstation5" unique_id=569801533]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.644947, 1.2747307, -1.0802498)
+shape = SubResource("BoxShape3D_073vx")
 
 [node name="MusicStart" type="Area3D" parent="." unique_id=161803482]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 0)

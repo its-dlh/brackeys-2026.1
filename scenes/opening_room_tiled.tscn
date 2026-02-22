@@ -33,6 +33,7 @@
 [ext_resource type="PackedScene" uid="uid://8mxryp082s56" path="res://tiles/plain_floor_tiny.tscn" id="23_j1g1p"]
 [ext_resource type="PackedScene" uid="uid://47b6rej64ben" path="res://tiles/stairs.tscn" id="24_kyuk5"]
 [ext_resource type="Resource" uid="uid://byd4fo28afkdk" path="res://words/opening_room/staircase_door.dialogue" id="25_8b6so"]
+[ext_resource type="Resource" uid="uid://d1fjljf1b4f6t" path="res://words/opening_room/locker_rpatel.dialogue" id="26_n7s62"]
 [ext_resource type="PackedScene" uid="uid://ctcjlsc6uyab8" path="res://utils/entrance_exit.tscn" id="27_cvynx"]
 [ext_resource type="Resource" uid="uid://bufvt5e7sga3q" path="res://words/sitting_technician.dialogue" id="30_h2kv4"]
 [ext_resource type="PackedScene" uid="uid://bh7r8co701lfi" path="res://environment_assets/science_tube/science-tube.glb" id="31_3kmu8"]
@@ -44,7 +45,9 @@
 [ext_resource type="PackedScene" uid="uid://umb1pd0bbkve" path="res://environment_assets/robo_parts/robo-head.glb" id="39_ljktu"]
 [ext_resource type="PackedScene" uid="uid://cxtebijyxmer5" path="res://environment_assets/robo_parts/robo-torso.glb" id="40_cmcjj"]
 [ext_resource type="Resource" uid="uid://1tc4vmbllrea" path="res://words/b_carter_workstation.dialogue" id="42_btffm"]
+[ext_resource type="Resource" uid="uid://fta5kseiav7e" path="res://words/opening_room/unknown_workstation.dialogue" id="45_28nw1"]
 [ext_resource type="Script" uid="uid://c14uptaury057" path="res://utils/music_start.gd" id="45_u3grh"]
+[ext_resource type="Resource" uid="uid://cy6yw6xkba0hc" path="res://words/opening_room/password_reset_workstation.dialogue" id="46_3quuo"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_j1g1p"]
 vertices = PackedVector3Array(-11.076571, 2.52, -9.886864, -11.076571, 2.52, -0.3868637, -10.826571, 2.52, -9.386864, -8.326571, 2.52, -9.636864, -9.576571, 1.02, -7.8868637, -8.576571, 1.01, -8.136864, -8.576571, 1.01, -9.136864, -10.326571, 1.24, -9.136864, -9.451571, 1.01, -9.136864, -10.326571, 1.02, -0.3868637, -9.576571, 1.02, -0.3868637, -10.326571, 1.02, -7.67853, -2.3265715, 0.01999998, -6.3868637, -2.0765715, 0.01999998, -5.8868637, -1.8265715, 0.01999998, -9.136864, -1.8265715, 0.01999998, -0.3868637, -2.0765715, 0.01999998, -4.6368637, -2.3265715, 0.01999998, -4.1368637, -5.8265715, 0.01999998, -6.1368637, -8.076571, 0.01999998, -9.136864, -8.076571, 0.01999998, -7.8868637, -5.5765715, 0.01999998, -4.1368637, -9.076571, 0.01999998, -0.3868637, -9.076571, 0.01999998, -7.6368637, 3.4234285, 0.01999998, -0.3868637, 3.4234285, 0.01999998, -9.136864, -5.3265715, 1.05, -5.8868637, -5.3265715, 1.05, -4.6368637, -2.5765715, 1.05, -4.6368637, -2.5765715, 1.05, -5.8868637)
@@ -303,6 +306,8 @@ open_dialogue = ExtResource("19_0vtoi")
 [node name="locker6" parent="HallwayNew" unique_id=1699928754 instance=ExtResource("14_ig36b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1.6493535, -2.4)
 locker_name = "R. Patel"
+locker_code = "2045"
+open_dialogue = ExtResource("26_n7s62")
 
 [node name="locker7" parent="HallwayNew" unique_id=1042447005 instance=ExtResource("14_ig36b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1.6493535, -2.4)
@@ -523,12 +528,6 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 37, 
 transform = Transform3D(-4.371139e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 1.9106855e-15, -9.536743e-07, 2, -1.3170166)
 metadata/_edit_lock_ = true
 
-[node name="computer-workstation" parent="ComputerRoom" unique_id=1762773058 instance=ExtResource("36_0xg4s")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 35.78351, 1.5, -11.5)
-
-[node name="computer-workstation2" parent="ComputerRoom" unique_id=990612496 instance=ExtResource("36_0xg4s")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 38.081055, 1.3954853, -11.630493)
-
 [node name="computer-workstation3" type="StaticBody3D" parent="ComputerRoom" unique_id=2136405231]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 32.01311, -4.7683716e-07, -5.003002)
 
@@ -540,6 +539,34 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7433357, 1.3904533, -1.080
 dialogue = ExtResource("42_btffm")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ComputerRoom/computer-workstation3" unique_id=2120955021]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.644947, 1.2747307, -1.0802498)
+shape = SubResource("BoxShape3D_btffm")
+
+[node name="computer-workstation4" type="StaticBody3D" parent="ComputerRoom" unique_id=1468647174]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 34.61311, -4.7683716e-07, -5.003002)
+
+[node name="computer-workstation" parent="ComputerRoom/computer-workstation4" unique_id=164572316 instance=ExtResource("36_0xg4s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7433357, 1.3904533, -1.0802498)
+
+[node name="Interactable" parent="ComputerRoom/computer-workstation4" unique_id=709921056 instance=ExtResource("5_hcl5b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7433357, 1.3904533, -1.0802498)
+dialogue = ExtResource("45_28nw1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ComputerRoom/computer-workstation4" unique_id=147821486]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.644947, 1.2747307, -1.0802498)
+shape = SubResource("BoxShape3D_btffm")
+
+[node name="computer-workstation5" type="StaticBody3D" parent="ComputerRoom" unique_id=1018695739]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 37.11311, -4.7683716e-07, -5.003002)
+
+[node name="computer-workstation" parent="ComputerRoom/computer-workstation5" unique_id=475523684 instance=ExtResource("36_0xg4s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7433357, 1.3904533, -1.0802498)
+
+[node name="Interactable" parent="ComputerRoom/computer-workstation5" unique_id=420248090 instance=ExtResource("5_hcl5b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7433357, 1.3904533, -1.0802498)
+dialogue = ExtResource("46_3quuo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ComputerRoom/computer-workstation5" unique_id=685414742]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.644947, 1.2747307, -1.0802498)
 shape = SubResource("BoxShape3D_btffm")
 

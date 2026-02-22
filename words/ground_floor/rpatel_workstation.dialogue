@@ -1,0 +1,11 @@
+~ start
+if RoomState.get_value("rpatel_workstation_logged_in") != true
+	This workstation is displaying a login screen, asking for the password for a user called rpatel.
+	if prompt("Password") == GameState.get_value("rpatel_password")
+		You entered the correct password!
+		do RoomState.set_value("rpatel_workstation_logged_in", true)
+	else
+		You entered an incorrect password.
+		=> END
+There is a virtual sticky note on the screen, with "2045" as the only content.
+=> END

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://d1fjljf1b4f6t"
+path="res://.godot/imported/locker_rpatel.dialogue-dbb5be58e849b6344fb31d7e02850537.tres"
+
+[deps]
+
+source_file="res://words/opening_room/locker_rpatel.dialogue"
+dest_files=["res://.godot/imported/locker_rpatel.dialogue-dbb5be58e849b6344fb31d7e02850537.tres"]
+
+[params]
+
+defaults=true

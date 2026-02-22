@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dvr1q7sspgppp"
+path="res://.godot/imported/rpatel_workstation.dialogue-d99acd0aba488f8a667b1060e10f42ea.tres"
+
+[deps]
+
+source_file="res://words/ground_floor/rpatel_workstation.dialogue"
+dest_files=["res://.godot/imported/rpatel_workstation.dialogue-d99acd0aba488f8a667b1060e10f42ea.tres"]
+
+[params]
+
+defaults=true

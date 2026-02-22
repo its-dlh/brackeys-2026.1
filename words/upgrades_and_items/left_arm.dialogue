@@ -4,6 +4,7 @@ if GameState.get_value(GameState.HAS_LEFT_ARM) != true:
 	You try putting your right arm socket near it. Nothing happens.
 	You try putting your left arm socket near it. It snaps magnetically into place, with a surprising amount of force.
 	do GameState.set_value(GameState.HAS_LEFT_ARM, true)
+	do SoundEffects.play_take_arm_sound()
 	set parent.visible = false
 else
 	There is no longer anything on the table here.

@@ -83,10 +83,10 @@ transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0.98, 0)
 
 [node name="RustyFootstepsPlayer" type="AudioStreamPlayer" parent="." unique_id=637112623]
 stream = SubResource("AudioStreamRandomizer_4r5pv")
-volume_db = -12.0
+volume_db = -11.0
 pitch_scale = 1.1
 
 [node name="OiledFootstepsPlayer" type="AudioStreamPlayer" parent="." unique_id=358320221]
 stream = SubResource("AudioStreamRandomizer_ke2ow")
-volume_db = -12.0
+volume_db = -10.0
 pitch_scale = 1.1

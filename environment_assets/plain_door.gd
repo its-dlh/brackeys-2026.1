@@ -12,10 +12,15 @@ extends Node3D
 
 var has_been_open: bool = false
 
+const DOOR_OPEN_AMOUNT = 1.4
+const DOOR_OPEN_SPEED = 5.0
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	if start_open:
-		open_door()
+		RoomState.set_value(open_state_key, true)
+	if is_door_open():
+		door_mesh.position.x = DOOR_OPEN_AMOUNT
 
 	# Reflect the initial state of the door
 	_on_open_state_changed(is_door_open())
@@ -25,6 +30,18 @@ func _ready() -> void:
 	if dialogue:
 		interactable.dialogue = dialogue
 
+func _physics_process(delta: float) -> void:
+	if is_door_open():
+		if door_mesh.position.x < DOOR_OPEN_AMOUNT:
+			door_mesh.position.x += DOOR_OPEN_SPEED * delta
+		else:
+			door_mesh.position.x = DOOR_OPEN_AMOUNT
+	else:
+		if door_mesh.position.x > 0.0:
+			door_mesh.position.x -= DOOR_OPEN_SPEED * delta
+		else:
+			door_mesh.position.x = 0.0
+
 func _on_state_changed(key, value, prev_value, _state) -> void:
 	if key == open_state_key and value != prev_value:
 		_on_open_state_changed(value)
@@ -32,7 +49,6 @@ func _on_state_changed(key, value, prev_value, _state) -> void:
 func _on_open_state_changed(is_open: bool) -> void:
 	if is_open:
 		print('Reflecting door state: open')
-		door_mesh.position.x = 1.4
 		door_collision_shape.set_deferred("disabled", true)
 
 		if not has_been_open:
@@ -43,7 +59,6 @@ func _on_open_state_changed(is_open: bool) -> void:
 				node.visible = false
 	else:
 		print('Reflecting door state: closed')
-		door_mesh.position.x = 0.0
 		door_collision_shape.set_deferred("disabled", false)
 
 		if not has_been_open:

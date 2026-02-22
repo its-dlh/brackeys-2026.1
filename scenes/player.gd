@@ -21,6 +21,8 @@ func _ready() -> void:
 	camera_3d.global_position = camera_marker.global_position
 	navigation_agent.path_changed.connect(_on_path_changed)
 	navigation_agent.navigation_finished.connect(_on_navigation_finished)
+	rusty_footsteps_player.finished.connect(_on_playback_finished)
+	oiled_footsteps_player.finished.connect(_on_playback_finished)
 	check_footsteps_type()
 
 func _physics_process(delta: float) -> void:
@@ -81,5 +83,10 @@ func _on_path_changed() -> void:
 		current_footsteps_player.play(0.0)
 
 func _on_navigation_finished() -> void:
-	if current_footsteps_player.playing:
-		current_footsteps_player.stop()
+	pass
+	# if not current_footsteps_player.playing:
+	# 	current_footsteps_player.stop()
+
+func _on_playback_finished() -> void:
+	if not navigation_agent.is_navigation_finished():
+		current_footsteps_player.play(0.0)

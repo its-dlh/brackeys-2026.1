@@ -1,4 +1,4 @@
 ~ start
-The terminal asks for a number.
+The terminal asks for a number with no context. There is also a sticky note off to the right that says D - U - D - U, but it is unclear what this means.
 do parent.set_rotation_amount(prompt("Enter number", parent.get_rotation_amount()))
 => END

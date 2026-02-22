@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://dtpgsvbsthrrl" path="res://tiles/plain_floor_plain_wall_corner_small.tscn" id="12_achke"]
 [ext_resource type="Resource" uid="uid://ged82wy52wki" path="res://words/generic_door.dialogue" id="13_0fxbs"]
 [ext_resource type="PackedScene" uid="uid://bn7gwfj7cphha" path="res://environment_assets/elevator.tscn" id="13_hyc2t"]
-[ext_resource type="Material" path="res://environment_assets/plain_floor_material.tres" id="13_i42y4"]
+[ext_resource type="Material" uid="uid://rgcl3mpxidm6" path="res://environment_assets/plain_floor_material.tres" id="13_i42y4"]
 [ext_resource type="PackedScene" uid="uid://cusi63op6frb3" path="res://environment_assets/base_navigation_region.tscn" id="13_orrkt"]
 [ext_resource type="Resource" uid="uid://b4qeeysd2lv5s" path="res://words/opening_room/elevator.dialogue" id="14_0fxbs"]
 [ext_resource type="PackedScene" uid="uid://cgo1eo41jj1h" path="res://tiles/plain_floor_small.tscn" id="14_2rhjw"]
@@ -221,7 +221,6 @@ distance_fade_shadow = 30.0
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.923428, 0, -6.3868637)
 dialogue = ExtResource("12_2x3w3")
 open_state_key = "hallway_door_open"
-start_open = true
 nodes_to_reveal = [NodePath("../../HallwayNew"), NodePath("../../MainHallPreviewTinyFloor")]
 nodes_to_hide = [NodePath("../../HallwayPreviewTinyFloor")]
 
@@ -410,7 +409,6 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4, 
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -3.75, 0, -7.25)
 dialogue = ExtResource("25_8b6so")
 open_state_key = "staircase_door_open"
-start_open = true
 
 [node name="EntranceExit" parent="MainHallNew" unique_id=1306114400 instance=ExtResource("27_cvynx")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.7, 1.25, -9)

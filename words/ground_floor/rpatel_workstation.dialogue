@@ -1,7 +1,7 @@
 ~ start
 if RoomState.get_value("rpatel_workstation_logged_in") != true
 	This workstation is displaying a login screen, asking for the password for a user called rpatel.
-	if prompt("Password") == GameState.get_value("rpatel_password")
+	if prompt("Password") == GameState.get_value(GameState.RPATEL_PASSWORD)
 		You entered the correct password!
 		do RoomState.set_value("rpatel_workstation_logged_in", true)
 	else

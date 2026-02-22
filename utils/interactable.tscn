@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bg5aj4kfetqrj" path="res://utils/interactable.gd" id="1_drdt1"]
 
+[sub_resource type="SystemFont" id="SystemFont_drdt1"]
+
 [node name="Interactable" type="Area3D" unique_id=528907151]
 script = ExtResource("1_drdt1")
 
@@ -13,8 +15,11 @@ layers = 513
 sorting_offset = 10000.0
 sorting_use_aabb_center = false
 billboard = 2
+no_depth_test = true
+render_priority = 1
 modulate = Color(0, 0.8352941, 0.8, 1)
 text = "⌄"
+font = SubResource("SystemFont_drdt1")
 font_size = 128
 
 [node name="TextPrompt" type="Control" parent="." unique_id=1933451061]

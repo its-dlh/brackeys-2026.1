@@ -2,7 +2,9 @@
 if GameState.get_value(GameState.IS_LOCKDOWN_CLEARED) != true
 	You press the button. The lockdown is cleared.
 	do GameState.set_value(GameState.IS_LOCKDOWN_CLEARED, true)
+	do SoundEffects.play_lockdown_disabled_sound()
 else
 	You press the button. The lockdown is in progress again. Is this what you want?
 	do GameState.set_value(GameState.IS_LOCKDOWN_CLEARED, false)
+	do SoundEffects.play_lockdown_enabled_sound()
 => END

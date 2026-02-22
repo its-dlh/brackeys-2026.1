@@ -4,6 +4,8 @@
 [ext_resource type="AudioStream" uid="uid://c0ddabfkwoc2e" path="res://audio/doorv2.wav" id="2_jt71b"]
 [ext_resource type="AudioStream" uid="uid://dkv37yy7yxnut" path="res://audio/squeaky-locker.wav" id="3_qpdnh"]
 [ext_resource type="AudioStream" uid="uid://bifq40vy4sh8j" path="res://audio/take-item.wav" id="4_twlsd"]
+[ext_resource type="AudioStream" uid="uid://15gtdlh4rs7x" path="res://audio/lockdown-disabled.wav" id="5_01k4q"]
+[ext_resource type="AudioStream" uid="uid://cn7ohm0e52w7" path="res://audio/lockdown-enabled.wav" id="6_8v5o6"]
 
 [node name="SoundEffects" type="Node" unique_id=800019027]
 script = ExtResource("1_jt71b")
@@ -21,3 +23,13 @@ max_polyphony = 4
 [node name="TakeItemPlayer" type="AudioStreamPlayer" parent="." unique_id=1968417234]
 stream = ExtResource("4_twlsd")
 volume_db = -10.0
+
+[node name="LockdownDisabled" type="AudioStreamPlayer" parent="." unique_id=1496704091]
+stream = ExtResource("5_01k4q")
+volume_db = -10.0
+max_polyphony = 2
+
+[node name="LockdownEnabled" type="AudioStreamPlayer" parent="." unique_id=1890647838]
+stream = ExtResource("6_8v5o6")
+volume_db = -10.0
+max_polyphony = 2

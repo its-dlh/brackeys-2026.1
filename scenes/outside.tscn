@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://b1edrkt1xytg3"]
 
-[ext_resource type="Script" path="res://scenes/outside.gd" id="1_nsm10"]
+[ext_resource type="Script" uid="uid://dtxtftnjdf8er" path="res://scenes/outside.gd" id="1_nsm10"]
 [ext_resource type="AudioStream" uid="uid://wnasnanhmqlg" path="res://audio/end-music.mp3" id="1_p61qw"]
 [ext_resource type="Texture2D" uid="uid://cguqlpcjwco48" path="res://environment_assets/outside/qwantani_moon_noon_puresky_1k.exr" id="3_7r1kg"]
 [ext_resource type="PackedScene" uid="uid://1kwgg8vvumgk" path="res://environment_assets/outside/dead-tree-1.glb" id="3_8lkp2"]
 [ext_resource type="PackedScene" uid="uid://ceb710qk551gr" path="res://environment_assets/outside/branch-coral.glb" id="5_bkgx0"]
+[ext_resource type="PackedScene" uid="uid://df6fudcwp2bf" path="res://environment_assets/outside/dead-body.glb" id="6_5tstl"]
+[ext_resource type="Material" path="res://environment_assets/plain_wall_material.tres" id="6_uaw8k"]
+[ext_resource type="PackedScene" uid="uid://7bxqkmdlkkqr" path="res://tiles/plain_floor_plain_wall_doorway.tscn" id="7_lt5my"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_bkgx0"]
 panorama = ExtResource("3_7r1kg")
@@ -16,6 +19,9 @@ sky_material = SubResource("PanoramaSkyMaterial_bkgx0")
 background_mode = 2
 sky = SubResource("Sky_lt5my")
 ambient_light_energy = 0.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uaw8k"]
+albedo_color = Color(0.037804056, 0.064063154, 0.08548749, 1)
 
 [node name="Outside" type="Node3D" unique_id=315287410]
 script = ExtResource("1_nsm10")
@@ -37,21 +43,6 @@ light_energy = 0.05
 
 [node name="Props" type="Node3D" parent="." unique_id=887544503]
 
-[node name="dead-tree-1" parent="Props" unique_id=246453485 instance=ExtResource("3_8lkp2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008942008, 0, -0.011259079)
-
-[node name="dead-tree-2" parent="Props" unique_id=1723373655 instance=ExtResource("3_8lkp2")]
-transform = Transform3D(0.7151806, 0, -0.69893974, 0, 1, 0, 0.69893974, 0, 0.7151806, 1.587265, -2.3841858e-07, 0.07242894)
-
-[node name="dead-tree-3" parent="Props" unique_id=91236690 instance=ExtResource("3_8lkp2")]
-transform = Transform3D(0.7212285, 0, 0.6926972, 0, 1, 0, -0.6926972, 0, 0.7212285, 2.9538064, 0, 0.03946209)
-
-[node name="dead-tree-4" parent="Props" unique_id=1621173561 instance=ExtResource("3_8lkp2")]
-transform = Transform3D(-0.07847652, 0, -0.99691594, -0.07322056, 0.99729913, 0.00576387, 0.9942234, 0.07344707, -0.078264564, 0.24846363, -0.34971452, -3.0035448)
-
-[node name="branch-coral" parent="Props" unique_id=627694091 instance=ExtResource("5_bkgx0")]
-transform = Transform3D(0.4523606, 0.027295344, -0.89141726, -0.28580558, 0.9512521, -0.11590801, 0.84479886, 0.30720425, 0.43811008, 0.7433653, 0, -5.5908403)
-
 [node name="branch-coral2" parent="Props" unique_id=375622137 instance=ExtResource("5_bkgx0")]
 transform = Transform3D(0.98306996, -0.1764086, -0.049533065, 0.18323077, 0.94646764, 0.26575488, 0, -0.2703316, 0.9627673, -1.2984347, 0, -5.4499874)
 
@@ -64,6 +55,184 @@ transform = Transform3D(-0.12070503, -0.23944813, 0.963377, -0.042172097, 0.9708
 [node name="branch-coral5" parent="Props" unique_id=1315791982 instance=ExtResource("5_bkgx0")]
 transform = Transform3D(1, 0, 0, 0, 0.99576974, -0.09188398, 0, 0.09188398, 0.99576974, 3.0261216, -0.38459015, -1.3736985)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=467386672]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.965866, -0.49074924, -3.8478012)
-size = Vector3(44.346466, 1, 47.30629)
+[node name="dead-tree-5" parent="Props" unique_id=927692180 instance=ExtResource("3_8lkp2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.668871, 0, 1.4923344)
+
+[node name="dead-tree-6" parent="Props" unique_id=937796327 instance=ExtResource("3_8lkp2")]
+transform = Transform3D(0.93415666, 0.07189784, 0.34954563, -0.06733812, 0.997412, -0.025196785, -0.3504526, 0, 0.9365805, -10.115675, -0.07813215, -2.0074234)
+
+[node name="dead-body" parent="Props" unique_id=353134192 instance=ExtResource("6_5tstl")]
+transform = Transform3D(0.2961249, 0, -0.9551492, 0, 1, 0, 0.9551492, 0, 0.2961249, -7.4857373, 0, -11.46969)
+
+[node name="dead-tree-7" parent="Props" unique_id=1024395568 instance=ExtResource("3_8lkp2")]
+transform = Transform3D(0.87563825, -0.11080982, -0.4700839, 0.09763056, 0.99384165, -0.052412685, 0.47299677, 0, 0.8810642, -7.674219, 0, 1.110606)
+
+[node name="branch-coral6" parent="Props" unique_id=640821487 instance=ExtResource("5_bkgx0")]
+transform = Transform3D(0.64891714, 0, 0, 0, 0.6206165, -0.10314995, 0, 0.12499169, 0.5121665, -9.273006, -0.09718084, 1.4473677)
+
+[node name="branch-coral7" parent="Props" unique_id=1251428682 instance=ExtResource("5_bkgx0")]
+transform = Transform3D(1.1922199, 0, 0, 0, 1.735403, 0, 0, 0, 2.1895442, -7.8974085, -0.14931107, -2.0774393)
+
+[node name="dead-body2" parent="Props" unique_id=2037756170 instance=ExtResource("6_5tstl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39010715, 0, -3.3371224)
+
+[node name="dead-tree-8" parent="Props" unique_id=1435429308 instance=ExtResource("3_8lkp2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3874216, 0, -12.813084)
+
+[node name="branch-coral8" parent="Props" unique_id=1396690083 instance=ExtResource("5_bkgx0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6156282, 0, -14.628757)
+
+[node name="dead-tree-9" parent="Props" unique_id=189470924 instance=ExtResource("3_8lkp2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0899115, -9.536743e-07, -12.019052)
+
+[node name="branch-coral9" parent="Props" unique_id=1898108726 instance=ExtResource("5_bkgx0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9703698, 0, -12.015657)
+
+[node name="dead-tree-10" parent="Props" unique_id=1988410193 instance=ExtResource("3_8lkp2")]
+transform = Transform3D(1.7872725, 0.16476607, 0, -0.21487208, 1.3265234, 0.24544881, 0.03912249, -0.24152464, 1.3480763, -3.2645302, -0.28490257, -15.08965)
+
+[node name="Node3D" type="Node3D" parent="Props" unique_id=2008316529]
+
+[node name="dead-tree-1" parent="Props/Node3D" unique_id=246453485 instance=ExtResource("3_8lkp2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008942008, 0, -0.011259079)
+
+[node name="dead-tree-2" parent="Props/Node3D" unique_id=1723373655 instance=ExtResource("3_8lkp2")]
+transform = Transform3D(0.7151806, 0, -0.69893974, 0, 1, 0, 0.69893974, 0, 0.7151806, 1.587265, -2.3841858e-07, 0.07242894)
+
+[node name="dead-tree-3" parent="Props/Node3D" unique_id=91236690 instance=ExtResource("3_8lkp2")]
+transform = Transform3D(0.7212285, 0, 0.6926972, 0, 1, 0, -0.6926972, 0, 0.7212285, 2.9538064, 0, 0.03946209)
+
+[node name="dead-tree-4" parent="Props/Node3D" unique_id=1621173561 instance=ExtResource("3_8lkp2")]
+transform = Transform3D(-0.07847652, 0, -0.99691594, -0.07322056, 0.99729913, 0.00576387, 0.9942234, 0.07344707, -0.078264564, 0.24846363, -0.34971452, -3.0035448)
+
+[node name="branch-coral" parent="Props/Node3D" unique_id=627694091 instance=ExtResource("5_bkgx0")]
+transform = Transform3D(0.4523606, 0.027295344, -0.89141726, -0.28580558, 0.9512521, -0.11590801, 0.84479886, 0.30720425, 0.43811008, 0.7433653, 0, -5.5908403)
+
+[node name="Node3D2" type="Node3D" parent="Props" unique_id=518861006]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -17.254063)
+
+[node name="dead-tree-1" parent="Props/Node3D2" unique_id=1470257744 instance=ExtResource("3_8lkp2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008942008, 0, -0.011259079)
+
+[node name="dead-tree-2" parent="Props/Node3D2" unique_id=1964764169 instance=ExtResource("3_8lkp2")]
+transform = Transform3D(0.7151806, 0, -0.69893974, 0, 1, 0, 0.69893974, 0, 0.7151806, 1.587265, -2.3841858e-07, 0.07242894)
+
+[node name="dead-tree-3" parent="Props/Node3D2" unique_id=1258583065 instance=ExtResource("3_8lkp2")]
+transform = Transform3D(0.7212285, 0, 0.6926972, 0, 1, 0, -0.6926972, 0, 0.7212285, 2.9538064, 0, 0.03946209)
+
+[node name="dead-tree-4" parent="Props/Node3D2" unique_id=1956223127 instance=ExtResource("3_8lkp2")]
+transform = Transform3D(-0.07847652, 0, -0.99691594, -0.07322056, 0.99729913, 0.00576387, 0.9942234, 0.07344707, -0.078264564, 0.24846363, -0.34971452, -3.0035448)
+
+[node name="branch-coral" parent="Props/Node3D2" unique_id=918253990 instance=ExtResource("5_bkgx0")]
+transform = Transform3D(0.4523606, 0.027295344, -0.89141726, -0.28580558, 0.9512521, -0.11590801, 0.84479886, 0.30720425, 0.43811008, 0.7433653, 0, -5.5908403)
+
+[node name="Node3D3" type="Node3D" parent="Props" unique_id=1667750191]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.786462, 0, -17.254063)
+
+[node name="dead-tree-1" parent="Props/Node3D3" unique_id=1401119748 instance=ExtResource("3_8lkp2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008942008, 0, -0.011259079)
+
+[node name="dead-tree-2" parent="Props/Node3D3" unique_id=1077744436 instance=ExtResource("3_8lkp2")]
+transform = Transform3D(0.7151806, 0, -0.69893974, 0, 1, 0, 0.69893974, 0, 0.7151806, 1.587265, -2.3841858e-07, 0.07242894)
+
+[node name="dead-tree-3" parent="Props/Node3D3" unique_id=1820488402 instance=ExtResource("3_8lkp2")]
+transform = Transform3D(0.7212285, 0, 0.6926972, 0, 1, 0, -0.6926972, 0, 0.7212285, 2.9538064, 0, 0.03946209)
+
+[node name="dead-tree-4" parent="Props/Node3D3" unique_id=708004827 instance=ExtResource("3_8lkp2")]
+transform = Transform3D(-0.07847652, 0, -0.99691594, -0.07322056, 0.99729913, 0.00576387, 0.9942234, 0.07344707, -0.078264564, 0.24846363, -0.34971452, -3.0035448)
+
+[node name="branch-coral" parent="Props/Node3D3" unique_id=5579854 instance=ExtResource("5_bkgx0")]
+transform = Transform3D(0.4523606, 0.027295344, -0.89141726, -0.28580558, 0.9512521, -0.11590801, 0.84479886, 0.30720425, 0.43811008, 0.7433653, 0, -5.5908403)
+
+[node name="Node3D4" type="Node3D" parent="Props" unique_id=1307252600]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.786462, 0, -8.758968)
+
+[node name="dead-tree-1" parent="Props/Node3D4" unique_id=1383014896 instance=ExtResource("3_8lkp2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008942008, 0, -0.011259079)
+
+[node name="dead-tree-2" parent="Props/Node3D4" unique_id=267951822 instance=ExtResource("3_8lkp2")]
+transform = Transform3D(0.7151806, 0, -0.69893974, 0, 1, 0, 0.69893974, 0, 0.7151806, 1.587265, -2.3841858e-07, 0.07242894)
+
+[node name="dead-tree-3" parent="Props/Node3D4" unique_id=809693672 instance=ExtResource("3_8lkp2")]
+transform = Transform3D(0.7212285, 0, 0.6926972, 0, 1, 0, -0.6926972, 0, 0.7212285, 2.9538064, 0, 0.03946209)
+
+[node name="dead-tree-4" parent="Props/Node3D4" unique_id=601369111 instance=ExtResource("3_8lkp2")]
+transform = Transform3D(-0.07847652, 0, -0.99691594, -0.07322056, 0.99729913, 0.00576387, 0.9942234, 0.07344707, -0.078264564, 0.24846363, -0.34971452, -3.0035448)
+
+[node name="branch-coral" parent="Props/Node3D4" unique_id=185422402 instance=ExtResource("5_bkgx0")]
+transform = Transform3D(0.4523606, 0.027295344, -0.89141726, -0.28580558, 0.9512521, -0.11590801, 0.84479886, 0.30720425, 0.43811008, 0.7433653, 0, -5.5908403)
+
+[node name="Node3D5" type="Node3D" parent="Props" unique_id=571198262]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.204892, 0, -13.7843075)
+
+[node name="dead-tree-1" parent="Props/Node3D5" unique_id=172880880 instance=ExtResource("3_8lkp2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008942008, 0, -0.011259079)
+
+[node name="dead-tree-2" parent="Props/Node3D5" unique_id=1828856622 instance=ExtResource("3_8lkp2")]
+transform = Transform3D(0.7151806, 0, -0.69893974, 0, 1, 0, 0.69893974, 0, 0.7151806, 1.587265, -2.3841858e-07, 0.07242894)
+
+[node name="dead-tree-3" parent="Props/Node3D5" unique_id=898640013 instance=ExtResource("3_8lkp2")]
+transform = Transform3D(0.7212285, 0, 0.6926972, 0, 1, 0, -0.6926972, 0, 0.7212285, 2.9538064, 0, 0.03946209)
+
+[node name="dead-tree-4" parent="Props/Node3D5" unique_id=1391398415 instance=ExtResource("3_8lkp2")]
+transform = Transform3D(-0.07847652, 0, -0.99691594, -0.07322056, 0.99729913, 0.00576387, 0.9942234, 0.07344707, -0.078264564, 0.24846363, -0.34971452, -3.0035448)
+
+[node name="branch-coral" parent="Props/Node3D5" unique_id=235773298 instance=ExtResource("5_bkgx0")]
+transform = Transform3D(0.4523606, 0.027295344, -0.89141726, -0.28580558, 0.9512521, -0.11590801, 0.84479886, 0.30720425, 0.43811008, 0.7433653, 0, -5.5908403)
+
+[node name="Node3D6" type="Node3D" parent="Props" unique_id=1617979012]
+transform = Transform3D(0.5904507, 0, -0.8070737, 0, 1, 0, 0.8070737, 0, 0.5904507, -4.1723585, 0, 4.764885)
+
+[node name="dead-tree-1" parent="Props/Node3D6" unique_id=174212871 instance=ExtResource("3_8lkp2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008942008, 0, -0.011259079)
+
+[node name="dead-tree-2" parent="Props/Node3D6" unique_id=1153975857 instance=ExtResource("3_8lkp2")]
+transform = Transform3D(0.7151806, 0, -0.69893974, 0, 1, 0, 0.69893974, 0, 0.7151806, 1.587265, -2.3841858e-07, 0.07242894)
+
+[node name="dead-tree-3" parent="Props/Node3D6" unique_id=1495003788 instance=ExtResource("3_8lkp2")]
+transform = Transform3D(0.7212285, 0, 0.6926972, 0, 1, 0, -0.6926972, 0, 0.7212285, 2.9538064, 0, 0.03946209)
+
+[node name="dead-tree-4" parent="Props/Node3D6" unique_id=648800569 instance=ExtResource("3_8lkp2")]
+transform = Transform3D(-0.07847652, 0, -0.99691594, -0.07322056, 0.99729913, 0.00576387, 0.9942234, 0.07344707, -0.078264564, 0.24846363, -0.34971452, -3.0035448)
+
+[node name="branch-coral" parent="Props/Node3D6" unique_id=845952812 instance=ExtResource("5_bkgx0")]
+transform = Transform3D(0.4523606, 0.027295344, -0.89141726, -0.28580558, 0.9512521, -0.11590801, 0.84479886, 0.30720425, 0.43811008, 0.7433653, 0, -5.5908403)
+
+[node name="LabBuilding" type="CSGBox3D" parent="." unique_id=1483445669]
+transform = Transform3D(0.9170948, 0, -0.398669, 0, 1, 0, 0.398669, 0, 0.9170948, -20.322615, 3.0578613, -16.80779)
+size = Vector3(15.170288, 7.1157227, 28.778198)
+material = ExtResource("6_uaw8k")
+
+[node name="PlainFloorPlainWallDoorway" parent="LabBuilding" unique_id=2028324652 instance=ExtResource("7_lt5my")]
+transform = Transform3D(2.8799472, 0, 0.017016143, 0, 1, 0, -0.04901269, 0, 0.99985516, 14.803256, -3.0578613, 2.2903814)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="LabBuilding" unique_id=302359575]
+transform = Transform3D(0.7901764, -0.61287946, -2.6789811e-08, 0, -4.371139e-08, 1, -0.61287946, -0.7901764, -3.4539706e-08, 10.345957, 2.018207, 8.968619)
+light_energy = 3.0
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="LabBuilding" unique_id=1493342614]
+transform = Transform3D(0.7901764, -0.61287946, -2.6789811e-08, 0, -4.371139e-08, 1, -0.61287946, -0.7901764, -3.4539706e-08, 10.17321, 1.5432396, 4.132548)
+light_energy = 3.0
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="LabBuilding" unique_id=1962669467]
+transform = Transform3D(0.7901764, -0.61287946, -2.6789811e-08, 0, -4.371139e-08, 1, -0.61287946, -0.7901764, -3.4539706e-08, 10.3338375, 1.5432396, -1.7597923)
+light_energy = 3.0
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="LabBuilding" unique_id=1618871138]
+transform = Transform3D(0.7901764, -0.61287946, -2.6789811e-08, 0, -4.371139e-08, 1, -0.61287946, -0.7901764, -3.4539706e-08, 10.409918, 1.5432396, -6.749505)
+light_energy = 3.0
+
+[node name="OmniLight3D" type="OmniLight3D" parent="LabBuilding" unique_id=1306202480]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.018982, 0, 1.2972448)
+light_color = Color(0.84313726, 0.81960785, 0.54901963, 1)
+omni_range = 7.0
+omni_attenuation = 0.8
+
+[node name="Ground" type="CSGBox3D" parent="." unique_id=467386672]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.730339, -0.5425414, -4.8291197)
+size = Vector3(162.21124, 1, 135.99625)
+material = SubResource("StandardMaterial3D_uaw8k")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1298762880]
+transform = Transform3D(-0.29442385, 0.06262063, -0.9536211, 0, 0.9978509, 0.06552503, 0.955675, 0.019292135, -0.29379112, -11.917931, 1.6564345, -11.49381)
+size = 9.0
